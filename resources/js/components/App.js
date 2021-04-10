@@ -5,16 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
     return (
         <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
-                        <div className="card-body">
-                            I'm an example component with React!
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 className='text-center display-2'>Home page</h2>
         </div>
     );
 }
