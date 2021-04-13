@@ -1,0 +1,28 @@
+.modal-s {
+    margin: auto;
+    width: 530px;
+    height: 520px;
+    border-radius: 13px;
+    background-color: #fff;
+}
+
+.div-col {
+    width: 152px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-svg1 {
+    height: 152px;
+    width: 152px;
+    background-image: url('../../../images/carbon_user-speaker.svg');
+    background-repeat: no-repeat;
+}
+
+.img-svg2 {
+    width: 152px;
+    height: 152px;
+    background-image: url('../../../images/ticket.svg');
+    background-repeat: no-repeat;
+}
