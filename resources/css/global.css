@@ -19,3 +19,10 @@
     font-weight: 800;
     font-family: Helvetica;
 }
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    padding: 50px 0px 70px 0px;
+}
