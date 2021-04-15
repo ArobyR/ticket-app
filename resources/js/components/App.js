@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
     return (
         <div className="">
-            <h2 className='text-center display-2'>Home page</h2>
+            <TicketView />
         </div>
     );
 }
