@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import LoginView from '../pages/Login/LoginView'
 
 function App() {
     return (
         <div className="">
-            <TicketView />
+            <LoginView />
         </div>
     );
 }
