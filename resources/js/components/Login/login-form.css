@@ -1,0 +1,15 @@
+.form {
+    padding: 35px;
+    width: 420px;
+    height: 460px;
+    background: #FFFFFF;
+    border-radius: 22px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
