@@ -14,12 +14,11 @@ class CreateTicketAtendidoTable extends Migration
     public function up()
     {
         Schema::create('ticket_atendido', function (Blueprint $table) {
-            $table->bigIncrements('id_caja')->unsigned();
+            $table->bigInteger('id_caja_fk')->unsigned();
             $table->bigInteger('id_ticket_fk')->unsigned();
-            $table->bigInteger('id_usuario_fk')->unsigned();
-            $table->string('numero_caja',22);
-            $table->foreign('id_ticket_fk')->references('id_ticket')->on('ticket');
-            $table->foreign('id_usuario_fk')->references('id_usuario')->on('usuario')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('verificado',22);
+            $table->foreign('id_ticket_fk')->references('id_ticket')->on('ticket')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_caja_fk')->references('id_caja')->on('caja')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
