@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {Formik, useFormik} from 'formik';
 import './login-form.css';
 import { Form, Button } from 'react-bootstrap';
+import '../../../css/global.css';
 
 const Login = () => {
     const [validated, setValidated] = useState(false);
