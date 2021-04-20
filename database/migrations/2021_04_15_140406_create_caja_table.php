@@ -14,7 +14,7 @@ class CreateCajaTable extends Migration
     public function up()
     {
         Schema::create('caja', function (Blueprint $table) {
-            $table->bigIncrement('id_caja')->unsigned();
+            $table->bigIncrements('id_caja')->unsigned();
             $table->bigInteger('id_usuario_fk')->unsigned();
             $table->string('numero_caja',22);
             $table->string('status',22);

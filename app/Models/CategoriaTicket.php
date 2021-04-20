@@ -27,4 +27,5 @@ class CategoriaTicket extends Model
             'nombre_categoria' => $request->input('nombre_categoria'),
         ]);
     }
+
 }
