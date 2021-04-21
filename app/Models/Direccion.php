@@ -19,7 +19,7 @@ class Direccion extends Model
         'codigo_area',
     ];
 
-    public function scopeInsertDireccion($query, Request $request = null,$id = null)
+    public function scopeInsertDireccion($query, Request $request = null, $id = null)
     {
         return $query->insert([
             'id_usuario_fk' => $id,
@@ -27,7 +27,7 @@ class Direccion extends Model
             'numero_casa' => $request->input('numero_casa'),
             'pais' => $request->input('pais'),
             'ciudad' => $request->input('ciudad'),
-            'codigo_area' =>$request->input('codigo_area'),
+            'codigo_area' => $request->input('codigo_area'),
         ]);
     }
 

@@ -16,7 +16,7 @@ class CategoriaTicket extends Model
 
     public function scopeInsertCategoriaTicket($query, Request $request = null)
     {
-        return $query->insert([
+        return $query->insertGetId([
             'nombre_categoria' => $request->input('nombre_categoria'),
         ]);
     }

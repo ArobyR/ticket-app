@@ -17,7 +17,6 @@ class Telefono extends Model
         'tipo_telefono',
     ];
 
-
     public function scopeInsertTelefono($query, Request $request = null, $id = null)
     {
         return $query->insert([

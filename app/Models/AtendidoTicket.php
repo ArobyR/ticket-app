@@ -11,13 +11,17 @@ class AtendidoTicket extends Model
     use HasFactory;
     protected $table = 'ticket_atendido';
     protected $fillable = [
-        'numero_caja',
+        'id_caja_fk',
+        'id_ticket_fk',
+        'verificado',
     ];
 
     public function scopeInsertAtendidoTicket($query, Request $request = null)
     {
         return $query->insert([
-            'numero_caja' => $request->input('numero_caja'),
+            'id_caja_fk',
+            'id_ticket_fk',
+            'verificado' => $request->input('verificado'),
         ]);
     }
 

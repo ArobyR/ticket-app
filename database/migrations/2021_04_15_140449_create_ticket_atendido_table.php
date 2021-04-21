@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateTicketAtendidoTable extends Migration
@@ -19,7 +20,8 @@ class CreateTicketAtendidoTable extends Migration
             $table->string('verificado',22);
             $table->foreign('id_ticket_fk')->references('id_ticket')->on('ticket')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_caja_fk')->references('id_caja')->on('caja')->onDelete('cascade')->onUpdate('cascade');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
     }
 
