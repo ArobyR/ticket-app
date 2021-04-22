@@ -20,8 +20,7 @@ class CreateTicketTable extends Migration
             $table->string('prioridad');
 		    $table->string('codigo_ticket',22);
 		    $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket')->onDelete('cascade')->onUpdate('cascade');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 

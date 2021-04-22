@@ -18,17 +18,17 @@ class Ticket extends Model
 
     public function scopeInsertTicket($query, Request $request = null)
     {
-        return $query->insert([
-            'id_categoria_fk'=> CategoriaTicket::insertCategoriaTicket($request),
+        return $query->create([
+            'id_categoria_fk' => CategoriaTicket::insertCategoriaTicket($request),
             'prioridad' => $request->input('prioridad'),
             'codigo_ticket' => $request->input('codigo_ticket'),
         ]);
     }
 
-    public function scopeUpdateTicket($query, Request $request = null)
+    public function scopeUpdateTicket($query, Request $request = null, $id = null)
     {
-        return $query->where('id_ticket', '=', $request->input('id'))->update([
-            'id_categoria_fk'=> CategoriaTicket::updateCategoriaTicket($request),
+        return $query->where('id_ticket', '=', $id)->update([
+            'id_categoria_fk' => CategoriaTicket::updateCategoriaTicket($request),
             'prioridad' => $request->input('prioridad'),
             'codigo_ticket' => $request->input('codigo_ticket'),
         ]);

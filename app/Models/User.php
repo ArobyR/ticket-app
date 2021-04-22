@@ -53,7 +53,7 @@ class User extends Authenticatable
         ]);
     }
 
-    public function scopeUpdateUser($query, Request $request = null)
+    public function scopeUpdateUser($query, Request $request = null, $id = null)
     {
         return $query->where('id_usuario', '=', $request->input('id'))->update([]);
     }

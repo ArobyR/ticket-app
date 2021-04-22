@@ -11,6 +11,7 @@ class Telefono extends Model
     use HasFactory;
 
     protected $table = 'telefono';
+    public $timestamps = false;
     protected $fillable = [
         'id_usuario_fk',
         'telefono',
@@ -19,16 +20,16 @@ class Telefono extends Model
 
     public function scopeInsertTelefono($query, Request $request = null, $id = null)
     {
-        return $query->insert([
+        return $query->create([
             'id_usuario_fk' => $id,
             'telefono' => $request->input('telefono'),
             'tipo_telefono' => $request->input('tipo_telefono'),
         ]);
     }
 
-    public function scopeUpdateTelefono($query, Request $request = null)
+    public function scopeUpdateTelefono($query, Request $request = null, $id = null)
     {
-        return $query->where('id_telefono', '=', $request->input('id'))->update([
+        return $query->where('id_telefono', '=', $id)->update([
             'telefono' => $request->input('telefono'),
             'tipo_telefono' => $request->input('tipo_telefono'),
         ]);

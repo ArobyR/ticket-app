@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Credencial;
 use App\Models\Direccion;
+use App\Models\Estado;
+use App\Models\Rol;
 use App\Models\Telefono;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -17,17 +19,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Usuario::getUser()->get();
     }
 
     /**
@@ -38,10 +30,11 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        $id_usuario = Usuario::insertUser($request);
-        Direccion::insertDireccion($request);
-        Credencial::insertCredencial($request);
-        Telefono::insertTelefono($request);
+        $id = Usuario::insertUser($request);
+        Direccion::insertDireccion($request, $id);
+        Credencial::insertCredencial($request, $id);
+        Telefono::insertTelefono($request, $id);
+        return response()->json(null, '201');
     }
 
     /**
@@ -52,18 +45,7 @@ class UsuarioController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-
+        return Usuario::getUserById($id)->get();
     }
 
     /**
@@ -73,9 +55,16 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        
+        Usuario::getUserById($id)->get();
+        Usuario::updateUser($request, $id);
+        Estado::updateEstado($request, $id);
+        Rol::updateRol($request, $id);
+        Telefono::updateTelefono($request, $id);
+        Credencial::updateCredencial($request, $id);
+        Direccion::updateDireccion($request, $id);
+        return response()->json(null, 200);
     }
 
     /**
@@ -86,6 +75,6 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Usuario::destroy($id);
     }
 }

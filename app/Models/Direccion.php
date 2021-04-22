@@ -10,6 +10,7 @@ class Direccion extends Model
 {
     use HasFactory;
     protected $table = 'direccion';
+    public $timestamps = false;
     protected $fillable = [
         'id_usuario_fk',
         'calle',
@@ -21,7 +22,7 @@ class Direccion extends Model
 
     public function scopeInsertDireccion($query, Request $request = null, $id = null)
     {
-        return $query->insert([
+        return $query->create([
             'id_usuario_fk' => $id,
             'calle' => $request->input('calle'),
             'numero_casa' => $request->input('numero_casa'),
@@ -31,9 +32,9 @@ class Direccion extends Model
         ]);
     }
 
-    public function scopeUpdateDireccion($query, Request $request = null)
+    public function scopeUpdateDireccion($query, Request $request = null, $id = null)
     {
-        return $query->where('id_direccion', '=', $request->input('id'))->update([
+        return $query->where('id_direccion', '=', $id)->update([
             'calle' => $request->input('calle'),
             'numero_casa' => $request->input('numero_casa'),
             'pais' => $request->input('pais'),

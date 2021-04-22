@@ -27,38 +27,65 @@ class Usuario extends Model
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 
-    public function scopeUpdateUser($query, Request $request = null)
-    {   /*
-        return $query->where('id_usuario', '=', $request->input('id'))->update([
+    public function scopeUpdateUser($query, Request $request = null, $id = null)
+    {
+        return $query->where('id_usuario', '=', $id)->update([
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
-
         ]);
-        */
-
-        return $query->where('usuario.id_usuario', '=', $request->input('id'))->update([
-            'usuario.nombre_usuario' => $request->input('nombre'),
-            'usuario.apellido_usuario' => $request->input('apellido'),
-            'usuario.cedula_usuario' => $request->input('cedula'),
-            'rol.rol' => $request->input('rol'),
-            'estado.estado_usuario' => $request->input('estado_usuario'),
-            'telefono.telefono' => $request->input('telefono'),
-            'telefono.tipo_telefono' => $request->input('tipo_telefono'),
-            'direccion.calle' => $request->input('calle'),
-            'direccion.numero_casa' => $request->input('numero_casa'),
-            'direccion.pais' => $request->input('pais'),
-            'direccion.ciudad' => $request->input('ciudad'),
-            'direccion.codigo_area' => $request->input('codigo_area'),
-            'credenciales.email' => $request->input('email'),
-            'credenciales.password' => $request->input('password'),
-        ])->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
+    }
+    public function scopeGetUser($query)
+    {
+        return $query->select(
+            'usuario.nombre_usuario',
+            'usuario.apellido_usuario',
+            'usuario.cedula_usuario',
+            'rol.rol',
+            'estado.estado_usuario',
+            'telefono.telefono',
+            'telefono.tipo_telefono',
+            'direccion.calle',
+            'direccion.numero_casa',
+            'direccion.pais',
+            'direccion.ciudad',
+            'direccion.codigo_area',
+            'credenciales.email',
+            'credenciales.password'
+        )
+            ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
             ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk');;
+            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk');
+    }
+    public function scopeGetUserById($query, $id = null)
+    {
+        return $query->select(
+            'usuario.nombre_usuario',
+            'usuario.apellido_usuario',
+            'usuario.cedula_usuario',
+            'rol.rol',
+            'estado.estado_usuario',
+            'telefono.telefono',
+            'telefono.tipo_telefono',
+            'direccion.calle',
+            'direccion.numero_casa',
+            'direccion.pais',
+            'direccion.ciudad',
+            'direccion.codigo_area',
+            'credenciales.email',
+            'credenciales.password'
+        )
+            ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
+            ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
+            ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
+            ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
+            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
     }
 }

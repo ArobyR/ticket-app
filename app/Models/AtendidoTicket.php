@@ -10,6 +10,7 @@ class AtendidoTicket extends Model
 {
     use HasFactory;
     protected $table = 'ticket_atendido';
+    public $timestamps = false;
     protected $fillable = [
         'id_caja_fk',
         'id_ticket_fk',
@@ -25,7 +26,7 @@ class AtendidoTicket extends Model
         ]);
     }
 
-    public function scopeUpdateAtendidoTicket($query, Request $request = null)
+    public function scopeUpdateAtendidoTicket($query, Request $request = null, $id = null)
     {
         return $query->where('id_caja', '=', $request->input('id'))->update([
             'numero_caja' => $request->input('numero_caja'),
