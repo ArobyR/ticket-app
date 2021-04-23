@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import LoginView from '../pages/Login/LoginView'
+import { BrowserRouter } from 'react-router-dom';
+
+import NavContainer from './NavContainer/NavContainer'
 
 function App() {
     return (
-        <div className="">
-            <LoginView />
+        <div>
+            <NavContainer />                
+
         </div>
     );
 }
