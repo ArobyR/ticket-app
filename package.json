@@ -27,7 +27,9 @@
     "dependencies": {
         "formik": "^2.2.6",
         "react-bootstrap": "^1.5.2",
+        "react-icons": "^4.2.0",
         "react-router-dom": "^5.2.0",
+        "recharts": "^2.0.9",
         "yup": "^0.32.9"
     }
 }
