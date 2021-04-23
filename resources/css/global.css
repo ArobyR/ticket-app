@@ -1,0 +1,28 @@
+.bg-color {
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(9,9,121,1) 5%, rgba(63,139,241,1) 95%);
+}
+
+.btn-style {
+    font-family: Helvetica;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: #0B1F38;
+    color: #fff;
+    padding: 15px 50px;
+    border: none;
+}
+
+.title-2 {
+    font-size: 36px;
+    font-weight: 800;
+    font-family: Helvetica;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    padding: 50px 0px 70px 0px;
+}
