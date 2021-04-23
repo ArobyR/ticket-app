@@ -19,11 +19,16 @@ class Ticket extends Model
 
     public function scopeInsertTicket($query, Request $request = null)
     {
-        return $query->create([
+        $category = $request->input('nombre_categoria');
+        $initialletter = substr($category,-strlen($category),1);
+        $chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        return $query->insertGetId([
             'id_categoria_fk' => CategoriaTicket::insertCategoriaTicket($request),
             'prioridad' => $request->input('prioridad'),
-            'codigo_ticket' => $request->input('codigo_ticket'),
-        ]);
+            'codigo_ticket' => $initialletter .substr(str_shuffle($chars),-strlen(str_shuffle($chars)),5) ,
+            'created_at' => now(),
+            'updated_at' => now(),
+            ]);
     }
 
     public function scopeUpdateTicket($query, Request $request = null, $id = null)

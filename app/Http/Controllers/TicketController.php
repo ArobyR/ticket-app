@@ -11,18 +11,12 @@ use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
-    public function GetCategory()
+
+    public function GetCategory(Request $request)
     {
-
-
-        /*
-        $request = new Request();
-        $request->setMethod('POST');
-        $request->request->add(['estado_ticket' => 'Atendidos', 'nombre_categoria' => 'muert', 'prioridad' => 'Media', 'codigo_ticket' => 'sad']);
         $id = Ticket::insertTicket($request);
         EstadoTicket::insertEstadoTicket($request, $id);
-        $algo = Ticket::select('ticket.codigo_ticket', 'ticket.created_at')->join('categoria_ticket', 'ticket.id_categoria_fk', '=', 'categoria_ticket.id_categoria')->get();
-        return json_encode($algo);*/
+        return Ticket::select('ticket.codigo_ticket', 'ticket.created_at')->join('categoria_ticket', 'ticket.id_categoria_fk', '=', 'categoria_ticket.id_categoria')->get();
     }
 
     public function ListTicket()
@@ -32,7 +26,6 @@ class TicketController extends Controller
 
     public function UpdateStateTicket()
     {
-
     }
 
     public function TicketActivos()
