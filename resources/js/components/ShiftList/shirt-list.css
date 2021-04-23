@@ -1,0 +1,16 @@
+.shift-container {
+    position: fixed;
+    top: 0;
+    right: -0px;
+    height: 100vh;
+    width: 400px;
+    background-color: #0B1F38;
+}
+
+.title-3 {
+    padding: 5px;
+    font-size: 55px;
+    font-weight: 800;
+    font-family: Helvetica;
+    color: #fff
+}
