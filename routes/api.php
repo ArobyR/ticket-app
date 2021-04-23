@@ -23,3 +23,4 @@ Route::get('ticket', [TicketController::class,"GetCategory"]);
 Route::get('ListTicket', [TicketController::class,"ListTicket"]);
 Route::put('Update', [TicketController::class,"UpdateStateTicket"]);
 Route::get('TicketActivos', [TicketController::class,"TicketActivos"]);
+Route::get('AtendidosYCancelados', [TicketController::class,'AtendidosYCancelados']);

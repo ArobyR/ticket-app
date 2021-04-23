@@ -21,7 +21,7 @@ class TicketController extends Controller
 
         $request = new Request();
         $request->setMethod('POST');
-        $request->request->add(['estado_ticket'=>'Activo', 'nombre_categoria'=>'muert','prioridad' => 'Media', 'codigo_ticket'=> 'sad']);
+        $request->request->add(['estado_ticket'=>'Atendidos', 'nombre_categoria'=>'muert','prioridad' => 'Media', 'codigo_ticket'=> 'sad']);
         
 
         /*foreach ($request->input('prioridad') as $key => $value) {
@@ -80,4 +80,10 @@ class TicketController extends Controller
                             Where estado_ticket = 'Activo';");
     }
 
+    public function AtendidosYCancelados(){
+        
+        return DB::select("select count(estado_ticket), estado_ticket 
+                            from estado_ticket 
+                            group by estado_ticket");
+    }
 }
