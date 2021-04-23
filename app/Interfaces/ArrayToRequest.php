@@ -12,16 +12,12 @@ class ArrayToRequest extends Request
         $this->$array = $array;
     }
 
-    /**
-     * Convert array to Request.
-     *
-     * @return void
-     */
     public function toRequest($array)
     {
         $request = new Request();
         $request->setMethod('POST');
         $request->request->add($this->$array);
+        $request->request->add($array);
         return $request;
     }
 }

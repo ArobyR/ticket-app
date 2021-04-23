@@ -28,7 +28,7 @@ class Ticket extends Model
     public function scopeUpdateTicket($query, Request $request = null, $id = null)
     {
         return $query->where('id_ticket', '=', $id)->update([
-            'id_categoria_fk' => CategoriaTicket::updateCategoriaTicket($request),
+            'id_categoria_fk'=> CategoriaTicket::updateCategoriaTicket($request),
             'prioridad' => $request->input('prioridad'),
             'codigo_ticket' => $request->input('codigo_ticket'),
         ]);

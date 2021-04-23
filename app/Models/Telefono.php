@@ -26,7 +26,7 @@ class Telefono extends Model
             'tipo_telefono' => $request->input('tipo_telefono'),
         ]);
     }
-
+  
     public function scopeUpdateTelefono($query, Request $request = null, $id = null)
     {
         return $query->where('id_telefono', '=', $id)->update([

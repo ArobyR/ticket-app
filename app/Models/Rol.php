@@ -20,7 +20,7 @@ class Rol extends Model
             'rol' => $request->input('rol'),
         ]);
     }
-
+  
     public function scopeUpdateRol($query, Request $request = null, $id = null)
     {
         return $query->where('id_rol', '=', $id)->update([

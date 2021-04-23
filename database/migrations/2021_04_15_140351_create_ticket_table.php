@@ -2,9 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-
 class CreateTicketTable extends Migration
 {
     /**
@@ -16,10 +14,10 @@ class CreateTicketTable extends Migration
     {
         Schema::create('ticket', function (Blueprint $table) {
             $table->bigIncrements('id_ticket')->unsigned();
-		    $table->bigInteger('id_categoria_fk')->unsigned();
+		        $table->bigInteger('id_categoria_fk')->unsigned();
             $table->string('prioridad');
-		    $table->string('codigo_ticket',22);
-		    $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket')->onDelete('cascade')->onUpdate('cascade');
+		        $table->string('codigo_ticket',22);
+		        $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

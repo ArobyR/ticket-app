@@ -10,7 +10,6 @@ class Credencial extends Model
 {
     use HasFactory;
     protected $table = 'credenciales';
-    public $timestamps = false;
     protected $fillable = [
         'id_usuario_fk',
         'email',
@@ -25,7 +24,6 @@ class Credencial extends Model
             'password' => $request->input('password'),
         ]);
     }
-
     public function scopeUpdateCredencial($query, Request $request = null, $id = null)
     {
         return $query->where('id_credencial', '=', $id)->update([

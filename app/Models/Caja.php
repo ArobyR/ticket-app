@@ -24,7 +24,7 @@ class Caja extends Model
             'status' => $request->input('status'),
         ]);
     }
-
+          
     public function scopeUpdateCaja($query, Request $request = null, $id = null)
     {
         return $query->where('id_caja', '=', $id)->update([

@@ -32,9 +32,9 @@ class Usuario extends Model
         ]);
     }
 
-    public function scopeUpdateUser($query, Request $request = null, $id = null)
+    public function scopeUpdateUser($query, Request $request = null)
     {
-        return $query->where('id_usuario', '=', $id)->update([
+        return $query->where('id_usuario', '=', $request->input('id'))->update([
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
@@ -88,4 +88,5 @@ class Usuario extends Model
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
             ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
     }
+
 }
