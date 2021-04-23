@@ -10,6 +10,7 @@ class CategoriaTicket extends Model
 {
     use HasFactory;
     protected $table  = 'categoria_ticket';
+    public $timestamps = false;
     protected $fillable = [
         'nombre_categoria',
     ];
@@ -20,12 +21,10 @@ class CategoriaTicket extends Model
             'nombre_categoria' => $request->input('nombre_categoria'),
         ]);
     }
-
-    public function scopeUpdateCategoriaTicket($query, Request $request = null)
+    public function scopeUpdateCategoriaTicket($query, Request $request = null, $id = null)
     {
-        return $query->where('id_categoria', '=', $request->input('id'))->update([
+        return $query->where('id_categoria', '=', $id)->update([
             'nombre_categoria' => $request->input('nombre_categoria'),
         ]);
     }
-
 }

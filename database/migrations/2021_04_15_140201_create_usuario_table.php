@@ -22,6 +22,7 @@ class CreateUsuarioTable extends Migration
             $table->string('cedula_usuario',22);
             $table->foreign('id_estado_fk')->references('id_estado')->on('estado')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_rol_fk')->references('id_rol')->on('rol')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

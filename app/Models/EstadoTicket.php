@@ -10,6 +10,7 @@ class EstadoTicket extends Model
 {
     use HasFactory;
     protected $table = 'estado_ticket';
+    public $timestamps = false;
     protected $fillable = [
         'estado_ticket',
     ];
@@ -22,9 +23,9 @@ class EstadoTicket extends Model
         ]);
     }
 
-    public function scopeUpdateEstadoTicket($query, Request $request = null)
+    public function scopeUpdateEstadoTicket($query, Request $request = null, $id = null)
     {
-        return $query->where('id_estado', '=', $request->input('id'))->update([
+        return $query->where('id_estado', '=', $id)->update([
             'estado_ticket' => $request->input('estado_ticket'),
         ]);
     }

@@ -10,6 +10,7 @@ class Estado extends Model
 {
     use HasFactory;
     protected $table  = 'estado';
+    public $timestamps = false;
     protected $fillable = [
         'estado_usuario'
     ];
@@ -21,9 +22,9 @@ class Estado extends Model
         ]);
     }
 
-    public function scopeUpdateEstado($query, Request $request = null)
+    public function scopeUpdateEstado($query, Request $request = null, $id = null)
     {
-        return $query->where('id_estado', '=', $request->input('id'))->update([
+        return $query->where('id_estado', '=', $id)->update([
             'estado_usuario' => $request->input('estado_usuario'),
         ]);
     }

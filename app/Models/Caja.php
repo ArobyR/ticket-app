@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class Caja extends Model
 {
     use HasFactory;
+    protected $table = 'caja';
     protected $fillable = [
         'id_usuario_fk',
         'numero_caja',
@@ -17,16 +18,16 @@ class Caja extends Model
 
     public function scopeInsertCaja($query, Request $request = null)
     {
-        return $query->insert([
+        return $query->create([
             'id_usuario_fk' => $request->input('id'),
             'numero_caja' => $request->input('numero_caja'),
             'status' => $request->input('status'),
         ]);
     }
-
-    public function scopeUpdateCaja($query, Request $request = null)
+          
+    public function scopeUpdateCaja($query, Request $request = null, $id = null)
     {
-        return $query->where('id_caja', '=', $request->input('id'))->update([
+        return $query->where('id_caja', '=', $id)->update([
             'id_usuario_fk' => $request->input('id_usuario'),
             'numero_caja' => $request->input('numero_caja'),
             'status' => $request->input('status'),

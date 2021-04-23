@@ -20,7 +20,7 @@ class CreateTicketAtendidoTable extends Migration
             $table->foreign('id_ticket_fk')->references('id_ticket')->on('ticket')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_caja_fk')->references('id_caja')->on('caja')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
-        });
+
     }
 
     /**

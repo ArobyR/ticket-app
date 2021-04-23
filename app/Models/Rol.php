@@ -10,6 +10,7 @@ class Rol extends Model
 {
     use HasFactory;
     protected $table = 'rol';
+    public $timestamps = false;
     protected $fillable = [
         'rol'
     ];
@@ -19,10 +20,10 @@ class Rol extends Model
             'rol' => $request->input('rol'),
         ]);
     }
-
-    public function scopeUpdateRol($query, Request $request = null)
+  
+    public function scopeUpdateRol($query, Request $request = null, $id = null)
     {
-        return $query->where('id_rol', '=', $request->input('id'))->update([
+        return $query->where('id_rol', '=', $id)->update([
             'rol' => $request->input('rol'),
         ]);
     }

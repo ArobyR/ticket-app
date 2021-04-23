@@ -18,17 +18,12 @@ class AtendidoTicket extends Model
 
     public function scopeInsertAtendidoTicket($query, Request $request = null)
     {
-        return $query->insert([
+        return $query->create([
+            'id_caja_fk',
+            'id_ticket_fk',
             'id_caja_fk'=>$request->input('id_caja'),
             'id_ticket_fk'=>$request->input('id_ticket'),
             'verificado' => $request->input('verificado'),
-        ]);
-    }
-
-    public function scopeUpdateAtendidoTicket($query, Request $request = null)
-    {
-        return $query->where('id_caja', '=', $request->input('id'))->update([
-            'numero_caja' => $request->input('numero_caja'),
         ]);
     }
 }
