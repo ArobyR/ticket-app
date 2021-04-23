@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TicketController;
+use App\Http\Controllers\RolController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +19,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('users/', [UsuarioController::class,'index']);
+Route::get('users.show/{id}', [UsuarioController::class,'show']);
+Route::post('users.store/', [UsuarioController::class,'store']);
+Route::put('users.update/{id}', [UsuarioController::class,'update']);
+Route::delete('users.delete/{id}', [UsuarioController::class,'destroy']);
+
+Route::get('ticket.category/', [TicketController::class,"GetCategory"]);
+Route::get('ticket.list/', [TicketController::class,"ListTicket"]);
+/*Route::put('ticket.update/', [TicketController::class,"UpdateStateTicket"]);*/
+Route::get('ticket.activos/', [TicketController::class,"TicketActivos"]);
+Route::get('ticket.ac/', [TicketController::class,'AtendidosCancelados']);
+
