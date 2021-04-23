@@ -14,9 +14,10 @@ class EstadoTicket extends Model
         'estado_ticket',
     ];
 
-    public function scopeInsertEstadoTicket($query, Request $request = null)
+    public function scopeInsertEstadoTicket($query, Request $request = null,$id = null)
     {
         return $query->insertGetId([
+            'id_ticket_fk' =>$id,
             'estado_ticket' => $request->input('estado_ticket'),
         ]);
     }

@@ -20,4 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('ticket', [TicketController::class,"GetCategory"]);
-Route::get('rol', [RolController::class,"GetRol"]);
+Route::get('ListTicket', [TicketController::class,"ListTicket"]);
+Route::put('Update', [TicketController::class,"UpdateStateTicket"]);
+Route::get('TicketActivos', [TicketController::class,"TicketActivos"]);

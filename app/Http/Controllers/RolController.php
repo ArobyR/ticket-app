@@ -28,13 +28,11 @@ class RolController extends Controller
         Direccion::insert($request);
         Estado::insert($request);*/
 
-        return DB::select("Select * 
-                                From ticket as t
-                                Inner Join categoria_ticket as ct On ct.id_categoria = t.id_categoria_fk
-                                order by prioridad; ");
     }
 
     public function ListTicket(){
 
     }
+
+
 }
