@@ -19,7 +19,7 @@ class CreateCategoriaTicketTable extends Migration
             $table->string('nombre_categoria');
         });
 
-        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Discapacitado']);
+        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Discapacitado/a']);
         DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Normal']);
         DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Embarazada']);
     }
