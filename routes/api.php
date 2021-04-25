@@ -28,7 +28,7 @@ Route::delete('users.delete/{id}', [UsuarioController::class,'destroy']);
 
 Route::get('ticket.insert/', [TicketController::class,"InsertTicket"]);
 Route::get('ticket.list/', [TicketController::class,"ListTicket"]);
-/*Route::put('ticket.update/', [TicketController::class,"UpdateStateTicket"]);*/
+Route::put('ticket.update/', [TicketController::class,"UpdateEstadoTicket"]);
 Route::get('ticket.atendidos/', [TicketController::class,"TicketAtendidos"]);
 Route::get('ticket.ac/', [TicketController::class,'AtendidosCancelados']);
 
