@@ -26,9 +26,11 @@ Route::post('users.store/', [UsuarioController::class,'store']);
 Route::put('users.update/{id}', [UsuarioController::class,'update']);
 Route::delete('users.delete/{id}', [UsuarioController::class,'destroy']);
 
-Route::get('ticket.category/', [TicketController::class,"GetCategory"]);
-Route::get('ticket.list/', [TicketController::class,"ListTicket"]);
-/*Route::put('ticket.update/', [TicketController::class,"UpdateStateTicket"]);*/
-Route::get('ticket.activos/', [TicketController::class,"TicketActivos"]);
-Route::get('ticket.ac/', [TicketController::class,'AtendidosCancelados']);
+Route::get('ticket.list/', [TicketController::class,"listTicket"]);
+Route::get('ticket.codigo/', [TicketController::class,"codigoTicket"]);
+Route::get('ticket.atendidos/', [TicketController::class,"ticketAtendidos"]);
+Route::get('ticket.atendidos-cancelados/', [TicketController::class,'atendidosCancelados']);
+Route::post('ticket.insert/', [TicketController::class,"insertTicket"]);
+Route::put('ticket.update-estado/{id}', [TicketController::class,"updateEstadoTicket"]);
+Route::delete('ticket.delete/{id}', [TicketController::class,'destroy']);
 
