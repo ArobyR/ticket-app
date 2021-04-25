@@ -11,20 +11,19 @@ use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
+
     /**
-     * Inserta y retorna el codigo y la fecha del ticket.
+     * Retorna una lista de tickets.
      */
-    public function InsertTicket(Request $request)
+    public function codigoTicket()
     {
-        $id = Ticket::insertTicket($request);
-        EstadoTicket::insertEstadoTicket($request, $id);
-        return [Ticket::select('ticket.codigo_ticket', 'ticket.created_at')->get(),response()->json(null, 200)];
+        return Ticket::codigoTicket();
     }
 
     /**
      * Retorna una lista de tickets.
      */
-    public function ListTicket()
+    public function listTicket()
     {
         return Ticket::listTicket();
     }
@@ -32,7 +31,7 @@ class TicketController extends Controller
     /**
      * Retorna la cantidad de tickets atendidos.
      */
-    public function TicketAtendidos()
+    public function ticketAtendidos()
     {
         return EstadoTicket::ticketAtendidos();
     }
@@ -40,13 +39,27 @@ class TicketController extends Controller
     /**
      * Retorna la cantidad de tickets atendidos y cancelados.
      */
-    public function AtendidosCancelados()
+    public function atendidosCancelados()
     {
         return EstadoTicket::atendidosCancelados();
     }
 
     /**
-     * Update the specified resource in storage.
+     * Inserta el ticket.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertTicket(Request $request)
+    {
+        $Ticket = Ticket::insertTicket($request);
+        EstadoTicket::insertEstadoTicket($request, $Ticket);
+        return response()->json($Ticket, 201);
+    }
+
+    /**
+     * Actualiza el estado del ticket.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -54,8 +67,8 @@ class TicketController extends Controller
      */
     public function updateEstadoTicket(Request $request, $id)
     {
-        EstadoTicket::updateEstadoTicket($request, $id);
-        return response()->json(null, 201);
+        $EstadoTicket = EstadoTicket::updateEstadoTicket($request, $id);
+        return response()->json($EstadoTicket, 200);
     }
 
     /**

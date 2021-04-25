@@ -45,4 +45,8 @@ class Ticket extends Model
         return $query->join('categoria_ticket','id_categoria_fk','=','id_categoria')->orderBy('prioridad')->get();
         # return DB::select('Select * From ticket as t Inner Join categoria_ticket as ct On ct.id_categoria = t.id_categoria_fk order by prioridad;');
     }
+
+    public function scopeCodigoTicket($query){
+        return $query->select('ticket.codigo_ticket', 'ticket.created_at')->get();
+    }
 }
