@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Caja;
 use App\Models\CategoriaTicket;
 use App\Models\Ticket;
 use Illuminate\Support\Facades\DB;
@@ -58,6 +59,19 @@ class TicketController extends Controller
         return response()->json($Ticket, 201);
     }
 
+        /**
+     * Inserta el usuario en la caja.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertCaja(Request $request)
+    {
+        $Caja = Caja::insertCaja($request);
+        return response()->json($Caja, 201);
+    }
+
     /**
      * Actualiza el estado del ticket.
      *
@@ -83,4 +97,6 @@ class TicketController extends Controller
         Ticket::destroy($id);
         return response()->json(null, 204);
     }
+
+
 }

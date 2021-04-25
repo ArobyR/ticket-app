@@ -33,4 +33,4 @@ Route::get('ticket.atendidos-cancelados/', [TicketController::class,'atendidosCa
 Route::post('ticket.insert/', [TicketController::class,"insertTicket"]);
 Route::put('ticket.update-estado/{id}', [TicketController::class,"updateEstadoTicket"]);
 Route::delete('ticket.delete/{id}', [TicketController::class,'destroy']);
-
+Route::post('caja.insert/', [TicketController::class,"insertCaja"]);
