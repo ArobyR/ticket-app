@@ -67,7 +67,8 @@ class TicketController extends Controller
      */
     public function updateEstadoTicket(Request $request, $id)
     {
-        $EstadoTicket = EstadoTicket::updateEstadoTicket($request, $id);
+        $EstadoTicket = EstadoTicket::findOrFail($id);
+        EstadoTicket::updateEstadoTicket($request, $id);
         return response()->json($EstadoTicket, 200);
     }
 
