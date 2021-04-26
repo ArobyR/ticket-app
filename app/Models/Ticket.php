@@ -23,7 +23,7 @@ class Ticket extends Model
         $initialletter = substr($category,-strlen($category),1);
         $chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         return $query->insertGetId([
-            'id_categoria_fk' => CategoriaTicket::insertCategoriaTicket($request),
+            'id_categoria_fk' => $request->input('id_categoria_fk'),
             'prioridad' => $request->input('prioridad'),
             'codigo_ticket' => $initialletter .substr(str_shuffle($chars),-strlen(str_shuffle($chars)),5) ,
             'created_at' => now(),

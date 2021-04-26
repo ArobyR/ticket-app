@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateCategoriaTicketTable extends Migration
@@ -17,6 +18,10 @@ class CreateCategoriaTicketTable extends Migration
             $table->bigIncrements('id_categoria')->unsigned();
             $table->string('nombre_categoria');
         });
+
+        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Discapacitado/a']);
+        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Normal']);
+        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Embarazada']);
     }
 
     /**

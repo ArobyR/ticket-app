@@ -19,12 +19,12 @@ class Caja extends Model
     public function scopeInsertCaja($query, Request $request = null)
     {
         return $query->create([
-            'id_usuario_fk' => $request->input('id'),
+            'id_usuario_fk' => $request->input('id_usuario'),
             'numero_caja' => $request->input('numero_caja'),
             'status' => $request->input('status'),
         ]);
     }
-          
+
     public function scopeUpdateCaja($query, Request $request = null, $id = null)
     {
         return $query->where('id_caja', '=', $id)->update([
