@@ -53,17 +53,25 @@ class UsuarioController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     */
+    public function edit($id)
+    {
+        Usuario::getUpdateUserById($id)->get();
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        Usuario::getUserById($id)->get();
+        Usuario::getUpdateUserById($id)->get();
         Usuario::updateUser($request, $id);
-        Estado::updateEstado($request, $id);
         Rol::updateRol($request, $id);
-        Telefono::updateTelefono($request, $id);
         Credencial::updateCredencial($request, $id);
-        Direccion::updateDireccion($request, $id);
         return response()->json(null, 200);
     }
 
@@ -75,6 +83,6 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        Usuario::destroy($id);
+        Usuario::where('id_usuario','=',$id)->delete();
     }
 }

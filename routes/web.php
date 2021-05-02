@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\UsuarioController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
-Route::get('users/', [UsuarioController::class,'index']);
-Route::get('users.show/{id}', [UsuarioController::class,'show']);
-Route::post('users.store/', [UsuarioController::class,'store']);
-Route::put('users.update/{id}', [UsuarioController::class,'update']);
-Route::delete('users.delete/{id}', [UsuarioController::class,'destroy']);
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+

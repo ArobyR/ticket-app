@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Caja;
 use App\Models\CategoriaTicket;
 use App\Models\Ticket;
-use Illuminate\Support\Facades\DB;
-use PHPUnit\Util\Json;
 use App\Models\EstadoTicket;
 use Illuminate\Http\Request;
 
@@ -94,9 +92,6 @@ class TicketController extends Controller
      */
     public function destroy($id)
     {
-        Ticket::destroy($id);
-        return response()->json(null, 204);
+        Ticket::where('id_ticket','=',$id)->delete();;
     }
-
-
 }

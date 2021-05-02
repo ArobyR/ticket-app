@@ -22,8 +22,8 @@ class Usuario extends Model
     public function scopeInsertUser($query, Request $request = null)
     {
         return $query->insertGetId([
-            'id_estado_fk' => Estado::insertEstado($request),
-            'id_rol_fk' => Rol::insertRol($request),
+            'id_estado_fk' => $request->input('id_estado'),
+            'id_rol_fk' => $request->input('id_rol'),
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
@@ -89,4 +89,17 @@ class Usuario extends Model
             ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
     }
 
+    public function scopeGetUpdateUserById($query, $id = null)
+    {
+        return $query->select(
+            'usuario.nombre_usuario',
+            'usuario.apellido_usuario',
+            'usuario.cedula_usuario',
+            'rol.rol',
+            'credenciales.email',
+            'credenciales.password'
+        )
+            ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
+            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
+    }
 }
