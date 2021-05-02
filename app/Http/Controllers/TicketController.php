@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Caja;
 use App\Models\CategoriaTicket;
 use App\Models\Ticket;
 use Illuminate\Support\Facades\DB;
@@ -12,29 +13,93 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
 
-    public function GetCategory(Request $request)
+    /**
+     * Retorna una lista de tickets.
+     */
+    public function codigoTicket(Request $request)
     {
         $id = Ticket::insertTicket($request);
         EstadoTicket::insertEstadoTicket($request, $id);
         return Ticket::select('ticket.codigo_ticket','ticket.created_at')->post();
+        return Ticket::codigoTicket();
     }
 
-    public function ListTicket()
+    /**
+     * Retorna una lista de tickets.
+     */
+    public function listTicket()
     {
         return Ticket::listTicket();
     }
 
-    public function UpdateStateTicket()
+    /**
+     * Retorna la cantidad de tickets atendidos.
+     */
+    public function ticketAtendidos()
     {
+        return EstadoTicket::ticketAtendidos();
     }
 
-    public function TicketActivos()
-    {
-        return EstadoTicket::ticketActivos();
-    }
-
-    public function AtendidosCancelados()
+    /**
+     * Retorna la cantidad de tickets atendidos y cancelados.
+     */
+    public function atendidosCancelados()
     {
         return EstadoTicket::atendidosCancelados();
     }
+
+    /**
+     * Inserta el ticket.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertTicket(Request $request)
+    {
+        $Ticket = Ticket::insertTicket($request);
+        EstadoTicket::insertEstadoTicket($request, $Ticket);
+        return response()->json($Ticket, 201);
+    }
+
+        /**
+     * Inserta el usuario en la caja.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertCaja(Request $request)
+    {
+        $Caja = Caja::insertCaja($request);
+        return response()->json($Caja, 201);
+    }
+
+    /**
+     * Actualiza el estado del ticket.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateEstadoTicket(Request $request, $id)
+    {
+        EstadoTicket::findOrFail($id);
+        $EstadoTicket = EstadoTicket::updateEstadoTicket($request, $id);
+        return response()->json($EstadoTicket, 200);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Ticket::destroy($id);
+        return response()->json(null, 204);
+    }
+
+
 }

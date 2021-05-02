@@ -30,17 +30,13 @@ class EstadoTicket extends Model
             'estado_ticket' => $request->input('estado_ticket'),
         ]);
     }
-    public function scopeTicketActivos()
+    public function scopeTicketAtendidos($query)
     {
-        return DB::select("select count(estado_ticket) as CantidadActivos
-                            from estado_ticket
-                            Where estado_ticket = 'Activo';");
+        return $query->select($query->raw('count(*) as cantidad, estado_ticket'))->where('estado_ticket','=','Atendido')->groupBy('estado_ticket')->get();
     }
 
-    public function scopeAtendidosCancelados()
+    public function scopeAtendidosCancelados($query)
     {
-        return DB::select("select count(estado_ticket) as cantidad, estado_ticket
-        from estado_ticket
-        group by estado_ticket");
+        return $query->select($query->raw('count(*) as cantidad , estado_ticket'))->where('estado_ticket','=','Atendido')->orWhere('estado_ticket','=','Cancelado')->groupBy('estado_ticket')->get();
     }
 }

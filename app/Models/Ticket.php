@@ -23,7 +23,7 @@ class Ticket extends Model
         $initialletter = substr($category,-strlen($category),1);
         $chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         return $query->insertGetId([
-            'id_categoria_fk' => CategoriaTicket::insertCategoriaTicket($request),
+            'id_categoria_fk' => $request->input('id_categoria_fk'),
             'prioridad' => $request->input('prioridad'),
             'codigo_ticket' => $initialletter .substr(str_shuffle($chars),-strlen(str_shuffle($chars)),5) ,
             'created_at' => now(),
@@ -42,6 +42,10 @@ class Ticket extends Model
 
     public function scopeListTicket($query)
     {
-        return DB::select('Select * From ticket as t Inner Join categoria_ticket as ct On ct.id_categoria = t.id_categoria_fk order by prioridad;');
+        return $query->join('categoria_ticket','id_categoria_fk','=','id_categoria')->orderBy('prioridad')->get();
+    }
+
+    public function scopeCodigoTicket($query){
+        return $query->select('ticket.codigo_ticket', 'ticket.created_at')->get();
     }
 }
