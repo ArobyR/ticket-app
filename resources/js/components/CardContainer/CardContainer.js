@@ -7,6 +7,7 @@ import Card from '../Card/Card';
 import ButtonClick from '../ButtonClick/ButtonClick';
 import '../../../css/global.css';
 import Popup from '../Popup/Popup';
+import { createTicket } from '../../services/ticket/tickets';
 
 const CardContainer = () => {
     const modalInitialValues = {
@@ -14,26 +15,43 @@ const CardContainer = () => {
         url: null
     }
 
-    const [cuality, setCuality] = useState({category: 'corriente'})
+    const ticketInitialValues = {
+        nombre_categoria: 'corriente', 
+        estado_ticket: 'en espera', 
+        prioridad: 'normal'
+    }
+
+    const [ticketInformation, setTicketCategory] = useState(ticketInitialValues)
     const [modalShow, setModalShow] = useState(false)
     const [modalInfo, setmodalInfo] = useState(modalInitialValues)
 
     const handleEmbarazada = () => {
-        setCuality({...cuality, category: 'embarazada'})
+        setTicketCategory({...ticketInformation, 
+            nombre_categoria: 'embarazada',
+            prioridad: 'alta'
+        })
     }
     
     const handleDiscapacitado = () => {
-        setCuality({...cuality, category: 'discapacitado'})
+        setTicketCategory({...ticketInformation, 
+            nombre_categoria: 'discapacitado',
+            prioridad: 'media'
+        })
     }
 
     const handleCorriente = () => {
-        setCuality({...cuality, category: 'corriente'})
+        setTicketCategory(ticketInitialValues)
     }
 
-    const printJson = () => {
+    const getTicket = () => {
+        (async () => {
+            const data = await createTicket(ticketInformation)
+            console.log(data)
+        })();
+        console.log(ticketInformation)
         setmodalInfo({...modalInfo, modalInitialValues})
         setModalShow(true)
-        console.log(cuality)
+        // console.log(cuality)
     }
 
     const test = () => {
@@ -70,7 +88,7 @@ const CardContainer = () => {
                     <ButtonClick name="Generar codigo QR" handleOnClick={test} />
                 </div>
                 <div className='mx-auto'>
-                    <ButtonClick handleOnClick={printJson} name="Imprimir ticket" />
+                    <ButtonClick handleOnClick={getTicket} name="Imprimir ticket" />
                 </div>
             </div>
         </div>

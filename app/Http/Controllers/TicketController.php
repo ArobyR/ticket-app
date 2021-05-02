@@ -16,7 +16,7 @@ class TicketController extends Controller
     {
         $id = Ticket::insertTicket($request);
         EstadoTicket::insertEstadoTicket($request, $id);
-        return Ticket::select('ticket.codigo_ticket', 'ticket.created_at')->join('categoria_ticket', 'ticket.id_categoria_fk', '=', 'categoria_ticket.id_categoria')->get();
+        return Ticket::select('ticket.codigo_ticket','ticket.created_at')->post();
     }
 
     public function ListTicket()

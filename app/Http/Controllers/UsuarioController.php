@@ -19,6 +19,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
+        // return  'hola';
         return Usuario::getUser()->get();
     }
 
@@ -34,7 +35,9 @@ class UsuarioController extends Controller
         Direccion::insertDireccion($request, $id);
         Credencial::insertCredencial($request, $id);
         Telefono::insertTelefono($request, $id);
-        return response()->json(null, '201');
+
+        // return '-- hello world';
+        return response()->json(['response'=>'success','code'=>201], 201);
     }
 
     /**

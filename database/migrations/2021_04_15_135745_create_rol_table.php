@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateRolTable extends Migration
@@ -17,6 +18,10 @@ class CreateRolTable extends Migration
             $table->bigIncrements('id_rol')->unsigned();
             $table->string('rol',22);
         });
+        DB::table('rol')->insert(['rol'=> 'administrador']);
+        DB::table('rol')->insert(['rol'=> 'agente']);
+        DB::table('rol')->insert(['rol'=> 'encargado']);
+        DB::table('rol')->insert(['rol'=> 'usuario']);
     }
 
     /**

@@ -22,8 +22,8 @@ class Usuario extends Model
     public function scopeInsertUser($query, Request $request = null)
     {
         return $query->insertGetId([
-            'id_estado_fk' => Estado::insertEstado($request),
-            'id_rol_fk' => Rol::insertRol($request),
+            'id_estado_fk' => $request->input('id_estado'),
+            'id_rol_fk' => $request->input('rol'),
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
@@ -43,6 +43,7 @@ class Usuario extends Model
     public function scopeGetUser($query)
     {
         return $query->select(
+            'usuario.id_usuario',
             'usuario.nombre_usuario',
             'usuario.apellido_usuario',
             'usuario.cedula_usuario',
