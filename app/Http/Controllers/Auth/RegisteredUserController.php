@@ -61,8 +61,9 @@ class RegisteredUserController extends Controller
          $id = Usuario::insertUser($request);
          Direccion::insertDireccion($request, $id);
          Telefono::insertTelefono($request, $id);
-         Credencial::insertCredencial($request, $id);
+         //Credencial::insertCredencial($request, $id);
         $user = User::create([
+            'id_usuario_fk'=> $id,
             'name' => $request->nombre . " " . $request->apellido,
             'email' => $request->email,
             'password' => Hash::make($request->password),

@@ -55,14 +55,14 @@ class Usuario extends Model
             'direccion.pais',
             'direccion.ciudad',
             'direccion.codigo_area',
-            'credenciales.email',
-            'credenciales.password'
+            'users.email',
+            'users.password'
         )
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
             ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk');
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk');
     }
     public function scopeGetUserById($query, $id = null)
     {
@@ -79,14 +79,14 @@ class Usuario extends Model
             'direccion.pais',
             'direccion.ciudad',
             'direccion.codigo_area',
-            'credenciales.email',
-            'credenciales.password'
+            'users.email',
+            'users.password'
         )
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
             ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk')->where('id_usuario', '=', $id);
     }
 
     public function scopeGetUpdateUserById($query, $id = null)
@@ -96,10 +96,10 @@ class Usuario extends Model
             'usuario.apellido_usuario',
             'usuario.cedula_usuario',
             'rol.rol',
-            'credenciales.email',
-            'credenciales.password'
+            'users.email',
+            'users.password'
         )
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk')->where('id_usuario', '=', $id);
     }
 }

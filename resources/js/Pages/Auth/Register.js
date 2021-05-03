@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "@inertiajs/inertia-react";
 import { InertiaLink } from "@inertiajs/inertia-react";
 import Button from "@/Components/Forms/Button";
-import SelectMenu from "@/Components/Forms/SelectMenu";
 import TextInput from "@/Components/Forms/TextInput";
+import TextInputDataList from "@/Components/Forms/TextInputDataList";
 import Guest from "@/Layouts/Guest";
 import ValidationErros from "@/Components/Forms/ValidationErrors";
-
-//import { Form, Button, Col } from 'react-bootstrap';
 
 export default function Register() {
 
@@ -16,9 +14,9 @@ export default function Register() {
         apellido: "",
         cedula: "",
         telefono: "",
-        tipo_telefono: { tipoTelefonoState },
-        id_rol: { rolState },
-        id_estado: { State },
+        tipo_telefono: "",
+        id_rol: "",
+        id_estado: "",
         calle: "",
         numero_casa: "",
         pais: "",
@@ -83,10 +81,6 @@ export default function Register() {
             value: "telefono",
         },
     ];
-
-    const [tipoTelefonoState, setTipoTelefonoState] = useState("");
-    const [rolState, setRolState] = useState("");
-    const [State, setState] = useState("");
 
     useEffect(() => {
         return () => {
@@ -155,30 +149,15 @@ export default function Register() {
                     />
                 </div>
 
-                <div class="mt-4">
-                    <div className="flex flex-col items-start">
-                        <label class="block font-medium text-sm text-gray-700 mb-1">Seleccione un tipo</label>
-                        <select onChange={(e) => {
-                            const selectedTipo = e.target.value;
-                            setTipoTelefonoState(selectedTipo)
-                        }}
-                            className="w-full p-2 border border-gray-300 outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                        >
-                            {optionsTipoTelefono.map((option) => (
-                                <option value={option.value}>{option.label}</option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-
                 <div className="mt-4">
-                    <TextInput
+                    <TextInputDataList
                         value={data.tipo_telefono}
-                        type="hidden"
+                        type="text"
                         handleChange={onHandleChange}
-                        label=""
+                        label="Seleccion un tipo"
                         name="tipo_telefono"
                         autoComplete=""
+                        options = {optionsTipoTelefono}
                     />
                 </div>
 
@@ -237,65 +216,27 @@ export default function Register() {
                     />
                 </div>
 
-                <div class="mt-4">
-                    <div className="flex flex-col items-start">
-                        <label class="block font-medium text-sm text-gray-700 mb-1">Seleccione un Estado</label>
-                        <select onChange={(e) => {
-                            const selectedState = e.target.value;
-                            setState(selectedState)
-                        }}
-                            className="w-full p-2 border border-gray-300 outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                        >
-                            {optionsEstado.map((option) => (
-                                <option value={option.value}>{option.label}</option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-
                 <div className="mt-4">
-                    <TextInput
+                    <TextInputDataList
                         value={data.id_estado}
-                        type="hidden"
+                        type="text"
                         handleChange={onHandleChange}
-                        label=""
+                        label="Seleccion un tipo"
                         name="id_estado"
                         autoComplete=""
+                        options = {optionsEstado}
                     />
                 </div>
 
-                <div class="mt-4">
-                    <div className="flex flex-col items-start">
-                        <label class="block font-medium text-sm text-gray-700 mb-1">Seleccione un rol</label>
-                        <select onChange={(e) => {
-                            const selectedRol = e.target.value;
-                            setRolState(selectedRol)
-                        }}
-                            className="w-full p-2 border border-gray-300 outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                        >
-                            {optionsRol.map((option) => (
-                                <option value={option.value}>{option.label}</option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-
                 <div className="mt-4">
-                    <TextInput
+                    <TextInputDataList
                         value={data.id_rol}
-                        type="hidden"
+                        type="text"
                         handleChange={onHandleChange}
-                        label=""
+                        label="Seleccion un tipo"
                         name="id_rol"
                         autoComplete=""
-                    />
-                </div>
-
-                <div class="mt-4">
-                    <SelectMenu
-                        name="id_estado"
-                        label="Seleccione un estado"
-                        options={optionsEstado}
+                        options = {optionsRol}
                     />
                 </div>
 

@@ -32,7 +32,7 @@ class UsuarioController extends Controller
     {
         $id = Usuario::insertUser($request);
         Direccion::insertDireccion($request, $id);
-        Credencial::insertCredencial($request, $id);
+        // Credencial::insertCredencial($request, $id);
         Telefono::insertTelefono($request, $id);
         return response()->json(null, '201');
     }
