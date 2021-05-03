@@ -16,10 +16,13 @@ class CreateCredencialesTable extends Migration
         Schema::create('credenciales', function (Blueprint $table) {
             $table->bigIncrements('id_credencial')->unsigned();
             $table->bigInteger('id_usuario_fk')->unsigned();
-            $table->string('email',50)->unique();
-            $table->string('password',22);
-            $table->timestamps();
+            $table->string('name');
+            $table->string('email', 50)->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->foreign('id_usuario_fk')->references('id_usuario')->on('usuario')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

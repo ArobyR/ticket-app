@@ -12,6 +12,7 @@ render(
     <App
         initialPage={JSON.parse(el.dataset.page)}
         resolveComponent={(name) => require(`./Pages/${name}`).default}
+        //resolveComponent={(name) => require(`./components/${name}`).default}
     />,
     el
 );

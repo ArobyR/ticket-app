@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Credencial;
+use App\Models\Direccion;
+use App\Models\Telefono;
 use App\Models\User;
+use App\Models\Usuario;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -34,13 +38,32 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|confirmed|min:8',
+            // Usuario
+            'nombre' => 'required|string|max:255',
+            'apellido' => 'required|string|max:255',
+            'cedula' => 'required|string|max:255',
+
+            // // Telefono Usuario
+             'telefono' => 'required|string|max:255',
+
+            // Direccion
+            'calle' => 'required|string|max:255',
+            'numero_casa' => 'required|string|max:255',
+            'pais' => 'required|string|max:255',
+            'ciudad' => 'required|string|max:255',
+            'codigo_area' => 'required|string|max:255',
+
+            // Credencial
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:8',
         ]);
 
+         $id = Usuario::insertUser($request);
+         Direccion::insertDireccion($request, $id);
+         Telefono::insertTelefono($request, $id);
+         Credencial::insertCredencial($request, $id);
         $user = User::create([
-            'name' => $request->name,
+            'name' => $request->nombre . " " . $request->apellido,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
