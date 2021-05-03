@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             'cedula' => 'required|string|max:255',
 
             // // Telefono Usuario
-             'telefono' => 'required|string|max:255',
+            'telefono' => 'required|string|max:255',
 
             // Direccion
             'calle' => 'required|string|max:255',
@@ -58,12 +58,11 @@ class RegisteredUserController extends Controller
             'password' => 'required|string|min:8',
         ]);
 
-         $id = Usuario::insertUser($request);
-         Direccion::insertDireccion($request, $id);
-         Telefono::insertTelefono($request, $id);
-         //Credencial::insertCredencial($request, $id);
+        $id = Usuario::insertUser($request);
+        Direccion::insertDireccion($request, $id);
+        Telefono::insertTelefono($request, $id);
         $user = User::create([
-            'id_usuario_fk'=> $id,
+            'id_usuario_fk' => $id,
             'name' => $request->nombre . " " . $request->apellido,
             'email' => $request->email,
             'password' => Hash::make($request->password),

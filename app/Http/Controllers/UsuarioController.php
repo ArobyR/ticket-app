@@ -7,6 +7,7 @@ use App\Models\Direccion;
 use App\Models\Estado;
 use App\Models\Rol;
 use App\Models\Telefono;
+use App\Models\User;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 
@@ -71,7 +72,7 @@ class UsuarioController extends Controller
         Usuario::getUpdateUserById($id)->get();
         Usuario::updateUser($request, $id);
         Rol::updateRol($request, $id);
-        Credencial::updateCredencial($request, $id);
+        User::updateCredencial($request, $id);
         return response()->json(null, 200);
     }
 
