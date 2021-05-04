@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Table } from "react-bootstrap";
 import { RiEditBoxLine, RiDeleteBin2Fill } from 'react-icons/ri'
-import { getAllUsers } from '../../services/user/users'
+import { getAllUsers, deleteUser } from '../../services/user/users'
 
 const UserList = () => {
     const [usuarios, setUsuarios] = useState([])
     
+    const getUsersFromApi = async () => {
+        const response = await getAllUsers();
+        setUsuarios(response)
+        console.log(response)
+    }
+
     useEffect(() => {
-        (async () => {
-            const response = await getAllUsers();
-            setUsuarios(response)
-        })();
+        getUsersFromApi()
     }, []);
 
     const handleDelete = (evt) => {
         const { id } = evt.target
+        deleteUser(id)
+        getUsersFromApi()
         console.log(id)
     }
 
