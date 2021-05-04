@@ -102,10 +102,9 @@ export default function Register() {
     };
 
     return (
-
         <Guest title="Register">
             <ValidationErros errors={errors} />
-            <form onSubmit={submit}>
+            <form onSubmit={submit} >
                 <TextInput
                     value={data.nombre}
                     type="text"
@@ -157,7 +156,7 @@ export default function Register() {
                         label="Seleccion un tipo"
                         name="tipo_telefono"
                         autoComplete=""
-                        options = {optionsTipoTelefono}
+                        options={optionsTipoTelefono}
                     />
                 </div>
 
@@ -224,7 +223,7 @@ export default function Register() {
                         label="Seleccion un tipo"
                         name="id_estado"
                         autoComplete=""
-                        options = {optionsEstado}
+                        options={optionsEstado}
                     />
                 </div>
 
@@ -236,7 +235,7 @@ export default function Register() {
                         label="Seleccion un tipo"
                         name="id_rol"
                         autoComplete=""
-                        options = {optionsRol}
+                        options={optionsRol}
                     />
                 </div>
 
@@ -286,6 +285,7 @@ export default function Register() {
                     </div>
                 </div>
             </form>
+
         </Guest>
     );
 }

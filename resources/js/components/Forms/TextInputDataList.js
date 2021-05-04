@@ -29,7 +29,7 @@ export default function TextInputDataList({ label, type = 'text', name, value, h
 
             >
                 {options.map((option) => (
-                    <option value={option.value}>{option.label}</option>
+                    <option key={option.label} value={option.value}>{option.label}</option>
                 ))}
             </datalist>
         </div>
