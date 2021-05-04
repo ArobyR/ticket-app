@@ -76,8 +76,15 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $id)
     {
-        Usuario::destroy($id);
+        Usuario::where('id_usuario', $id->input('id'))->delete();
+
+        // $response['message'] = 'usuario eliminado';
+        // $response['success'] = true;
+
+        // return $response;
+        return response()->json(['response'=>'success','code'=>201], 201);
+
     }
 }

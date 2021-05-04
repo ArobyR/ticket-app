@@ -8,7 +8,7 @@ const get_users = '/api/users/'
 
 const insert_user = '/api/users.insert/'
 
-const delete_user = '/api/users.delete'
+const delete_user = '/api/users.delete/'
 
 
 export {

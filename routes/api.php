@@ -24,7 +24,7 @@ Route::get('users/', [UsuarioController::class,'index']);
 Route::get('users.show/{id}', [UsuarioController::class,'show']);
 Route::post('users.insert/', [UsuarioController::class,'store']);
 Route::put('users.update/{id}', [UsuarioController::class,'update']);
-Route::delete('users.delete/{id}', [UsuarioController::class,'destroy']);
+Route::post('users.delete/{id}', [UsuarioController::class,'destroy']);
 
 Route::get('ticket.list/', [TicketController::class,"listTicket"]);
 Route::get('ticket.codigo/', [TicketController::class,"codigoTicket"]);
