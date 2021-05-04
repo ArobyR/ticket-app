@@ -21,11 +21,15 @@ export const getAllUsers = async () => {
     }
 }
 
-export const deleteUser = async (id) => {
+export const deleteUser = async (id_user) => {
+    let idObject = {
+        id: id_user
+    }
     try {
-        const reponse = await axios.delete(delete_user, id)
-        const info = await reponse.data
-        return info
+        let response = await axios.post(delete_user, idObject)
+        let info = await response.data
+        // return info
+        console.log(info)
     } catch(error) {
         console.log(error)
     }

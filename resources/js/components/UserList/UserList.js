@@ -16,10 +16,11 @@ const UserList = () => {
         getUsersFromApi()
     }, []);
 
-    const handleDelete = (evt) => {
+    const handleDelete = async (evt) => {
         const { id } = evt.target
-        deleteUser(id)
-        getUsersFromApi()
+        const info = await deleteUser(id)
+        await getUsersFromApi()
+        console.log(info)
         console.log(id)
     }
 
