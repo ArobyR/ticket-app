@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './card_container.css';
 import logo_embarazada from '../../../images/logo_embarazada.svg'
 import logo_corriente from '../../../images/logo_corriente.svg';
@@ -16,8 +16,8 @@ const CardContainer = () => {
     }
 
     const ticketInitialValues = {
-        nombre_categoria: 'corriente', 
-        estado_ticket: 'en espera', 
+        id_categoria: '3', 
+        estado_ticket: 'en espera!!', 
         prioridad: 'normal'
     }
 
@@ -27,14 +27,14 @@ const CardContainer = () => {
 
     const handleEmbarazada = () => {
         setTicketCategory({...ticketInformation, 
-            nombre_categoria: 'embarazada',
+            id_categoria: '3',
             prioridad: 'alta'
         })
     }
     
     const handleDiscapacitado = () => {
         setTicketCategory({...ticketInformation, 
-            nombre_categoria: 'discapacitado',
+            id_categoria: '1',
             prioridad: 'media'
         })
     }
@@ -43,7 +43,8 @@ const CardContainer = () => {
         setTicketCategory(ticketInitialValues)
     }
 
-    const getTicket = () => {
+    const getTicket = async () => {
+
         (async () => {
             const data = await createTicket(ticketInformation)
             console.log(data)
@@ -51,7 +52,10 @@ const CardContainer = () => {
         console.log(ticketInformation)
         setmodalInfo({...modalInfo, modalInitialValues})
         setModalShow(true)
-        // console.log(cuality)
+    }
+
+    const getTicketById = async () => {
+        
     }
 
     const test = () => {
@@ -74,7 +78,7 @@ const CardContainer = () => {
                     handleOnClick={handleEmbarazada}
                     textSide="embarazada"
                 />
-                <Card logo={logo_discapacitado} 
+                 <Card logo={logo_discapacitado} 
                     handleOnClick={handleDiscapacitado} 
                     textSide="discapacitado" 
                 />

@@ -27,6 +27,7 @@ export async function deleteUser(id_user) {
         id: id_user,
         withCredentials: false
     }
+    
     try {
         let response = await axios.post(delete_user, idObject)
         let info = await response.data
