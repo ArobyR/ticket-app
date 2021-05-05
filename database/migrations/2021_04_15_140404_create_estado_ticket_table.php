@@ -18,7 +18,9 @@ class CreateEstadoTicketTable extends Migration
             $table->bigInteger('id_ticket_fk')->unsigned();
             $table->string('estado_ticket',22);
             $table->foreign('id_ticket_fk')->references('id_ticket')->on('ticket')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
+
     }
 
     /**

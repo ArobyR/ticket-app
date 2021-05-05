@@ -28,6 +28,14 @@ class TicketController extends Controller
     }
 
     /**
+     * Retorna la cantidad de tickets cancelados.
+     */
+    public function ticketCancelados()
+    {
+        return EstadoTicket::ticketCancelados();
+    }
+
+    /**
      * Retorna la cantidad de tickets atendidos.
      */
     public function ticketAtendidos()
@@ -44,6 +52,30 @@ class TicketController extends Controller
     }
 
     /**
+     * Retorna la cantidad de tickets cancelados por mes.
+     */
+    public function ticketCanceladosPorMes()
+    {
+        return EstadoTicket::ticketCanceladosPorMes();
+    }
+
+    /**
+     * Retorna la cantidad de tickets atendidos por mes.
+     */
+    public function ticketAtendidosPorMes()
+    {
+        return EstadoTicket::ticketAtendidosPorMes();
+    }
+
+    /**
+     * Retorna la cantidad de tickets atendidos y cancelados por mes.
+     */
+    public function atendidosCanceladosPorMes()
+    {
+        return EstadoTicket::atendidosCanceladosPorMes();
+    }
+
+    /**
      * Inserta el ticket.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -57,7 +89,7 @@ class TicketController extends Controller
         return response()->json($Ticket, 201);
     }
 
-        /**
+    /**
      * Inserta el usuario en la caja.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -92,6 +124,6 @@ class TicketController extends Controller
      */
     public function destroy($id)
     {
-        Ticket::where('id_ticket','=',$id)->delete();;
+        Ticket::where('id_ticket', '=', $id)->delete();;
     }
 }
