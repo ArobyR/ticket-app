@@ -4513,8 +4513,7 @@ var el = document.getElementById('app');
   initialPage: JSON.parse(el.dataset.page),
   resolveComponent: function resolveComponent(name) {
     return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
-  } //resolveComponent={(name) => require(`./components/${name}`).default}
-
+  }
 }), el);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
   color: '#4B5563'

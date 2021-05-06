@@ -24,12 +24,12 @@ Route::get('users/', [UsuarioController::class,'index']);
 Route::get('users.show/{id}', [UsuarioController::class,'show']);
 Route::get('users.update/{id}', [UsuarioController::class,'edit']);
 Route::get('users.delete/{id}', [UsuarioController::class,'destroy']);
-Route::post('users.store/', [UsuarioController::class,'store']);
+Route::post('users.insert/', [UsuarioController::class,'store']);
 Route::put('users.update/{id}', [UsuarioController::class,'update']);
 
 
 Route::get('ticket.list/', [TicketController::class,"listTicket"]);
-Route::get('ticket.codigo/', [TicketController::class,"codigoTicket"]);
+Route::get('ticket.codigo/{id}', [TicketController::class,"codigoTicket"]);
 
 Route::get('ticket.cancelados/', [TicketController::class,"ticketCancelados"]);
 Route::get('ticket.atendidos/', [TicketController::class,"ticketAtendidos"]);

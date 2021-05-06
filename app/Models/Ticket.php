@@ -32,10 +32,10 @@ class Ticket extends Model
         return $query->insertGetId([
             'id_categoria_fk' => $request->input('id_categoria_fk'),
             'prioridad' => $request->input('prioridad'),
-            'codigo_ticket' => $initialletter .substr(str_shuffle($chars),-strlen(str_shuffle($chars)),5) ,
+            'codigo_ticket' => $initialletter . substr(str_shuffle($chars), -strlen(str_shuffle($chars)), 5),
             'created_at' => now(),
             'updated_at' => now(),
-            ]);
+        ]);
     }
 
     public function scopeUpdateTicket($query, Request $request = null, $id = null)
@@ -49,10 +49,11 @@ class Ticket extends Model
 
     public function scopeListTicket($query)
     {
-        return $query->join('categoria_ticket','id_categoria_fk','=','id_categoria')->orderBy('prioridad')->get();
+        return $query->join('categoria_ticket', 'id_categoria_fk', '=', 'id_categoria')->orderBy('prioridad')->get();
     }
 
-    public function scopeCodigoTicket($query){
-        return $query->select('ticket.codigo_ticket', 'ticket.created_at')->get();
+    public function scopeCodigoTicket($query, $id = null)
+    {
+        return $query->select('ticket.codigo_ticket', 'ticket.created_at')->where('id_ticket', '=', $id)->get();
     }
 }

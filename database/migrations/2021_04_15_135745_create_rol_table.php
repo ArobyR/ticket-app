@@ -19,18 +19,10 @@ class CreateRolTable extends Migration
             $table->string('rol', 22);
         });
 
-        DB::table('rol')->insert([
-            'rol' => 'Admin',
-        ]);
-        DB::table('rol')->insert([
-            'rol' => 'Agente',
-        ]);
-        DB::table('rol')->insert([
-            'rol' => 'Encargado',
-        ]);
-        DB::table('rol')->insert([
-            'rol' => 'Usuario'
-        ]);
+        DB::table('rol')->insert(['rol' => 'administrador']);
+        DB::table('rol')->insert(['rol' => 'agente']);
+        DB::table('rol')->insert(['rol' => 'encargado']);
+        DB::table('rol')->insert(['rol' => 'usuario']);
     }
 
     /**
