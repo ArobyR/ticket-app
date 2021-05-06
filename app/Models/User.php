@@ -44,6 +44,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function scopeInsertCredencial($query, Request $request = null, $id = null)
+    {
+        return $query->create([
+            'id_usuario_fk' => $id,
+            'name'=> $request->nombre . " " . $request->apellido,
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+    }
+
     public function scopeUpdateCredencial($query, Request $request = null, $id = null)
     {
         return $query->where('id', '=', $id)->update([

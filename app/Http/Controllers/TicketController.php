@@ -14,9 +14,9 @@ class TicketController extends Controller
     /**
      * Retorna una lista de tickets.
      */
-    public function codigoTicket()
+    public function codigoTicket($id)
     {
-        return Ticket::codigoTicket();
+        return Ticket::codigoTicket($id);
     }
 
     /**

@@ -33,7 +33,7 @@ class UsuarioController extends Controller
     {
         $id = Usuario::insertUser($request);
         Direccion::insertDireccion($request, $id);
-        // Credencial::insertCredencial($request, $id);
+        User::insertCredencial($request, $id);
         Telefono::insertTelefono($request, $id);
         return response()->json(null, '201');
     }
@@ -69,7 +69,6 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Usuario::getUpdateUserById($id)->get();
         Usuario::updateUser($request, $id);
         Rol::updateRol($request, $id);
         User::updateCredencial($request, $id);
