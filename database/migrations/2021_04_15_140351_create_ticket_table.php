@@ -17,7 +17,7 @@ class CreateTicketTable extends Migration
 		        $table->bigInteger('id_categoria_fk')->unsigned();
             $table->string('prioridad');
 		        $table->string('codigo_ticket',22);
-		        $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket')->onDelete('cascade')->onUpdate('cascade');
+		        $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket');
             $table->timestamps();
         });
     }

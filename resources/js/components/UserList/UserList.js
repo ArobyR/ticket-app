@@ -18,7 +18,8 @@ const UserList = () => {
 
     const handleDelete = async (evt) => {
         const { id } = evt.target
-        deleteUser(id)
+        const resp = await deleteUser(id)
+        console.log(resp)
         getUsersFromApi()
         console.log(id)
     }

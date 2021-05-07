@@ -78,6 +78,7 @@ class UsuarioController extends Controller
      */
     public function destroy(Request $id)
     {
+        return 'Hello world ' . $id;
         Usuario::where('id_usuario', $id->input('id'))->delete();
 
         // $response['message'] = 'usuario eliminado';
