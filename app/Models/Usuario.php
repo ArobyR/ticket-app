@@ -22,8 +22,8 @@ class Usuario extends Model
     public function scopeInsertUser($query, Request $request = null)
     {
         return $query->insertGetId([
-            'id_estado_fk' => Estado::insertEstado($request),
-            'id_rol_fk' => Rol::insertRol($request),
+            'id_estado_fk' => $request->input('id_estado'),
+            'id_rol_fk' => $request->input('id_rol'),
             'nombre_usuario' => $request->input('nombre'),
             'apellido_usuario' => $request->input('apellido'),
             'cedula_usuario' => $request->input('cedula'),
@@ -55,14 +55,14 @@ class Usuario extends Model
             'direccion.pais',
             'direccion.ciudad',
             'direccion.codigo_area',
-            'credenciales.email',
-            'credenciales.password'
+            'users.email',
+            'users.password'
         )
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
             ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk');
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk');
     }
     public function scopeGetUserById($query, $id = null)
     {
@@ -79,14 +79,27 @@ class Usuario extends Model
             'direccion.pais',
             'direccion.ciudad',
             'direccion.codigo_area',
-            'credenciales.email',
-            'credenciales.password'
+            'users.email',
+            'users.password'
         )
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('estado', 'usuario.id_estado_fk', '=', 'estado.id_estado')
             ->join('telefono', 'usuario.id_usuario', '=', 'telefono.id_usuario_fk')
             ->join('direccion', 'usuario.id_usuario', '=', 'direccion.id_usuario_fk')
-            ->join('credenciales', 'usuario.id_usuario', '=', 'credenciales.id_usuario_fk')->where('id_usuario', '=', $id);
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk')->where('id_usuario', '=', $id);
     }
 
+    public function scopeGetUpdateUserById($query, $id = null)
+    {
+        return $query->select(
+            'usuario.nombre_usuario',
+            'usuario.apellido_usuario',
+            'usuario.cedula_usuario',
+            'rol.rol',
+            'users.email',
+            'users.password'
+        )
+            ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
+            ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk')->where('id_usuario', '=', $id);
+    }
 }

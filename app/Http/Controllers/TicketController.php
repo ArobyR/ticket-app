@@ -2,46 +2,128 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Caja;
 use App\Models\CategoriaTicket;
 use App\Models\Ticket;
-use Illuminate\Support\Facades\DB;
-use PHPUnit\Util\Json;
 use App\Models\EstadoTicket;
+use Illuminate\Http\Request;
 
 class TicketController extends Controller
 {
-    public function GetCategory(){
 
-        $request = new Request();
-        $request->setMethod('POST');
-        $request->request->add(['estado_ticket'=>'Atendidos', 'nombre_categoria'=>'muert','prioridad' => 'Media', 'codigo_ticket'=> 'sad']);
-        $id = Ticket::insertTicket($request);
-        EstadoTicket::insertEstadoTicket($request,$id); 
-        $algo = Ticket::select('ticket.codigo_ticket','ticket.created_at')->join('categoria_ticket','ticket.id_categoria_fk','=','categoria_ticket.id_categoria')->get();
-        return json_encode($algo); 
+    /**
+     * Retorna una lista de tickets.
+     */
+    public function codigoTicket($id)
+    {
+        return Ticket::codigoTicket($id);
     }
 
-    public function ListTicket(){
-        return DB::select("Select * 
-                                From ticket as t
-                                Inner Join categoria_ticket as ct On ct.id_categoria = t.id_categoria_fk
-                                order by prioridad; ");
-
-    }
-    public function UpdateStateTicket(){
-        $request = new Request();
-        $request->setMethod('POST');
-        $request->request->add(['']);
+    /**
+     * Retorna una lista de tickets.
+     */
+    public function listTicket()
+    {
+        return Ticket::listTicket();
     }
 
-    public function TicketActivos(){
-        return DB::select("select count(estado_ticket) as CantidadActivos
-                            from estado_ticket
-                            Where estado_ticket = 'Activo';");
+    /**
+     * Retorna la cantidad de tickets cancelados.
+     */
+    public function ticketCancelados()
+    {
+        return EstadoTicket::ticketCancelados();
     }
 
-    public function AtendidosYCancelados(){
-        return DB::select("select count(estado_ticket), estado_ticket 
-                            from estado_ticket 
-                            group by estado_ticket");
+    /**
+     * Retorna la cantidad de tickets atendidos.
+     */
+    public function ticketAtendidos()
+    {
+        return EstadoTicket::ticketAtendidos();
+    }
+
+    /**
+     * Retorna la cantidad de tickets atendidos y cancelados.
+     */
+    public function atendidosCancelados()
+    {
+        return EstadoTicket::atendidosCancelados();
+    }
+
+    /**
+     * Retorna la cantidad de tickets cancelados por mes.
+     */
+    public function ticketCanceladosPorMes()
+    {
+        return EstadoTicket::ticketCanceladosPorMes();
+    }
+
+    /**
+     * Retorna la cantidad de tickets atendidos por mes.
+     */
+    public function ticketAtendidosPorMes()
+    {
+        return EstadoTicket::ticketAtendidosPorMes();
+    }
+
+    /**
+     * Retorna la cantidad de tickets atendidos y cancelados por mes.
+     */
+    public function atendidosCanceladosPorMes()
+    {
+        return EstadoTicket::atendidosCanceladosPorMes();
+    }
+
+    /**
+     * Inserta el ticket.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertTicket(Request $request)
+    {
+        $Ticket = Ticket::insertTicket($request);
+        EstadoTicket::insertEstadoTicket($request, $Ticket);
+        return response()->json($Ticket, 201);
+    }
+
+    /**
+     * Inserta el usuario en la caja.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function insertCaja(Request $request)
+    {
+        $Caja = Caja::insertCaja($request);
+        return response()->json($Caja, 201);
+    }
+
+    /**
+     * Actualiza el estado del ticket.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateEstadoTicket(Request $request, $id)
+    {
+        EstadoTicket::findOrFail($id);
+        $EstadoTicket = EstadoTicket::updateEstadoTicket($request, $id);
+        return response()->json($EstadoTicket, 200);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Ticket::where('id_ticket', '=', $id)->delete();;
+    }
 }

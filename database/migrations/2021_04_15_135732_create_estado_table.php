@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateEstadoTable extends Migration
@@ -17,6 +18,12 @@ class CreateEstadoTable extends Migration
             $table->bigIncrements('id_estado')->unsigned();
             $table->string('estado_usuario',22);
         });
+        DB::table('estado')->insert([
+            'estado_usuario' => 'activo',
+        ]);
+        DB::table('estado')->insert([
+            'estado_usuario' => 'inactivo',
+        ]);
     }
 
     /**

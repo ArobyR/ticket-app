@@ -7,6 +7,7 @@ use App\Models\Direccion;
 use App\Models\Estado;
 use App\Models\Rol;
 use App\Models\Telefono;
+use App\Models\User;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 
@@ -32,7 +33,7 @@ class UsuarioController extends Controller
     {
         $id = Usuario::insertUser($request);
         Direccion::insertDireccion($request, $id);
-        Credencial::insertCredencial($request, $id);
+        User::insertCredencial($request, $id);
         Telefono::insertTelefono($request, $id);
         return response()->json(null, '201');
     }
@@ -53,17 +54,24 @@ class UsuarioController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     */
+    public function edit($id)
+    {
+        Usuario::getUpdateUserById($id)->get();
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        Usuario::getUserById($id)->get();
         Usuario::updateUser($request, $id);
-        Estado::updateEstado($request, $id);
         Rol::updateRol($request, $id);
-        Telefono::updateTelefono($request, $id);
-        Credencial::updateCredencial($request, $id);
-        Direccion::updateDireccion($request, $id);
+        User::updateCredencial($request, $id);
         return response()->json(null, 200);
     }
 
@@ -75,6 +83,6 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        Usuario::destroy($id);
+        Usuario::where('id_usuario','=',$id)->delete();
     }
 }
