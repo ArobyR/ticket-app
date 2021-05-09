@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "@inertiajs/inertia-react";
-import Button from "@/Components/Forms/Button";
-import TextInput from "@/Components/Forms/TextInput";
-import Guest from "@/Layouts/Guest";
-import ValidationErros from "@/Components/Forms/ValidationErrors";
+import Button from "../../components/Forms/Button";
+import TextInput from "../../components/Forms/TextInput";
+import Guest from "../../Layouts/Guest";
+import ValidationErros from "../../components/Forms/ValidationErrors";
 
 export default function ForgotPassword({ status }) {
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "@inertiajs/inertia-react";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import Button from "@/Components/Forms/Button";
-import Guest from "@/Layouts/Guest";
+import Button from "../../components/Forms/Button";
+import Guest from "../../Layouts/Guest";
 
 export default function VerifyEmail({ status }) {
     const { post, processing } = useForm();

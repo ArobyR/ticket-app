@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import Logo from "../Components/UI/Logo";
+import Logo from '../components/UI/Logo'
 
 export default function Guest({ title, children }) {
 

@@ -8,7 +8,7 @@ import { InertiaProgress } from '@inertiajs/progress';
 
 const el = document.getElementById('app');
 
-render(
+render(    
     <App
         initialPage={JSON.parse(el.dataset.page)}
         resolveComponent={(name) => require(`./Pages/${name}`).default}

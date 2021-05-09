@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import Logo from "../Components/UI/Logo";
-import NavLink from "../Components/UI/NavLink";
-import Dropdown from "../Components/UI/Dropdown";
-import ResponsiveNavLink from "../Components/UI/ResponsiveNavLink";
+import Logo from '../components/UI/Logo'
+import NavLink from "../components/UI/NavLink";
+import Dropdown from "../components/UI/Dropdown";
+import ResponsiveNavLink from "../components/UI/ResponsiveNavLink";
 
 export default function Authenticated({ title, auth, children, header }) {
 
