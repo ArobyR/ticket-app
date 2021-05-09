@@ -4026,7 +4026,7 @@ function Register() {
             value: data.id_estado,
             type: "text",
             handleChange: onHandleChange,
-            label: "Seleccion un tipo",
+            label: "Seleccion un Estado",
             name: "id_estado",
             autoComplete: "",
             options: optionsEstado
@@ -4037,7 +4037,7 @@ function Register() {
             value: data.id_rol,
             type: "text",
             handleChange: onHandleChange,
-            label: "Seleccion un tipo",
+            label: "Seleccion un Rol",
             name: "id_rol",
             autoComplete: "",
             options: optionsRol
