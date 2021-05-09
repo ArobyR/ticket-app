@@ -2791,6 +2791,36 @@ function Button(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/Components/Forms/ButtonOnClick.js":
+/*!********************************************************!*\
+  !*** ./resources/js/Components/Forms/ButtonOnClick.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ButtonOnClick)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function ButtonOnClick(_ref) {
+  var processing = _ref.processing,
+      onClick = _ref.onClick,
+      children = _ref.children;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+    disabled: processing,
+    type: "button",
+    onClick: onClick,
+    className: "inline-flex items-center px-4 py-2 bg-indigo-900 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest active:bg-gray-900 transition ease-in-out duration-150 ".concat(processing && 'cursor-wait'),
+    children: children
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Components/Forms/Checkbox.js":
 /*!***************************************************!*\
   !*** ./resources/js/Components/Forms/Checkbox.js ***!
@@ -3726,11 +3756,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _Components_Forms_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Components/Forms/Button */ "./resources/js/Components/Forms/Button.js");
-/* harmony import */ var _Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Components/Forms/TextInput */ "./resources/js/Components/Forms/TextInput.js");
-/* harmony import */ var _Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/TextInputDataList */ "./resources/js/Components/Forms/TextInputDataList.js");
-/* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Layouts/Guest */ "./resources/js/Layouts/Guest.js");
-/* harmony import */ var _Components_Forms_ValidationErrors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Components/Forms/ValidationErrors */ "./resources/js/Components/Forms/ValidationErrors.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Components_Forms_ButtonOnClick__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClick */ "./resources/js/Components/Forms/ButtonOnClick.js");
+/* harmony import */ var _Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/TextInput */ "./resources/js/Components/Forms/TextInput.js");
+/* harmony import */ var _Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/Forms/TextInputDataList */ "./resources/js/Components/Forms/TextInputDataList.js");
+/* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Layouts/Guest */ "./resources/js/Layouts/Guest.js");
+/* harmony import */ var _Components_Forms_ValidationErrors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Components/Forms/ValidationErrors */ "./resources/js/Components/Forms/ValidationErrors.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -3809,6 +3853,23 @@ function Register() {
     };
   }, []);
 
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      formStep = _useState2[0],
+      setFormStep = _useState2[1];
+
+  var onContinue = function onContinue() {
+    setFormStep(function (cur) {
+      return cur + 1;
+    });
+  };
+
+  var onBack = function onBack() {
+    setFormStep(function (cur) {
+      return cur - 1;
+    });
+  };
+
   var onHandleChange = function onHandleChange(event) {
     if (event.target.type === "checkbox") {
       setData(event.target.name, event.target.checked);
@@ -3822,175 +3883,215 @@ function Register() {
     post(route("register"));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_5__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_6__.default, {
     title: "Register",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_ValidationErrors__WEBPACK_IMPORTED_MODULE_6__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_ValidationErrors__WEBPACK_IMPORTED_MODULE_7__.default, {
       errors: errors
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
       onSubmit: submit,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-        value: data.nombre,
-        type: "text",
-        handleChange: onHandleChange,
-        isFocused: true,
-        label: "Nombre",
-        name: "nombre",
-        autoComplete: "name"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.apellido,
+      children: [formStep === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("section", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+          value: data.nombre,
           type: "text",
           handleChange: onHandleChange,
-          label: "Apellido",
-          name: "apellido",
-          autoComplete: "surname"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.cedula,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Cedula",
-          name: "cedula",
-          autoComplete: "cedula"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.telefono,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Telefono",
-          name: "telefono",
-          autoComplete: "tel"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_4__.default, {
-          value: data.tipo_telefono,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Seleccion un tipo",
-          name: "tipo_telefono",
-          autoComplete: "",
-          options: optionsTipoTelefono
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.calle,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Calle",
-          name: "calle",
-          autoComplete: "calle"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.numero_casa,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Numero de casa",
-          name: "numero_casa",
-          autoComplete: "numero_casa"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.pais,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Pais",
-          name: "pais",
-          autoComplete: "pais"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.ciudad,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Ciudad",
-          name: "ciudad",
-          autoComplete: "ciudad"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.codigo_area,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Codigo de area",
-          name: "codigo_area",
-          autoComplete: "codigo_area"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_4__.default, {
-          value: data.id_estado,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Seleccion un tipo",
-          name: "id_estado",
-          autoComplete: "",
-          options: optionsEstado
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_4__.default, {
-          value: data.id_rol,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Seleccion un tipo",
-          name: "id_rol",
-          autoComplete: "",
-          options: optionsRol
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.email,
-          type: "text",
-          handleChange: onHandleChange,
-          label: "Email",
-          name: "email",
-          autoComplete: "username"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.password,
-          type: "password",
-          handleChange: onHandleChange,
-          label: "Password",
-          name: "password",
-          autoComplete: "new-password"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "mt-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_3__.default, {
-          value: data.password_confirmation,
-          type: "password",
-          handleChange: onHandleChange,
-          label: "Password",
-          name: "password_confirmation",
-          autoComplete: "new-password"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-        className: "flex items-center justify-end mt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
-          href: route("login"),
-          className: "underline text-sm text-gray-600 hover:text-gray-900",
-          children: "Already registered?"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-          className: "ml-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Forms_Button__WEBPACK_IMPORTED_MODULE_2__.default, {
-            processing: processing,
-            children: "Register"
+          isFocused: true,
+          label: "Nombre",
+          name: "nombre",
+          autoComplete: "name"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.apellido,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Apellido",
+            name: "apellido",
+            autoComplete: "surname"
           })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.cedula,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Cedula",
+            name: "cedula",
+            autoComplete: "cedula"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.telefono,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Telefono",
+            name: "telefono",
+            autoComplete: "tel"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_5__.default, {
+            value: data.tipo_telefono,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Seleccion un tipo",
+            name: "tipo_telefono",
+            autoComplete: "",
+            options: optionsTipoTelefono
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "flex items-center justify-end mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "ml-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_ButtonOnClick__WEBPACK_IMPORTED_MODULE_3__.default, {
+              processing: processing,
+              onClick: onContinue,
+              children: "Next"
+            })
+          })
+        })]
+      }), formStep === 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("section", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.calle,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Calle",
+            name: "calle",
+            autoComplete: "calle"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.numero_casa,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Numero de casa",
+            name: "numero_casa",
+            autoComplete: "numero_casa"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.pais,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Pais",
+            name: "pais",
+            autoComplete: "pais"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.ciudad,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Ciudad",
+            name: "ciudad",
+            autoComplete: "ciudad"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.codigo_area,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Codigo de area",
+            name: "codigo_area",
+            autoComplete: "codigo_area"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "flex items-center justify-end mt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "ml-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_ButtonOnClick__WEBPACK_IMPORTED_MODULE_3__.default, {
+              processing: processing,
+              onClick: onBack,
+              children: "Back"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "ml-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_ButtonOnClick__WEBPACK_IMPORTED_MODULE_3__.default, {
+              processing: processing,
+              onClick: onContinue,
+              children: "Next"
+            })
+          })]
+        })]
+      }), formStep === 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("section", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_5__.default, {
+            value: data.id_estado,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Seleccion un tipo",
+            name: "id_estado",
+            autoComplete: "",
+            options: optionsEstado
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInputDataList__WEBPACK_IMPORTED_MODULE_5__.default, {
+            value: data.id_rol,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Seleccion un tipo",
+            name: "id_rol",
+            autoComplete: "",
+            options: optionsRol
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.email,
+            type: "text",
+            handleChange: onHandleChange,
+            label: "Email",
+            name: "email",
+            autoComplete: "username"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.password,
+            type: "password",
+            handleChange: onHandleChange,
+            label: "Password",
+            name: "password",
+            autoComplete: "new-password"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "mt-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_TextInput__WEBPACK_IMPORTED_MODULE_4__.default, {
+            value: data.password_confirmation,
+            type: "password",
+            handleChange: onHandleChange,
+            label: "Password",
+            name: "password_confirmation",
+            autoComplete: "new-password"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "flex items-center justify-end mt-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+            href: route("login"),
+            className: "underline text-sm text-gray-600 hover:text-gray-900",
+            children: "Already registered?"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "ml-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_ButtonOnClick__WEBPACK_IMPORTED_MODULE_3__.default, {
+              processing: processing,
+              onClick: onBack,
+              children: "Back"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "ml-4",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_Forms_Button__WEBPACK_IMPORTED_MODULE_2__.default, {
+              processing: processing,
+              children: "Register"
+            })
+          })]
         })]
       })]
     })]
