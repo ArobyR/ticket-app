@@ -43,6 +43,7 @@ class Usuario extends Model
     public function scopeGetUser($query)
     {
         return $query->select(
+            'usuario.id_usuario',
             'usuario.nombre_usuario',
             'usuario.apellido_usuario',
             'usuario.cedula_usuario',
@@ -67,6 +68,7 @@ class Usuario extends Model
     public function scopeGetUserById($query, $id = null)
     {
         return $query->select(
+            'usuario.id_usuario',
             'usuario.nombre_usuario',
             'usuario.apellido_usuario',
             'usuario.cedula_usuario',
@@ -92,6 +94,7 @@ class Usuario extends Model
     public function scopeGetUpdateUserById($query, $id = null)
     {
         return $query->select(
+            'usuario.id_usuario',
             'usuario.nombre_usuario',
             'usuario.apellido_usuario',
             'usuario.cedula_usuario',

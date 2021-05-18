@@ -10,6 +10,7 @@ use App\Models\Telefono;
 use App\Models\User;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class UsuarioController extends Controller
 {
@@ -84,5 +85,6 @@ class UsuarioController extends Controller
     public function destroy($id)
     {
         Usuario::where('id_usuario','=',$id)->delete();
+        return redirect('user.list');
     }
 }
