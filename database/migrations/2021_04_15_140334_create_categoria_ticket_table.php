@@ -17,11 +17,24 @@ class CreateCategoriaTicketTable extends Migration
         Schema::create('categoria_ticket', function (Blueprint $table) {
             $table->bigIncrements('id_categoria')->unsigned();
             $table->string('nombre_categoria');
+            $table->string('prioridad');
         });
 
-        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Discapacitado/a']);
-        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Normal']);
-        DB::table('categoria_ticket')->insert(['nombre_categoria' => 'Embarazada']);
+        DB::table('categoria_ticket')
+            ->insert([
+                'nombre_categoria' => 'persona embarazada',
+                'prioridad' => 'alta'
+            ]);
+        DB::table('categoria_ticket')
+            ->insert([
+            'nombre_categoria' => 'persona con discapacitadad',
+            'prioridad' => 'media'
+            ]);
+        DB::table('categoria_ticket')
+            ->insert([
+                'nombre_categoria' => 'persona sin discapacidad',
+                'prioridad' => 'normal'
+            ]);
     }
 
     /**

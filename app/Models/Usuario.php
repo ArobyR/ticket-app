@@ -105,4 +105,12 @@ class Usuario extends Model
             ->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')
             ->join('users', 'usuario.id_usuario', '=', 'users.id_usuario_fk')->where('id_usuario', '=', $id);
     }
+
+    public function scopeGetRol($query, $id = null)
+    {
+        return $query->select(
+            'usuario.id_usuario',
+            'rol.id_rol',
+        )->join('rol', 'usuario.id_rol_fk', '=', 'rol.id_rol')->where('id_usuario', '=', $id);
+    }
 }

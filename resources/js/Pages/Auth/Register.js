@@ -35,10 +35,6 @@ export default function Register() {
             value: "",
         },
         {
-            label: "Usuario",
-            value: "4",
-        },
-        {
             label: "Agente",
             value: "2",
         },

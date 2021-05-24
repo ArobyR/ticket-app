@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('users/', [UsuarioController::class, 'index']);
 Route::get('users.show/{id}', [UsuarioController::class, 'show']);
+Route::get('users.rol/{id}', [UsuarioController::class, 'rol']);
 Route::get('users.update/{id}', [UsuarioController::class, 'edit']);
 Route::get('users.delete/{id}', [UsuarioController::class, 'destroy']);
 Route::post('users.insert/', [UsuarioController::class, 'store']);

@@ -39,10 +39,20 @@ class CreateUsuarioTable extends Migration
 
         DB::table('usuario')->insert([
             'id_estado_fk' =>'1',
-            'id_rol_fk' =>'1',
+            'id_rol_fk' =>'2',
             'nombre_usuario'=>'Aroby' ,
             'apellido_usuario' =>'Rosario',
             'cedula_usuario' =>'001300642269',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('usuario')->insert([
+            'id_estado_fk' =>'1',
+            'id_rol_fk' =>'3',
+            'nombre_usuario'=>'Walase' ,
+            'apellido_usuario' =>'Javier',
+            'cedula_usuario' =>'402300646269',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

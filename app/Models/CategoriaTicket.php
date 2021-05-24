@@ -13,12 +13,14 @@ class CategoriaTicket extends Model
     public $timestamps = false;
     protected $fillable = [
         'nombre_categoria',
+        'prioridad'
     ];
 
     public function scopeInsertCategoriaTicket($query, Request $request = null)
     {
         return $query->insertGetId([
             'nombre_categoria' => $request->input('nombre_categoria'),
+            
         ]);
     }
     public function scopeUpdateCategoriaTicket($query, Request $request = null, $id = null)

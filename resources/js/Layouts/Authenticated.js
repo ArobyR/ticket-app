@@ -11,9 +11,22 @@ export default function Authenticated({ title, auth, children, header }) {
         false
     );
 
+    const [user, setUser] = useState([])
+
+    const url = "/api/users.rol/"+ auth.user.id_usuario_fk
+    const fetchApi = async () => {
+        const response = await fetch(url)
+        const responseJson = await response.json()
+        setUser(responseJson)
+        console.log(responseJson)
+    }
     useEffect(() => {
         document.title = title;
-    }, [title]);
+        fetchApi()
+    }, [title], []);
+
+    const rol = user.map((row) =>{ return (row.id_rol)})
+    const rodd = user.map((row) =>{ return (row)})
 
     return (
         <div className="min-h-screen bg-gray-100">
@@ -35,13 +48,41 @@ export default function Authenticated({ title, auth, children, header }) {
                                 />
                             </div>
 
+                            <div>
+                                <h1>
+                                    {rodd.id_usuario}
+                                </h1>
+                            </div>
+                            
+                            {rol == 1 && (
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink
-                                    href={route("user.list")}
-                                    active={route().current("user.list")}
-                                    label="UserList"
+                                    href={route("user.admins")}
+                                    active={route().current("user.admins")}
+                                    label="Administradores"
                                 />
                             </div>
+                            )}
+                            
+                            {rol == 2 && (
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink
+                                    href={route("user.managers")}
+                                    active={route().current("user.managers")}
+                                    label="Encargados"
+                                    />
+                            </div>
+                            )}
+
+                            {rol == 3 && (
+                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <NavLink
+                                    href={route("user.agents")}
+                                    active={route().current("user.agents")}
+                                    label="Agentes"
+                                />
+                            </div>
+                            )}
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ml-6">
@@ -127,6 +168,7 @@ export default function Authenticated({ title, auth, children, header }) {
                         " sm:hidden"
                     }
                 >
+
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
                             method="post"
@@ -136,14 +178,35 @@ export default function Authenticated({ title, auth, children, header }) {
                         </ResponsiveNavLink>
                     </div>
 
+                    {rol == 1 && (
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
                             method="get"
-                            href={route("user.list")}
-                            active={route().current("user.list")}>
-                            UserList
+                            href={route("user.admins")}
+                            active={route().current("user.admins")}>
+                            Administradores
                         </ResponsiveNavLink>
-                    </div>
+                    </div>)}
+
+                    {rol == 2 && (
+                    <div className="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink
+                            method="get"
+                            href={route("user.managers")}
+                            active={route().current("user.managers")}>
+                            Encargados
+                        </ResponsiveNavLink>
+                    </div>)}
+
+                    {rol == 3 && (
+                    <div className="pt-2 pb-3 space-y-1">
+                        <ResponsiveNavLink
+                            method="get"
+                            href={route("user.agents")}
+                            active={route().current("user.agents")}>
+                            Agentes
+                        </ResponsiveNavLink>
+                    </div>)}
 
 
                     <div className="pt-4 pb-1 border-t border-gray-200">

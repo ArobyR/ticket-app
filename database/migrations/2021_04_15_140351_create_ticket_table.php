@@ -15,7 +15,6 @@ class CreateTicketTable extends Migration
         Schema::create('ticket', function (Blueprint $table) {
             $table->bigIncrements('id_ticket')->unsigned();
 		        $table->bigInteger('id_categoria_fk')->unsigned();
-            $table->string('prioridad');
 		        $table->string('codigo_ticket',22);
 		        $table->foreign('id_categoria_fk')->references('id_categoria')->on('categoria_ticket')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

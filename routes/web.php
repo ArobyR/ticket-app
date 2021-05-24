@@ -29,6 +29,18 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/user.managers', function () {
+    return Inertia::render('Managers');
+})->name('user.managers');
+
+Route::get('/user.admins', function () {
+    return Inertia::render('Admins');
+})->name('user.admins');
+
+Route::get('/user.agents', function () {
+    return Inertia::render('Agents');
+})->name('user.agents');
+
 Route::get('/user.list', function () {
     return Inertia::render('UserList');
 })->name('user.list');
