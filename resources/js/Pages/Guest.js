@@ -21,7 +21,8 @@ export default function Dashboard(props) {
             estado_ticket: 'en proceso'
         })
         const confirm = window.confirm('Estas Seguro')
-        setFormStep(2)
+        {confirm && (setFormStep(2))}
+
     }
 
     const handleDisabled = () => {
@@ -29,7 +30,8 @@ export default function Dashboard(props) {
             id_categoria: '2',
             estado_ticket: 'en proceso'
         })
-        setFormStep(2)
+        const confirm = window.confirm('Estas Seguro')
+        {confirm && (setFormStep(2))}
 
     }
     const handleNormal = () => {
@@ -37,7 +39,8 @@ export default function Dashboard(props) {
             id_categoria: '3',
             estado_ticket: 'en proceso'
         })
-        setFormStep(2)
+        const confirm = window.confirm('Estas Seguro')
+        {confirm && (setFormStep(2))}
     }
 
     const createTicket = async () => {
