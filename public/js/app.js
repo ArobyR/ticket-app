@@ -2774,6 +2774,59 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/Components/Cards/CardOne.js":
+/*!**************************************************!*\
+  !*** ./resources/js/Components/Cards/CardOne.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ CardOne)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function CardOne(_ref) {
+  var label = _ref.label,
+      name = _ref.name,
+      children = _ref.children,
+      onClick = _ref.onClick,
+      processing = _ref.processing;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "min-h-screen flex justify-center items-center",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+        className: "text-white font-semibold text-2xl",
+        children: label
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+        className: "mt-4 font-semibold text-gray-400 text-left",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "pl-2 ",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("main", {
+            children: children
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "pt-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_1__.default, {
+          processing: processing,
+          onClick: onClick,
+          children: name
+        })
+      })]
+    })
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Components/Forms/Button.js":
 /*!*************************************************!*\
   !*** ./resources/js/Components/Forms/Button.js ***!
@@ -4732,6 +4785,624 @@ function Dashboard(props) {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Guest copy.js":
+/*!******************************************!*\
+  !*** ./resources/js/Pages/Guest copy.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Dashboard)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
+/* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
+/* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
+/* harmony import */ var _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/PNg/Corriente.png */ "./resources/js/Assets/PNg/Corriente.png");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+
+
+
+
+
+function Dashboard(props) {
+  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    id_categoria: '',
+    estado_ticket: ''
+  }),
+      data = _useForm.data,
+      setData = _useForm.setData,
+      processing = _useForm.processing;
+
+  var handlePregnant = function handlePregnant() {
+    setData({
+      id_categoria: '1',
+      estado_ticket: 'en proceso'
+    });
+    var confirm = window.confirm('Estas Seguro');
+    setFormStep(2);
+  };
+
+  var handleDisabled = function handleDisabled() {
+    setData({
+      id_categoria: '2',
+      estado_ticket: 'en proceso'
+    });
+    setFormStep(2);
+  };
+
+  var handleNormal = function handleNormal() {
+    setData({
+      id_categoria: '3',
+      estado_ticket: 'en proceso'
+    });
+    setFormStep(2);
+  };
+
+  var createTicket = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var reponse, responseData;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_8___default().post("api/ticket.insert", data);
+
+            case 2:
+              reponse = _context.sent;
+              _context.next = 5;
+              return reponse.data;
+
+            case 5:
+              responseData = _context.sent;
+              console.log(responseData);
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function createTicket() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var handleOption1 = function handleOption1() {};
+
+  var handleOption2 = function handleOption2() {
+    var confirm = window.confirm('Estas Seguro de quieres finalizar');
+
+    if (confirm) {
+      setFormStep(0);
+    }
+  };
+
+  var handleOption3 = function handleOption3() {};
+
+  var handleOption4 = function handleOption4() {
+    createTicket();
+    setFormStep(3);
+  };
+
+  var handleOption5 = function handleOption5() {
+    setFormStep(1);
+  };
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      formStep = _useState2[0],
+      setFormStep = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
+    auth: props.auth,
+    errors: props.errors,
+    title: "Dashboard",
+    children: [formStep == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "General"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          className: "mt-4 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption5,
+            children: "Registrar tu turno"
+          })
+        })]
+      })
+    }), formStep == 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Persona embarazada"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left pt-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_5__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handlePregnant,
+            children: "Seleccionar"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "Persona con discapacidad"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left pt-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_6__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleDisabled,
+            children: "Seleccionar"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Persona sin discapacidad"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left ",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleNormal,
+            children: "Seleccionar"
+          })]
+        })]
+      })]
+    }), formStep == 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "General"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          className: "mt-4 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption4,
+            children: "Continuar"
+          })
+        })]
+      })
+    }), formStep == 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Opcion 1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
+          className: "mt-4 border-1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          className: "mt-8 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
+            className: "pl-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+              className: "text-white",
+              children: " - "
+            }), "Generar ticket o voucher para visualizar su turno."]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption1,
+            children: "Seleccionar"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "General"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          className: "mt-4 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption2,
+            children: "Finalizar"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Opcion 2"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
+          className: "mt-4 border-1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          className: "mt-8 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Generar Codigo Qr para escanear y visualizar su turno en la App Movil."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "pt-8 ",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption3,
+            children: "Seleccionar"
+          })
+        })]
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Guest.js":
+/*!*************************************!*\
+  !*** ./resources/js/Pages/Guest.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Dashboard)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
+/* harmony import */ var _Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/Cards/CardOne */ "./resources/js/Components/Cards/CardOne.js");
+/* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
+/* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
+/* harmony import */ var _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Assets/PNg/Corriente.png */ "./resources/js/Assets/PNg/Corriente.png");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+
+
+
+
+
+
+function Dashboard(props) {
+  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.useForm)({
+    id_categoria: '',
+    estado_ticket: ''
+  }),
+      data = _useForm.data,
+      setData = _useForm.setData,
+      processing = _useForm.processing;
+
+  var handlePregnant = function handlePregnant() {
+    setData({
+      id_categoria: '1',
+      estado_ticket: 'en proceso'
+    });
+    var confirm = window.confirm('Estas Seguro');
+    setFormStep(2);
+  };
+
+  var handleDisabled = function handleDisabled() {
+    setData({
+      id_categoria: '2',
+      estado_ticket: 'en proceso'
+    });
+    setFormStep(2);
+  };
+
+  var handleNormal = function handleNormal() {
+    setData({
+      id_categoria: '3',
+      estado_ticket: 'en proceso'
+    });
+    setFormStep(2);
+  };
+
+  var createTicket = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var reponse, responseData;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_9___default().post("api/ticket.insert", data);
+
+            case 2:
+              reponse = _context.sent;
+              _context.next = 5;
+              return reponse.data;
+
+            case 5:
+              responseData = _context.sent;
+              console.log(responseData);
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function createTicket() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var handleOption1 = function handleOption1() {};
+
+  var handleOption2 = function handleOption2() {
+    var confirm = window.confirm('Estas Seguro de quieres finalizar');
+
+    if (confirm) {
+      setFormStep(0);
+    }
+  };
+
+  var handleOption3 = function handleOption3() {};
+
+  var handleOption4 = function handleOption4() {
+    createTicket();
+    setFormStep(3);
+  };
+
+  var handleOption5 = function handleOption5() {
+    setFormStep(1);
+  };
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      formStep = _useState2[0],
+      setFormStep = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
+    auth: props.auth,
+    errors: props.errors,
+    title: "Dashboard",
+    children: [formStep == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__.default, {
+      label: "General",
+      name: "Generar tu turno",
+      onClick: handleOption5,
+      processing: processing,
+      children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+    }), formStep == 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Persona embarazada"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left pt-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_6__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handlePregnant,
+            children: "Seleccionar"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "Persona con discapacidad"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left pt-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_7__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleDisabled,
+            children: "Seleccionar"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Persona sin discapacidad"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          className: "pt-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+            className: "font-semibold text-gray-400 text-left ",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+              className: "ml-0",
+              src: _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_8__.default
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleNormal,
+            children: "Seleccionar"
+          })]
+        })]
+      })]
+    }), formStep == 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__.default, {
+      label: "General",
+      name: "Continuar",
+      onClick: handleOption4,
+      processing: processing,
+      children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+    }), formStep == 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+      className: "min-h-screen flex justify-center items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Opcion 1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("hr", {
+          className: "mt-4 border-1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          className: "mt-8 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("span", {
+            className: "pl-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+              className: "text-white",
+              children: " - "
+            }), "Generar ticket o voucher para visualizar su turno."]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption1,
+            children: "Seleccionar"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-white font-semibold text-2xl",
+          children: "General"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          className: "mt-4 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          className: "pt-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption2,
+            children: "Finalizar"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h1", {
+          className: "text-black font-semibold text-2xl",
+          children: "Opcion 2"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("hr", {
+          className: "mt-4 border-1"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          className: "mt-8 font-semibold text-gray-400 text-left",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+            className: "pl-2 ",
+            children: "Generar Codigo Qr para escanear y visualizar su turno en la App Movil."
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          className: "pt-8 ",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
+            processing: processing,
+            onClick: handleOption3,
+            children: "Seleccionar"
+          })
+        })]
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Managers.js":
 /*!****************************************!*\
   !*** ./resources/js/Pages/Managers.js ***!
@@ -4820,10 +5491,10 @@ function Register() {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/UserList-.js":
-/*!*****************************************!*\
-  !*** ./resources/js/Pages/UserList-.js ***!
-  \*****************************************/
+/***/ "./resources/js/Pages/UserList.js":
+/*!****************************************!*\
+  !*** ./resources/js/Pages/UserList.js ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5176,320 +5847,6 @@ function Register() {
        </table></div>
       */
   ;
-}
-
-/***/ }),
-
-/***/ "./resources/js/Pages/UserList.js":
-/*!****************************************!*\
-  !*** ./resources/js/Pages/UserList.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Dashboard)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
-/* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
-/* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
-/* harmony import */ var _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/PNg/Corriente.png */ "./resources/js/Assets/PNg/Corriente.png");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
-
-
-
-
-
-
-
-
-
-function Dashboard(props) {
-  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.useForm)({
-    id_categoria: '',
-    estado_ticket: ''
-  }),
-      data = _useForm.data,
-      setData = _useForm.setData,
-      post = _useForm.post,
-      processing = _useForm.processing,
-      errors = _useForm.errors,
-      reset = _useForm.reset;
-
-  var handlePregnant = function handlePregnant() {
-    setData({
-      id_categoria: '1',
-      estado_ticket: 'en proceso'
-    });
-    var confirm = window.confirm('Estas Seguro');
-
-    if (confirm) {
-      setFormStep(2);
-    }
-  };
-
-  var handleDisabled = function handleDisabled() {
-    setData({
-      id_categoria: '2',
-      estado_ticket: 'en proceso'
-    });
-    var confirm = window.confirm('Estas Seguro');
-
-    if (confirm) {
-      setFormStep(2);
-    }
-  };
-
-  var handleNormal = function handleNormal() {
-    setData({
-      id_categoria: '3',
-      estado_ticket: 'en proceso'
-    });
-    var confirm = window.confirm('Estas Seguro');
-
-    if (confirm) {
-      setFormStep(2);
-    }
-  };
-
-  var createTicket = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      var reponse, responseData;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_8___default().post("api/ticket.insert", data);
-
-            case 2:
-              reponse = _context.sent;
-              _context.next = 5;
-              return reponse.data;
-
-            case 5:
-              responseData = _context.sent;
-              console.log(responseData);
-
-            case 7:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function createTicket() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
-  var handleOption1 = function handleOption1() {};
-
-  var handleOption2 = function handleOption2() {};
-
-  var handleOption3 = function handleOption3() {};
-
-  var handleOption4 = function handleOption4() {
-    var confirm = window.confirm('Estas Seguro');
-
-    if (confirm) {
-      setFormStep(0);
-    }
-  };
-
-  var handleOption5 = function handleOption5() {
-    setFormStep(1);
-  };
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      formStep = _useState2[0],
-      setFormStep = _useState2[1];
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
-    auth: props.auth,
-    errors: props.errors,
-    title: "Dashboard",
-    children: [formStep == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-      className: "min-h-screen flex justify-center items-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-white font-semibold text-2xl",
-          children: "General"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "mt-4 font-semibold text-gray-400 text-left",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-            className: "pl-2 ",
-            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "pt-8",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleOption5,
-            children: "Registrar tu turno"
-          })
-        })]
-      })
-    }), formStep == 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      className: "min-h-screen flex justify-center items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-black font-semibold text-2xl",
-          children: "Persona embarazada"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "pt-8",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "font-semibold text-gray-400 text-left pt-5",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-              className: "ml-0",
-              src: _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_5__.default
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handlePregnant,
-            children: "Seleccionar"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-white font-semibold text-2xl",
-          children: "Persona con discapacidad"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "pt-8",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "font-semibold text-gray-400 text-left pt-5",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-              className: "ml-0",
-              src: _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_6__.default
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleDisabled,
-            children: "Seleccionar"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-black font-semibold text-2xl",
-          children: "Persona sin discapacidad"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "pt-8",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-            className: "font-semibold text-gray-400 text-left ",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-              className: "ml-0",
-              src: _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__.default
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleNormal,
-            children: "Seleccionar"
-          })]
-        })]
-      })]
-    }), formStep == 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      onClick: createTicket,
-      className: "min-h-screen flex justify-center items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-black font-semibold text-2xl",
-          children: "Opcion 1"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
-          className: "mt-4 border-1"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "mt-8 font-semibold text-gray-400 text-left",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
-            className: "pl-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-              className: "text-white",
-              children: " - "
-            }), "Generar ticket o voucher para visualizar su turno."]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "pt-8",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleOption1,
-            children: "Seleccionar"
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-white font-semibold text-2xl",
-          children: "General"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "mt-4 font-semibold text-gray-400 text-left",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-            className: "pl-2 ",
-            children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "pt-8",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleOption4,
-            children: "Finish"
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
-          className: "text-black font-semibold text-2xl",
-          children: "Opcion 2"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
-          className: "mt-4 border-1"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-          className: "mt-8 font-semibold text-gray-400 text-left",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-            className: "pl-2 ",
-            children: "Generar Codigo Qr para escanear y visualizar su turno en la App Movil."
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "pt-8 ",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
-            processing: processing,
-            onClick: handleOption3,
-            children: "Seleccionar"
-          })
-        })]
-      })]
-    })]
-  });
 }
 
 /***/ }),
@@ -74891,11 +75248,13 @@ var map = {
 	"./Auth/VerifyEmail.js": "./resources/js/Pages/Auth/VerifyEmail.js",
 	"./Dashboard": "./resources/js/Pages/Dashboard.js",
 	"./Dashboard.js": "./resources/js/Pages/Dashboard.js",
+	"./Guest": "./resources/js/Pages/Guest.js",
+	"./Guest copy": "./resources/js/Pages/Guest copy.js",
+	"./Guest copy.js": "./resources/js/Pages/Guest copy.js",
+	"./Guest.js": "./resources/js/Pages/Guest.js",
 	"./Managers": "./resources/js/Pages/Managers.js",
 	"./Managers.js": "./resources/js/Pages/Managers.js",
 	"./UserList": "./resources/js/Pages/UserList.js",
-	"./UserList-": "./resources/js/Pages/UserList-.js",
-	"./UserList-.js": "./resources/js/Pages/UserList-.js",
 	"./UserList.js": "./resources/js/Pages/UserList.js",
 	"./Welcome": "./resources/js/Pages/Welcome.js",
 	"./Welcome.js": "./resources/js/Pages/Welcome.js"

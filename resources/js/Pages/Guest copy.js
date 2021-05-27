@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "@inertiajs/inertia-react";
 import Authenticated from "@/Layouts/Layout";
 import Button from "@/Components/Forms/ButtonOnClickSelect"
-import CardOne from "@/Components/Cards/CardOne"
 import Embarazada from "@/Assets/Png/Embarazada.png";
 import Discapacitado from "@/Assets/Png/Discapacitado.png";
 import Corriente from "@/Assets/PNg/Corriente.png";
@@ -76,16 +75,31 @@ export default function Dashboard(props) {
             title="Dashboard"
         >
             {formStep == 0 && (
-                <CardOne
-                    label="General"
-                    name="Generar tu turno"
-                    onClick={handleOption5}
-                    processing={processing}
-                >
-                    Nota: Sea paciente espere su turno y respete a los demas.
-                    "Con amor y paciencia, nada es imposible"
-                    (Daisaku Ikeda).
-                </CardOne>
+                <div className="min-h-screen flex justify-center items-center">
+                    {/* <!-- Inicio  --> */}
+                    <div className="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+
+                        <h1 className="text-white font-semibold text-2xl">
+                            General
+                        </h1>
+
+                        <p className="mt-4 font-semibold text-gray-400 text-left">
+                            <span className="pl-2 ">
+                            Nota: Sea paciente espere su turno y respete a los demas.
+                                "Con amor y paciencia, nada es imposible"
+                                (Daisaku Ikeda).
+                        </span>
+                        </p>
+
+                        <div className="pt-8">
+
+                            <Button processing={processing} onClick={handleOption5}>
+                                Registrar tu turno
+                            </Button>
+
+                        </div>
+                    </div>
+                </div>
             )}
 
             {formStep == 1 && (
@@ -155,16 +169,31 @@ export default function Dashboard(props) {
             )}
 
             {formStep == 2 && (
-                <CardOne
-                label="General"
-                name="Continuar"
-                onClick={handleOption4}
-                processing={processing}
-            >
-                Nota: Sea paciente espere su turno y respete a los demas.
-                "Con amor y paciencia, nada es imposible"
-                (Daisaku Ikeda).
-            </CardOne>
+                <div className="min-h-screen flex justify-center items-center">
+                    {/* <!-- Inicio  --> */}
+                    <div className="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+
+                        <h1 className="text-white font-semibold text-2xl">
+                            General
+                        </h1>
+
+                        <p className="mt-4 font-semibold text-gray-400 text-left">
+                            <span className="pl-2 ">
+                                Nota: Sea paciente espere su turno y respete a los demas.
+                                "Con amor y paciencia, nada es imposible"
+                                (Daisaku Ikeda).
+                        </span>
+                        </p>
+
+                        <div className="pt-8">
+
+                            <Button processing={processing} onClick={handleOption4}>
+                                Continuar
+                            </Button>
+
+                        </div>
+                    </div>
+                </div>
             )}
 
             {formStep == 3 && (

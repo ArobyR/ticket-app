@@ -29,6 +29,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 Route::get('/user.managers', function () {
     return Inertia::render('Managers');
 })->name('user.managers');
@@ -44,6 +45,11 @@ Route::get('/user.agents', function () {
 Route::get('/user.list', function () {
     return Inertia::render('UserList');
 })->name('user.list');
+
+Route::get('/user.guest', function () {
+    return Inertia::render('Guest');
+})->name('user.guest');
+
 
 require __DIR__.'/auth.php';
 
