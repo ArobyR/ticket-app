@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "@inertiajs/inertia-react";
-import Authenticated from "@/Layouts/Layout";
+import Layout from "@/Layouts/Layout";
 import Button from "@/Components/Forms/ButtonOnClickSelect"
 import CardOne from "@/Components/Cards/CardOne"
+import CardTwo from "@/Components/Cards/CardTwo"
+import CardThree from "@/Components/Cards/CardThree"
 import Embarazada from "@/Assets/Png/Embarazada.png";
 import Discapacitado from "@/Assets/Png/Discapacitado.png";
 import Corriente from "@/Assets/PNg/Corriente.png";
@@ -21,7 +23,7 @@ export default function Dashboard(props) {
             estado_ticket: 'en proceso'
         })
         const confirm = window.confirm('Estas Seguro')
-        {confirm && (setFormStep(2))}
+        { confirm && (setFormStep(2)) }
 
     }
 
@@ -31,7 +33,7 @@ export default function Dashboard(props) {
             estado_ticket: 'en proceso'
         })
         const confirm = window.confirm('Estas Seguro')
-        {confirm && (setFormStep(2))}
+        { confirm && (setFormStep(2)) }
 
     }
     const handleNormal = () => {
@@ -40,7 +42,7 @@ export default function Dashboard(props) {
             estado_ticket: 'en proceso'
         })
         const confirm = window.confirm('Estas Seguro')
-        {confirm && (setFormStep(2))}
+        { confirm && (setFormStep(2)) }
     }
 
     const createTicket = async () => {
@@ -73,178 +75,119 @@ export default function Dashboard(props) {
 
     return (
 
-        <Authenticated
+        <Layout
             auth={props.auth}
             errors={props.errors}
             title="Dashboard"
         >
             {formStep == 0 && (
-                <CardOne
-                    label="General"
-                    name="Generar tu turno"
-                    onClick={handleOption5}
-                    processing={processing}
-                >
-                    Nota: Sea paciente espere su turno y respete a los demas.
-                    "Con amor y paciencia, nada es imposible"
-                    (Daisaku Ikeda).
-                </CardOne>
+                <div className="min-h-screen flex justify-center items-center">
+                    <CardTwo
+                        label="General"
+                        name="Generar tu turno"
+                        onClick={handleOption5}
+                        processing={processing}
+                    >
+                        Nota: Sea paciente espere su turno y respete a los demas.
+                        "Con amor y paciencia, nada es imposible"
+                        (Daisaku Ikeda).
+                </CardTwo>
+                </div>
             )}
 
             {formStep == 1 && (
                 <div className="min-h-screen flex justify-center items-center">
                     {/* <!-- Persona embarazada --> */}
-                    <div className="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
-
-                        <h1 className="text-black font-semibold text-2xl">
-                            Persona embarazada
-                    </h1>
-
-
-                        <div className="pt-8">
-
-                            <p className="font-semibold text-gray-400 text-left pt-5">
-                                <img className="ml-0" src={Embarazada} ></img>
-                            </p>
-
-                            <Button processing={processing} onClick={handlePregnant}>
-                                Seleccionar
-                            </Button>
-
-                        </div>
-
-                    </div>
+                    <CardOne
+                        label="Persona embarazada"
+                        name="Seleccionar"
+                        onClick={handlePregnant}
+                        processing={processing}
+                    >
+                        <img className="ml-0" src={Embarazada} ></img>
+                    </CardOne>
 
                     {/* <!-- Persona con discapacidad --> */}
-                    <div className="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
-
-                        <h1 className="text-white font-semibold text-2xl">
-                            Persona con discapacidad
-                    </h1>
-
-                        <div className="pt-8">
-
-                            <p className="font-semibold text-gray-400 text-left pt-5">
-                                <img className="ml-0" src={Discapacitado} ></img>
-                            </p>
-
-                            <Button processing={processing} onClick={handleDisabled}>
-                                Seleccionar
-                            </Button>
-
-                        </div>
-                    </div>
+                    <CardTwo
+                        label="Persona sin discapacidad"
+                        name="Seleccionar"
+                        onClick={handleDisabled}
+                        processing={processing}
+                    >
+                        <img className="ml-0" src={Discapacitado} ></img>
+                    </CardTwo>
 
                     {/* <!-- Persona sin discapacidad --> */}
-                    <div className="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
-
-                        <h1 className="text-black font-semibold text-2xl">
-                            Persona sin discapacidad
-                    </h1>
-
-                        <div className="pt-8">
-
-                            <p className="font-semibold text-gray-400 text-left ">
-                                <img className="ml-0" src={Corriente} ></img>
-                            </p>
-
-                            <Button processing={processing} onClick={handleNormal}>
-                                Seleccionar
-                            </Button>
-
-                        </div>
-                    </div>
+                    <CardThree
+                        label="Persona sin discapacidad"
+                        name="Seleccionar"
+                        onClick={handleNormal}
+                        processing={processing}
+                    >
+                        <img className="ml-0" src={Corriente} ></img>
+                    </CardThree>
                 </div>
             )}
 
             {formStep == 2 && (
-                <CardOne
-                label="General"
-                name="Continuar"
-                onClick={handleOption4}
-                processing={processing}
-            >
-                Nota: Sea paciente espere su turno y respete a los demas.
-                "Con amor y paciencia, nada es imposible"
-                (Daisaku Ikeda).
-            </CardOne>
+                <div className="min-h-screen flex justify-center items-center">
+
+                    <CardTwo
+                        label="General"
+                        name="Continuar"
+                        onClick={handleOption4}
+                        processing={processing}
+                    >
+                        Nota: Sea paciente espere su turno y respete a los demas.
+                        "Con amor y paciencia, nada es imposible"
+                        (Daisaku Ikeda).
+                </CardTwo>
+                </div>
             )}
 
             {formStep == 3 && (
 
                 <div className="min-h-screen flex justify-center items-center">
                     {/* <!-- Persona embarazada --> */}
-                    <div className="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
-
-                        <h1 className="text-black font-semibold text-2xl">
-                            Opcion 1
-                        </h1>
-                        <hr className="mt-4 border-1"></hr>
-
-                        <p className="mt-8 font-semibold text-gray-400 text-left">
-                            <span className="pl-2">
-                                <span className="text-white"> - </span>
+                    <CardOne
+                        label="Opcion 1"
+                        name="Seleccionar"
+                        onClick={handlePregnant}
+                        processing={processing}
+                    >
+                        <span className="pl-2">
+                            <span className="text-white"> - </span>
                                 Generar ticket o voucher para visualizar su turno.
                         </span>
-                        </p>
-
-                        <div className="pt-8">
-                            <Button processing={processing} onClick={handleOption1}>
-                                Seleccionar
-                            </Button>
-                        </div>
-
-                    </div>
+                    </CardOne>
 
                     {/* <!-- Persona con discapacidad --> */}
-                    <div className="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
-
-                        <h1 className="text-white font-semibold text-2xl">
-                            General
-                        </h1>
-
-                        <p className="mt-4 font-semibold text-gray-400 text-left">
-                            <span className="pl-2 ">
-                                Nota: Sea paciente espere su turno y respete a los demas.
-                                "Con amor y paciencia, nada es imposible"
-                                (Daisaku Ikeda).
+                    <CardTwo
+                        label="General"
+                        name="Seleccionar"
+                        onClick={handleDisabled}
+                        processing={processing}
+                    >
+                        <span className="pl-2 ">
+                            Nota: Sea paciente espere su turno y respete a los demas.
+                            "Con amor y paciencia, nada es imposible"
+                            (Daisaku Ikeda).
                         </span>
-                        </p>
-
-                        <div className="pt-8">
-
-                            <Button processing={processing} onClick={handleOption2}>
-                                Finalizar
-                            </Button>
-
-                        </div>
-                    </div>
+                    </CardTwo>
 
                     {/* <!-- Persona sin discapacidad --> */}
-                    <div className="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
-
-                        <h1 className="text-black font-semibold text-2xl">
-                            Opcion 2
-                        </h1>
-
-                        <hr className="mt-4 border-1"></hr>
-
-                        <p className="mt-8 font-semibold text-gray-400 text-left">
-                            <span className="pl-2 ">
-                                Generar Codigo Qr para escanear y visualizar su turno en la App Movil.
+                    <CardThree
+                        label="Opcion 2"
+                        name="Seleccionar"
+                        onClick={handleNormal}
+                        processing={processing}
+                    >
+                        <span className="pl-2 ">
+                            Generar Codigo Qr para escanear y visualizar su turno en la App Movil.
                         </span>
-                        </p>
-
-                        <div className="pt-8 ">
-
-                            <Button processing={processing} onClick={handleOption3}>
-                                Seleccionar
-                            </Button>
-
-                        </div>
-                    </div>
+                    </CardThree>
                 </div>
             )}
-        </Authenticated>
+        </Layout>
     );
 }
