@@ -4882,7 +4882,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
 /* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
 /* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
-/* harmony import */ var _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/PNg/Corriente.png */ "./resources/js/Assets/PNg/Corriente.png");
+/* harmony import */ var _Assets_Png_Corriente_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/Png/Corriente.png */ "./resources/js/Assets/Png/Corriente.png");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -5083,7 +5083,7 @@ function Dashboard(props) {
             className: "font-semibold text-gray-400 text-left ",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
               className: "ml-0",
-              src: _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_7__.default
+              src: _Assets_Png_Corriente_png__WEBPACK_IMPORTED_MODULE_7__.default
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__.default, {
             processing: processing,
@@ -5203,16 +5203,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _Components_Forms_ButtonOnClickSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Forms/ButtonOnClickSelect */ "./resources/js/Components/Forms/ButtonOnClickSelect.js");
-/* harmony import */ var _Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/Cards/CardOne */ "./resources/js/Components/Cards/CardOne.js");
-/* harmony import */ var _Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Components/Cards/CardTwo */ "./resources/js/Components/Cards/CardTwo.js");
-/* harmony import */ var _Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Components/Cards/CardThree */ "./resources/js/Components/Cards/CardThree.js");
-/* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
-/* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
-/* harmony import */ var _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Assets/PNg/Corriente.png */ "./resources/js/Assets/PNg/Corriente.png");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Cards/CardOne */ "./resources/js/Components/Cards/CardOne.js");
+/* harmony import */ var _Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/Cards/CardTwo */ "./resources/js/Components/Cards/CardTwo.js");
+/* harmony import */ var _Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Components/Cards/CardThree */ "./resources/js/Components/Cards/CardThree.js");
+/* harmony import */ var _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Assets/Png/Embarazada.png */ "./resources/js/Assets/Png/Embarazada.png");
+/* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
+/* harmony import */ var _Assets_Png_Corriente_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/Assets/Png/Corriente.png */ "./resources/js/Assets/Png/Corriente.png");
+/* harmony import */ var _Utils_Ticket_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Utils/Ticket/api */ "./resources/js/Utils/Ticket/api.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -5230,7 +5228,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 
 
 
@@ -5286,26 +5283,21 @@ function Dashboard(props) {
     }
   };
 
-  var createTicket = /*#__PURE__*/function () {
+  var create = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      var reponse, responseData;
+      var responseData;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_11___default().post("api/ticket.insert", data);
+              return (0,_Utils_Ticket_api__WEBPACK_IMPORTED_MODULE_10__.createTicket)(data);
 
             case 2:
-              reponse = _context.sent;
-              _context.next = 5;
-              return reponse.data;
-
-            case 5:
               responseData = _context.sent;
               console.log(responseData);
 
-            case 7:
+            case 4:
             case "end":
               return _context.stop();
           }
@@ -5313,7 +5305,7 @@ function Dashboard(props) {
       }, _callee);
     }));
 
-    return function createTicket() {
+    return function create() {
       return _ref.apply(this, arguments);
     };
   }();
@@ -5331,7 +5323,7 @@ function Dashboard(props) {
   var handleOption3 = function handleOption3() {};
 
   var handleOption4 = function handleOption4() {
-    createTicket();
+    create();
     setFormStep(3);
   };
 
@@ -5344,87 +5336,87 @@ function Dashboard(props) {
       formStep = _useState2[0],
       setFormStep = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_3__.default, {
     auth: props.auth,
     errors: props.errors,
     title: "Dashboard",
-    children: [formStep == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+    children: [formStep == 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       className: "min-h-screen flex justify-center items-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_6__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "General",
         name: "Generar tu turno",
         onClick: handleOption5,
         processing: processing,
         children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
       })
-    }), formStep == 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
+    }), formStep == 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
       className: "min-h-screen flex justify-center items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Persona embarazada",
         name: "Seleccionar",
         onClick: handlePregnant,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
           className: "ml-0",
-          src: _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_8__.default
+          src: _Assets_Png_Embarazada_png__WEBPACK_IMPORTED_MODULE_7__.default
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Persona sin discapacidad",
         name: "Seleccionar",
         onClick: handleDisabled,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
           className: "ml-0",
-          src: _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_9__.default
+          src: _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_8__.default
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Persona sin discapacidad",
         name: "Seleccionar",
         onClick: handleNormal,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
           className: "ml-0",
-          src: _Assets_PNg_Corriente_png__WEBPACK_IMPORTED_MODULE_10__.default
+          src: _Assets_Png_Corriente_png__WEBPACK_IMPORTED_MODULE_9__.default
         })
       })]
-    }), formStep == 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("div", {
+    }), formStep == 2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       className: "min-h-screen flex justify-center items-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_6__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "General",
         name: "Continuar",
         onClick: handleOption4,
         processing: processing,
         children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
       })
-    }), formStep == 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
+    }), formStep == 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
       className: "min-h-screen flex justify-center items-center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_5__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardOne__WEBPACK_IMPORTED_MODULE_4__.default, {
         label: "Opcion 1",
         name: "Seleccionar",
         onClick: handlePregnant,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("span", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("span", {
           className: "pl-2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
             className: "text-white",
             children: " - "
           }), "Generar ticket o voucher para visualizar su turno."]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardTwo__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "General",
-        name: "Seleccionar",
-        onClick: handleDisabled,
+        name: "Finalizar",
+        onClick: handleOption2,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
           className: "pl-2 ",
           children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_7__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_Components_Cards_CardThree__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Opcion 2",
         name: "Seleccionar",
         onClick: handleNormal,
         processing: processing,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("span", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
           className: "pl-2 ",
           children: "Generar Codigo Qr para escanear y visualizar su turno en la App Movil."
         })
@@ -5604,281 +5596,59 @@ function Register() {
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     fetchApi();
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    "class": "pt-24 flex flex-row",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      "class": "w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-        "class": "text-black font-semibold text-2xl",
-        children: "Basic"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-        "class": "pt-2 tracking-wide",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 align-top",
-          children: "$ "
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-3xl font-semibold",
-          children: "10"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 font-medium",
-          children: "/ user"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
-        "class": "mt-4 border-1"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        "class": "pt-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["Get started with ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "messaging"
-            })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
+      className: "w-full whitespace-nowrap ",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          className: "font-bold text-left",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Nombre"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Apellido"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Cedula"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Email"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Password"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            className: "px-6 pt-5 pb-4",
+            children: "Action"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["Flexible ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "team meetings"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tbody", {
+        children: !usuarios ? 'Cargando...' : usuarios.map(function (row) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+              children: row.nombre_usuario
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+              children: row.apellido_usuario
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+              children: row.cedula_usuario
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+              children: row.email
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+              children: row.password
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Components_Tables_Link__WEBPACK_IMPORTED_MODULE_2__.default, {
+                href: "/api/users.delete/" + row.id_usuario,
+                children: "Eliminar"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Components_Tables_Link__WEBPACK_IMPORTED_MODULE_2__.default, {
+                href: "/api/users.update/" + row.id_usuario,
+                children: "Actualizar"
+              })]
             })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "5 TB"
-            }), " cloud storage"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-          href: "#",
-          "class": "",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-            "class": "w-full py-4 bg-blue-600 mt-8 rounded-xl text-white",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "font-medium",
-              children: "Choose Plan"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "pl-2 material-icons align-middle text-sm",
-              children: "east"
-            })]
-          })
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      "class": "w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-        "class": "text-white font-semibold text-2xl",
-        children: "Startup"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-        "class": "pt-2 tracking-wide",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 align-top",
-          children: "$ "
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-3xl font-semibold",
-          children: "24"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 font-medium",
-          children: "/ user"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
-        "class": "mt-4 border-1 border-gray-600"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        "class": "pt-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["All features in ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-white",
-              children: "Basic"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["Flexible ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-white",
-              children: "call scheduling"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-white",
-              children: "15 TB"
-            }), " cloud storage"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-          href: "#",
-          "class": "",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-            "class": "w-full py-4 bg-blue-600 mt-8 rounded-xl text-white",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "font-medium",
-              children: "Choose Plan"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "pl-2 material-icons align-middle text-sm",
-              children: "east"
-            })]
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        "class": "absolute top-4 right-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          "class": "bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs",
-          children: "Popular"
+          });
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      "class": "w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
-        "class": "text-black font-semibold text-2xl",
-        children: "Enterprise"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-        "class": "pt-2 tracking-wide",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 align-top",
-          children: "$ "
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-3xl font-semibold",
-          children: "35"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          "class": "text-gray-400 font-medium",
-          children: "/ user"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
-        "class": "mt-4 border-1"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        "class": "pt-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["All features in ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "Startup"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: ["Growth ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "oriented"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-          "class": "font-semibold text-gray-400 text-left pt-5",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            "class": "material-icons align-middle",
-            children: "done"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-            "class": "pl-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "text-black",
-              children: "Unlimited"
-            }), " cloud storage"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-          href: "#",
-          "class": "",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-            "class": "w-full py-4 bg-blue-600 mt-8 rounded-xl text-white",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "font-medium",
-              children: "Choose Plan"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              "class": "pl-2 material-icons align-middle text-sm",
-              children: "east"
-            })]
-          })
-        })]
-      })]
-    })]
-  })
-  /*
-  }
-  <div>
-  <table className="w-full whitespace-nowrap " >
-          <thead>
-          <tr className="font-bold text-left">
-                  <th className="px-6 pt-5 pb-4">Nombre</th>
-                  <th className="px-6 pt-5 pb-4">Apellido</th>
-                  <th className="px-6 pt-5 pb-4">Cedula</th>
-                  <th className="px-6 pt-5 pb-4">Email</th>
-                  <th className="px-6 pt-5 pb-4">Password</th>
-                  <th className="px-6 pt-5 pb-4">Action</th>
-                  </tr>
-          </thead>
-          <tbody>
-              {!usuarios ? 'Cargando...' :
-                  usuarios.map((row) => {
-                      return (
-                      <tr>
-                      <td>
-                              {row.nombre_usuario}
-                          </td>
-                          <td>
-                              {row.apellido_usuario}
-                          </td>
-                            <td>
-                              {row.cedula_usuario}
-                              </td>
-                          <td>
-                          {row.email}
-                          </td>
-                          <td>
-                              {row.password}
-                          </td>
-                            <td>
-                              <Link href={"/api/users.delete/" + row.id_usuario} >
-                                  Eliminar
-                                  </Link>
-                                    <Link href={"/api/users.update/" + row.id_usuario}>
-                                  Actualizar
-                      </Link>
-                          </td>
-                          </tr>)
-                  })
-              }
-            </tbody>
-        </table></div>
-      */
-  ;
+    })
+  });
 }
 
 /***/ }),
@@ -6149,6 +5919,410 @@ function Welcome(props) {
     })]
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/Utils/Ticket/api.js":
+/*!******************************************!*\
+  !*** ./resources/js/Utils/Ticket/api.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getAllTickets": () => (/* binding */ getAllTickets),
+/* harmony export */   "getCodigoTicket": () => (/* binding */ getCodigoTicket),
+/* harmony export */   "getCancelados": () => (/* binding */ getCancelados),
+/* harmony export */   "getAtendidos": () => (/* binding */ getAtendidos),
+/* harmony export */   "getAtendidosCancelados": () => (/* binding */ getAtendidosCancelados),
+/* harmony export */   "getAtendidosMes": () => (/* binding */ getAtendidosMes),
+/* harmony export */   "getCanceladosMes": () => (/* binding */ getCanceladosMes),
+/* harmony export */   "getAtendidosCanceladosMes": () => (/* binding */ getAtendidosCanceladosMes),
+/* harmony export */   "createTicket": () => (/* binding */ createTicket),
+/* harmony export */   "deleteTicket": () => (/* binding */ deleteTicket)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+var getAllTickets = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.list');
+
+          case 3:
+            response = _context.sent;
+            _context.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context.sent;
+            return _context.abrupt("return", responseData);
+
+          case 10:
+            _context.prev = 10;
+            _context.t0 = _context["catch"](0);
+            console.error(_context.t0);
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 10]]);
+  }));
+
+  return function getAllTickets() {
+    return _ref.apply(this, arguments);
+  };
+}();
+var getCodigoTicket = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(id) {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.prev = 0;
+            _context2.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.codigo/' + id);
+
+          case 3:
+            response = _context2.sent;
+            _context2.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context2.sent;
+            return _context2.abrupt("return", responseData);
+
+          case 10:
+            _context2.prev = 10;
+            _context2.t0 = _context2["catch"](0);
+            console.error(_context2.t0);
+
+          case 13:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[0, 10]]);
+  }));
+
+  return function getCodigoTicket(_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+var getCancelados = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.prev = 0;
+            _context3.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.cancelados');
+
+          case 3:
+            response = _context3.sent;
+            _context3.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context3.sent;
+            return _context3.abrupt("return", responseData);
+
+          case 10:
+            _context3.prev = 10;
+            _context3.t0 = _context3["catch"](0);
+            console.error(_context3.t0);
+
+          case 13:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[0, 10]]);
+  }));
+
+  return function getCancelados() {
+    return _ref3.apply(this, arguments);
+  };
+}();
+var getAtendidos = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.prev = 0;
+            _context4.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.atendidos');
+
+          case 3:
+            response = _context4.sent;
+            _context4.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context4.sent;
+            return _context4.abrupt("return", responseData);
+
+          case 10:
+            _context4.prev = 10;
+            _context4.t0 = _context4["catch"](0);
+            console.error(_context4.t0);
+
+          case 13:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[0, 10]]);
+  }));
+
+  return function getAtendidos() {
+    return _ref4.apply(this, arguments);
+  };
+}();
+var getAtendidosCancelados = /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            _context5.prev = 0;
+            _context5.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.atendidos-cancelados');
+
+          case 3:
+            response = _context5.sent;
+            _context5.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context5.sent;
+            return _context5.abrupt("return", responseData);
+
+          case 10:
+            _context5.prev = 10;
+            _context5.t0 = _context5["catch"](0);
+            console.error(_context5.t0);
+
+          case 13:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5, null, [[0, 10]]);
+  }));
+
+  return function getAtendidosCancelados() {
+    return _ref5.apply(this, arguments);
+  };
+}();
+var getAtendidosMes = /*#__PURE__*/function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.prev = 0;
+            _context6.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.atendidos-mes');
+
+          case 3:
+            response = _context6.sent;
+            _context6.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context6.sent;
+            return _context6.abrupt("return", responseData);
+
+          case 10:
+            _context6.prev = 10;
+            _context6.t0 = _context6["catch"](0);
+            console.error(_context6.t0);
+
+          case 13:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6, null, [[0, 10]]);
+  }));
+
+  return function getAtendidosMes() {
+    return _ref6.apply(this, arguments);
+  };
+}();
+var getCanceladosMes = /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee7() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            _context7.prev = 0;
+            _context7.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.cancelados-mes');
+
+          case 3:
+            response = _context7.sent;
+            _context7.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context7.sent;
+            return _context7.abrupt("return", responseData);
+
+          case 10:
+            _context7.prev = 10;
+            _context7.t0 = _context7["catch"](0);
+            console.error(_context7.t0);
+
+          case 13:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7, null, [[0, 10]]);
+  }));
+
+  return function getCanceladosMes() {
+    return _ref7.apply(this, arguments);
+  };
+}();
+var getAtendidosCanceladosMes = /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee8() {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee8$(_context8) {
+      while (1) {
+        switch (_context8.prev = _context8.next) {
+          case 0:
+            _context8.prev = 0;
+            _context8.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.atendidos-cancelados-mes');
+
+          case 3:
+            response = _context8.sent;
+            _context8.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context8.sent;
+            return _context8.abrupt("return", responseData);
+
+          case 10:
+            _context8.prev = 10;
+            _context8.t0 = _context8["catch"](0);
+            console.error(_context8.t0);
+
+          case 13:
+          case "end":
+            return _context8.stop();
+        }
+      }
+    }, _callee8, null, [[0, 10]]);
+  }));
+
+  return function getAtendidosCanceladosMes() {
+    return _ref8.apply(this, arguments);
+  };
+}();
+var createTicket = /*#__PURE__*/function () {
+  var _ref9 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee9(data) {
+    var reponse, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee9$(_context9) {
+      while (1) {
+        switch (_context9.prev = _context9.next) {
+          case 0:
+            _context9.prev = 0;
+            _context9.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().post('api/ticket.insert', data);
+
+          case 3:
+            reponse = _context9.sent;
+            _context9.next = 6;
+            return reponse.data;
+
+          case 6:
+            responseData = _context9.sent;
+            return _context9.abrupt("return", responseData);
+
+          case 10:
+            _context9.prev = 10;
+            _context9.t0 = _context9["catch"](0);
+            console.error(_context9.t0);
+
+          case 13:
+          case "end":
+            return _context9.stop();
+        }
+      }
+    }, _callee9, null, [[0, 10]]);
+  }));
+
+  return function createTicket(_x2) {
+    return _ref9.apply(this, arguments);
+  };
+}();
+var deleteTicket = /*#__PURE__*/function () {
+  var _ref10 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee10(id) {
+    var response, responseData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee10$(_context10) {
+      while (1) {
+        switch (_context10.prev = _context10.next) {
+          case 0:
+            _context10.prev = 0;
+            _context10.next = 3;
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().get('api/ticket.delete/' + id);
+
+          case 3:
+            response = _context10.sent;
+            _context10.next = 6;
+            return response.data;
+
+          case 6:
+            responseData = _context10.sent;
+            return _context10.abrupt("return", responseData);
+
+          case 10:
+            _context10.prev = 10;
+            _context10.t0 = _context10["catch"](0);
+            console.error(_context10.t0);
+
+          case 13:
+          case "end":
+            return _context10.stop();
+        }
+      }
+    }, _callee10, null, [[0, 10]]);
+  }));
+
+  return function deleteTicket(_x3) {
+    return _ref10.apply(this, arguments);
+  };
+}();
 
 /***/ }),
 
@@ -10899,9 +11073,9 @@ module.exports = deepmerge_1;
 
 /***/ }),
 
-/***/ "./resources/js/Assets/PNg/Corriente.png":
+/***/ "./resources/js/Assets/Png/Corriente.png":
 /*!***********************************************!*\
-  !*** ./resources/js/Assets/PNg/Corriente.png ***!
+  !*** ./resources/js/Assets/Png/Corriente.png ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "@inertiajs/inertia-react";
 import Layout from "@/Layouts/Layout";
-import Button from "@/Components/Forms/ButtonOnClickSelect"
 import CardOne from "@/Components/Cards/CardOne"
 import CardTwo from "@/Components/Cards/CardTwo"
 import CardThree from "@/Components/Cards/CardThree"
 import Embarazada from "@/Assets/Png/Embarazada.png";
 import Discapacitado from "@/Assets/Png/Discapacitado.png";
-import Corriente from "@/Assets/PNg/Corriente.png";
-import axios from "axios"
+import Corriente from "@/Assets/Png/Corriente.png";
+import { createTicket } from "@/Utils/Ticket/api";
 
 export default function Dashboard(props) {
 
@@ -45,9 +44,8 @@ export default function Dashboard(props) {
         { confirm && (setFormStep(2)) }
     }
 
-    const createTicket = async () => {
-        const reponse = await axios.post("api/ticket.insert", data)
-        const responseData = await reponse.data
+    const create = async () => {
+        const responseData = await createTicket(data)
         console.log(responseData)
     }
 
@@ -65,7 +63,7 @@ export default function Dashboard(props) {
 
     }
     const handleOption4 = () => {
-        createTicket()
+        create()
         setFormStep(3)
     }
     const handleOption5 = () => {
@@ -148,7 +146,7 @@ export default function Dashboard(props) {
             {formStep == 3 && (
 
                 <div className="min-h-screen flex justify-center items-center">
-                    {/* <!-- Persona embarazada --> */}
+                    {/* <!-- Opcion 1 --> */}
                     <CardOne
                         label="Opcion 1"
                         name="Seleccionar"
@@ -161,11 +159,11 @@ export default function Dashboard(props) {
                         </span>
                     </CardOne>
 
-                    {/* <!-- Persona con discapacidad --> */}
+                    {/* <!-- General --> */}
                     <CardTwo
                         label="General"
-                        name="Seleccionar"
-                        onClick={handleDisabled}
+                        name="Finalizar"
+                        onClick={handleOption2}
                         processing={processing}
                     >
                         <span className="pl-2 ">
@@ -175,7 +173,7 @@ export default function Dashboard(props) {
                         </span>
                     </CardTwo>
 
-                    {/* <!-- Persona sin discapacidad --> */}
+                    {/* <!-- Opcion 2 --> */}
                     <CardThree
                         label="Opcion 2"
                         name="Seleccionar"
