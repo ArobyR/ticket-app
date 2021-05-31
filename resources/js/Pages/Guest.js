@@ -8,7 +8,8 @@ import Embarazada from "@/Assets/Png/Embarazada.png";
 import Discapacitado from "@/Assets/Png/Discapacitado.png";
 import Corriente from "@/Assets/Png/Corriente.png";
 import { createTicket } from "@/Utils/Ticket/api";
-import { StaticDialog, useDialog } from "react-st-modal";
+/*import { StaticDialog, useDialog } from "react-st-modal";*/
+import Modal from "@/Components/Forms/Modal";
 import QRCode from "qrcode.react";
 
 export default function Dashboard(props) {
@@ -35,7 +36,7 @@ export default function Dashboard(props) {
         { confirm && (setFormStep(2)) }
     }
 
-    const [formStep, setFormStep] = useState(3)
+    const [formStep, setFormStep] = useState(0)
     const [isOpen, setOpen] = useState(false);
     const create = async () => {
         const responseData = await createTicket(data)
@@ -157,16 +158,11 @@ export default function Dashboard(props) {
                         </span>
                     </CardCenter>
 
-                    <StaticDialog
-                        isOpen={isOpen}
-                        title="Custom static dialog"
-                        onAfterClose={(result) => {
-                            setOpen(false);
-                        }}
-                    >
-                        <QRCode value="http://facebook.github.io/react/" />,
-                    </StaticDialog>
-
+                    <Modal isOpen={isOpen} isClose={() => setOpen(false)}>
+                        <span className="pl-2 ">
+                            <QRCode value="Hola Mundo" />
+                        </span>
+                    </Modal>
                     <CardEnd
                         label="Opcion 2"
                         name="Seleccionar"

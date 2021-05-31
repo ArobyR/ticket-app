@@ -3043,6 +3043,64 @@ function Checkbox(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/Components/Forms/Modal.js":
+/*!************************************************!*\
+  !*** ./resources/js/Components/Forms/Modal.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Modal)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function Modal(_ref) {
+  var isOpen = _ref.isOpen,
+      children = _ref.children,
+      isClose = _ref.isClose;
+  if (!isOpen) return react__WEBPACK_IMPORTED_MODULE_0__.Fragment;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "fixed md:w-1/3 sm:w-full rounded-lg shadow-lg bg-white my-3",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "flex justify-between border-b border-gray-100 px-5 py-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "font-bold text-gray-700 text-lg",
+          children: "Information"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          className: true,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+            className: "fa fa-times-circle text-red-500 hover:text-red-600 transition duration-150"
+          })
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "px-10 py-5 text-gray-600",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("main", {
+        children: children
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "px-5 py-4 flex justify-end",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        type: "button",
+        onClick: isClose,
+        className: "text-sm py-2 px-3 text-gray-500 hover:text-gray-600 transition duration-150",
+        children: "Close"
+      })
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/Components/Forms/TextInput.js":
 /*!****************************************************!*\
   !*** ./resources/js/Components/Forms/TextInput.js ***!
@@ -5396,7 +5454,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Assets_Png_Discapacitado_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Assets/Png/Discapacitado.png */ "./resources/js/Assets/Png/Discapacitado.png");
 /* harmony import */ var _Assets_Png_Corriente_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/Assets/Png/Corriente.png */ "./resources/js/Assets/Png/Corriente.png");
 /* harmony import */ var _Utils_Ticket_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/Utils/Ticket/api */ "./resources/js/Utils/Ticket/api.js");
-/* harmony import */ var react_st_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-st-modal */ "./node_modules/react-st-modal/build/index.js");
+/* harmony import */ var _Components_Forms_Modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/Components/Forms/Modal */ "./resources/js/Components/Forms/Modal.js");
 /* harmony import */ var qrcode_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! qrcode.react */ "./node_modules/qrcode.react/lib/index.js");
 /* harmony import */ var qrcode_react__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(qrcode_react__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -5427,6 +5485,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+/*import { StaticDialog, useDialog } from "react-st-modal";*/
 
 
 
@@ -5474,7 +5534,7 @@ function Dashboard(props) {
     }
   };
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(3),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       formStep = _useState2[0],
       setFormStep = _useState2[1];
@@ -5606,15 +5666,17 @@ function Dashboard(props) {
           className: "pl-2 ",
           children: "Nota: Sea paciente espere su turno y respete a los demas. \"Con amor y paciencia, nada es imposible\" (Daisaku Ikeda)."
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_st_modal__WEBPACK_IMPORTED_MODULE_11__.StaticDialog, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Components_Forms_Modal__WEBPACK_IMPORTED_MODULE_11__.default, {
         isOpen: isOpen,
-        title: "Custom static dialog",
-        onAfterClose: function onAfterClose(result) {
-          setOpen(false);
+        isClose: function isClose() {
+          return setOpen(false);
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)((qrcode_react__WEBPACK_IMPORTED_MODULE_12___default()), {
-          value: "http://facebook.github.io/react/"
-        }), ","]
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
+          className: "pl-2 ",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)((qrcode_react__WEBPACK_IMPORTED_MODULE_12___default()), {
+            value: "Hola Mundo"
+          })
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_Components_Cards_CardEnd__WEBPACK_IMPORTED_MODULE_6__.default, {
         label: "Opcion 2",
         name: "Seleccionar",
@@ -6089,7 +6151,7 @@ function Register() {
                           <td>
                               {row.apellido_usuario}
                           </td>
-                           <td>
+                            <td>
                               {row.cedula_usuario}
                           </td>
                           <td>
@@ -6098,19 +6160,19 @@ function Register() {
                           <td>
                               {row.password}
                           </td>
-                           <td>
+                            <td>
                               <Link href={"/api/users.delete/" + row.id_usuario} >
                                   Eliminar
                               </Link>
-                               <Link href={"/api/users.update/" + row.id_usuario}>
+                                <Link href={"/api/users.update/" + row.id_usuario}>
                                   Actualizar
                   </Link>
                           </td>
                       </tr>)
               })
           }
-       </tbody>
-   </table></div>
+        </tbody>
+    </table></div>
       */
   ;
 }
@@ -73124,49 +73186,6 @@ exports.typeOf = typeOf;
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/react-st-modal/build/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/react-st-modal/build/index.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Alert": () => (/* binding */ k),
-/* harmony export */   "Confirm": () => (/* binding */ M),
-/* harmony export */   "CustomDialog": () => (/* binding */ O),
-/* harmony export */   "Dialog": () => (/* binding */ C),
-/* harmony export */   "Modal": () => (/* binding */ g),
-/* harmony export */   "ModalButton": () => (/* binding */ m),
-/* harmony export */   "ModalContent": () => (/* binding */ F),
-/* harmony export */   "ModalFooter": () => (/* binding */ S),
-/* harmony export */   "Prompt": () => (/* binding */ w),
-/* harmony export */   "StaticDialog": () => (/* binding */ H),
-/* harmony export */   "useDialog": () => (/* binding */ A)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */function i(e,t,o,n){return new(o||(o=Promise))((function(l,a){function r(e){try{i(n.next(e))}catch(e){a(e)}}function d(e){try{i(n.throw(e))}catch(e){a(e)}}function i(e){var t;e.done?l(e.value):(t=e.value,t instanceof o?t:new o((function(e){e(t)}))).then(r,d)}i((n=n.apply(e,t||[])).next())}))}function s(e,t){void 0===t&&(t={});var o=t.insertAt;if(e&&"undefined"!=typeof document){var n=document.head||document.getElementsByTagName("head")[0],l=document.createElement("style");l.type="text/css","top"===o&&n.firstChild?n.insertBefore(l,n.firstChild):n.appendChild(l),l.styleSheet?l.styleSheet.cssText=e:l.appendChild(document.createTextNode(e))}}var c={button:"Button-module_button__3FnXy","--primary":"Button-module_--primary__1ZLkB Button-module_button__3FnXy","--danger":"Button-module_--danger__2K53z Button-module_button__3FnXy","--light":"Button-module_--light__3HiwO Button-module_button__3FnXy","--dark":"Button-module_--dark__1kDBA Button-module_button__3FnXy",buttonPending:"Button-module_buttonPending__1mRIX",spin:"Button-module_spin__25Z1R"};function u(){return react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg",{viewBox:"0 0 512 512",width:"20",height:"20",fill:"#ffffff",fillRule:"nonzero"},react__WEBPACK_IMPORTED_MODULE_0__.createElement("g",null,react__WEBPACK_IMPORTED_MODULE_0__.createElement("path",{d:"M102.59,341.42a15,15,0,0,1-13.42-8.28,187.41,187.41,0,0,1,35.11-216.86c73.18-73.19,192.26-73.19,265.44,0a15,15,0,0,1-21.21,21.21C307,76,207,76,145.49,137.49A157.45,157.45,0,0,0,116,319.69a15,15,0,0,1-13.4,21.73Z"}),react__WEBPACK_IMPORTED_MODULE_0__.createElement("path",{d:"M257,436.61a187.1,187.1,0,0,1-132.72-54.88,15,15,0,1,1,21.21-21.22C207,422,307,422,368.51,360.51A157.45,157.45,0,0,0,398,178.31a15,15,0,0,1,26.82-13.45A187.62,187.62,0,0,1,257,436.61Z"}),react__WEBPACK_IMPORTED_MODULE_0__.createElement("path",{d:"M315.21,148.25a15,15,0,0,1-1.47-29.92l47.43-4.73-9.51-47.67a15,15,0,0,1,29.42-5.86L393.82,124a15,15,0,0,1-13.22,17.86l-63.88,6.37C316.21,148.23,315.71,148.25,315.21,148.25Z"}),react__WEBPACK_IMPORTED_MODULE_0__.createElement("path",{d:"M147.61,450a15,15,0,0,1-14.7-12.07l-12.74-63.88a15,15,0,0,1,13.23-17.86l63.88-6.37a15,15,0,0,1,3,29.85l-47.43,4.73,9.5,47.67A15,15,0,0,1,147.61,450Z"})))}s("@-webkit-keyframes Button-module_spin__25Z1R{to{transform:rotate(1turn)}}@keyframes Button-module_spin__25Z1R{to{transform:rotate(1turn)}}.Button-module_button__3FnXy{display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:.8rem 3rem;border:none;border-radius:6px;font-size:80%;text-transform:uppercase;font-weight:bolder}.Button-module_button__3FnXy svg{margin-right:3px}.Button-module_button__3FnXy:active{padding:.9rem 3rem .7rem}.Button-module_--primary__1ZLkB{background-color:var(--st-button-primaryColor);color:var(--st-button-primaryTextColor)}.Button-module_--danger__2K53z{background-color:var(--st-button-dangerColor);color:var(--st-button-dangerTextColor)}.Button-module_--light__3HiwO{background-color:var(--st-button-lightColor);color:var(--st-button-lightTextColor)}.Button-module_--dark__1kDBA{background-color:var(--st-button-darkColor);color:var(--st-button-darkTextColor)}.Button-module_buttonPending__1mRIX{pointer-events:none;opacity:.8;padding-left:2.7rem}.Button-module_buttonPending__1mRIX svg{margin-right:.3rem;-webkit-animation:Button-module_spin__25Z1R 1s linear infinite;animation:Button-module_spin__25Z1R 1s linear infinite}");const m=(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(((t,o)=>{var n;return react__WEBPACK_IMPORTED_MODULE_0__.createElement("button",{ref:o,autoFocus:t.autoFocus,onClick:t.onClick,type:t.formRole||"button",disabled:"disabled"===t.state||"pending"===t.state,className:[null!==(n=t.className)&&void 0!==n?n:"",c[t.type?"--"+t.type:"--primary"],"pending"===t.state?c.buttonPending:""].join(" ")},"pending"===t.state&&react__WEBPACK_IMPORTED_MODULE_0__.createElement(u,null),t.children)}));m.displayName="Button";function p(t){var l;const a=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(),r=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(),d=null===(l=t.isLocked)||void 0===l||l;return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{const e=()=>{var e;r.current=null===(e=a.current)||void 0===e?void 0:e.querySelectorAll('input, select, textarea, button, [href], [tabindex]:not([tabindex="-1"]), video')},t=new MutationObserver((()=>{e()}));return e(),t.observe(a.current,{childList:!0}),()=>{t.disconnect()}}),[a]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{var e,o;if(t.isOpen){if(0===(null===(e=a.current)||void 0===e?void 0:e.querySelectorAll('input:focus, button:focus, [href]:focus, select:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus, video:focus')).length&&r.current.length>0){let e=null;const t=null===(o=a.current)||void 0===o?void 0:o.querySelector(".stf__dialogClose");r.current.forEach((o=>{o!==t&&null===e&&(e=o)})),null===e&&(e=t),e.focus()}}}),[t.isOpen]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{const e=e=>{if(!r.current||0===r.current.length)return;const{key:t,shiftKey:o}=e,{length:n,0:l,[n-1]:a}=r.current;if(d&&"Tab"===t){if(1===n)return void e.preventDefault();if(!o&&document.activeElement===a)return e.preventDefault(),void l.focus();if(o&&document.activeElement===l)return e.preventDefault(),void a.focus()}};if(t.isOpen)return window.addEventListener("keydown",e),()=>{window.removeEventListener("keydown",e)}}),[d,r,t.isOpen]),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{ref:a},t.children)}function _(e){let t=document.getElementById(e);return t||(t=document.createElement("div"),t.setAttribute("id",e),document.body.appendChild(t)),t}s(":root{--st-overlay-color:rgba(0,0,0,0.4);--st-overlay-z-index:1000;--st-overlay-transition:opacity 0.6s cubic-bezier(0.25,1,0.5,1);--st-overlay-perspective:1000px;--st-modal-minWidth:300px;--st-modal-borderRadius:5px;--st-modal-border:none;--st-modal-boxShadow:0 0 10px rgba(0,0,0,0.3);--st-modal-transformVisible:translate3d(-50%,-50%,0) scale(1) rotateX(0);--st-modal-transformHidden:translate3d(-50%,100%,0) scale(0.5) rotateX(-90deg);--st-modal-transition:all 0.6s cubic-bezier(0.25,1,0.5,1);--st-modal-backgroundColor:#fff;--st-modal-titleTextColor:#444;--st-modal-secondColor:#f6f6f6;--st-button-dangerColor:#ff5c5c;--st-button-dangerTextColor:#fff;--st-button-primaryColor:#5d9aff;--st-button-primaryTextColor:#fff;--st-button-lightColor:#f6f6f6;--st-button-lightTextColor:#444;--st-button-darkColor:#444;--st-button-darkTextColor:#f6f6f6;--st-button-borderRadius:6px;--st-input-padding:0.5rem;--st-input-border:solid 1px #eee;--st-input-borderRadius:6px;--st-dialog-baseWidth:95%;--st-dialog-maxWidth:600px;--st-dialog-padding:1rem;--st-dialog-maxContentHeight:85vh;--st-dialog-contentColor:#000}");var v={overlay:"Modal-module_overlay__21YAk",overlayHidden:"Modal-module_overlayHidden__1PlEe",modal:"Modal-module_modal__FqeFw",modalHidden:"Modal-module_modalHidden__3kGH6",modalBody:"Modal-module_modalBody__3_RoW",modalTitle:"Modal-module_modalTitle__1TtY9",modalContent:"Modal-module_modalContent__nuwvF",promtInput:"Modal-module_promtInput__1ceBZ",promtErrorInput:"Modal-module_promtErrorInput__1dvtX Modal-module_promtInput__1ceBZ",promtErrorText:"Modal-module_promtErrorText__2Eyj9",modalButtonPlace:"Modal-module_modalButtonPlace__AYeOm",modalCloseIcon:"Modal-module_modalCloseIcon__20QFz",dialog:"Modal-module_dialog__2UBIn",staticDialog:"Modal-module_staticDialog__1ApBK",alert:"Modal-module_alert__vNcoS Modal-module_dialog__2UBIn"};function g(t){var r;const d=null===(r=t.isBodyScrollLocked)||void 0===r||r,[i,s]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!1),[c,u]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),m=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(i),_=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(!1),g=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(),f=(0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((e=>{t.isOpen&&t.onAttemptClose&&("Esc"===e.key||"Escape"===e.key)&&t.onAttemptClose()}),[t]);return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{var e,o;if(s(t.isOpen),m.current=t.isOpen,d){(null===(e=t.replaceScrollBar)||void 0===e||e)&&(document.body.style.borderRight=t.isOpen?`solid ${window.innerWidth-document.documentElement.clientWidth}px ${null!==(o=t.scrollBarPlaceholderColor)&&void 0!==o?o:"#eeeeee"}`:"none"),document.body.style.overflow=t.isOpen?"hidden":t.defaultBodyOverflow||"visible"}}),[t.isOpen,t.defaultBodyOverflow,t.scrollBarPlaceholderColor,t.replaceScrollBar,d]),(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>(window.addEventListener("keydown",f),()=>{window.removeEventListener("keydown",f)})),[f]),react__WEBPACK_IMPORTED_MODULE_0__.createElement(p,{isLocked:t.isFocusLock,isOpen:i},react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{ref:g,className:[v.overlay,i?"":v.overlayHidden,c&&!i&&t.isStatic?v.staticDialog:""].join(" "),onMouseDown:e=>{e.target===g.current&&(_.current=!0)},onMouseUp:e=>{e.target===g.current&&!0===_.current&&(_.current=!1,t.onAttemptClose())}},react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{role:"dialog","aria-modal":"true","aria-labelledby":t.labelledby||"","aria-describedby":t.describedby||"",onTransitionEnd:()=>{m.current&&t.onCompletelyVisible&&t.onCompletelyVisible(),!m.current&&t.onCompletelyHidden&&t.onCompletelyHidden(),t.isStatic&&u(!m.current)},className:[v.modal,t.className||"",i?"":v.modalHidden].join(" ")},t.children)))}function f(t){const[o,n]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),a=(~~(1e8*Math.random())).toString(16),r=e=>{n(!1),t.onClose&&t.onClose(e)};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(g,{className:v.alert,isOpen:o,labelledby:"header_"+a,describedby:"content_"+a,onAttemptClose:()=>r("cancel"),onCompletelyHidden:()=>{t.onCompletelyHidden&&t.onCompletelyHidden()}},t.title&&react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalTitle,id:"header_"+a},t.title),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalContent,id:"content_"+a},t.body),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalButtonPlace},react__WEBPACK_IMPORTED_MODULE_0__.createElement(m,{onClick:()=>{r("ok")}},t.okButtonText||"Ok"),react__WEBPACK_IMPORTED_MODULE_0__.createElement(m,{onClick:()=>{r("cancel")},autoFocus:!0,type:"light"},t.cancelButtonText||"Cancel")))}function b(t){const[o,n]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),a=(~~(1e8*Math.random())).toString(16),r=()=>{n(!1),t.onClose&&t.onClose()};return react__WEBPACK_IMPORTED_MODULE_0__.createElement(g,{className:v.alert,isOpen:o,labelledby:"header_"+a,describedby:"content_"+a,onAttemptClose:r,onCompletelyHidden:()=>{t.onCompletelyHidden&&t.onCompletelyHidden()}},t.title&&react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3",{className:v.modalTitle,id:"header_"+a},t.title),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalContent,id:"content_"+a},t.body),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalButtonPlace},react__WEBPACK_IMPORTED_MODULE_0__.createElement(m,{onClick:r,autoFocus:!0},t.buttonText||"Ok")))}s(".Modal-module_overlay__21YAk{position:fixed;display:block;z-index:var(--st-overlay-z-index);left:0;top:0;width:100%;height:100%;background-color:var(--st-overlay-color);opacity:1;transition:var(--st-overlay-transition);perspective:var(--st-overlay-perspective)}.Modal-module_overlay__21YAk.Modal-module_overlayHidden__1PlEe{opacity:0;transition:var(--st-overlay-transition)}.Modal-module_modal__FqeFw{position:absolute;overflow:hidden;display:block;z-index:calc(var(--st-overlay-z-index) + 1);min-width:var(--st-modal-minWidth);transform:var(--st-modal-transformVisible);transition:var(--st-modal-transition);left:50%;top:50%;border:var(--st-modal-border);border-radius:var(--st-modal-borderRadius);box-shadow:var(--st-modal-boxShadow);background-color:var(--st-modal-backgroundColor);opacity:1}.Modal-module_modal__FqeFw.Modal-module_modalHidden__3kGH6{opacity:0;transform:var(--st-modal-transformHidden)}.Modal-module_modalBody__3_RoW{position:relative;max-height:var(--st-dialog-maxContentHeight);overflow-y:auto}.Modal-module_modalTitle__1TtY9{text-transform:uppercase;font-size:80%;font-weight:700;padding:var(--st-dialog-padding) var(--st-dialog-padding) calc(var(--st-dialog-padding)/2) var(--st-dialog-padding);color:var(--st-modal-titleTextColor);border-bottom:1px solid var(--st-modal-secondColor);margin:0}.Modal-module_modalContent__nuwvF{padding:calc(var(--st-dialog-padding)/2) var(--st-dialog-padding);color:var(--st-dialog-contentColor)}.Modal-module_promtInput__1ceBZ{width:100%;padding:var(--st-input-padding);border:var(--st-input-border);border-radius:var(--st-input-borderRadius)}.Modal-module_promtErrorInput__1dvtX{border-color:var(--st-button-dangerColor);box-shadow:0 0 3px var(--st-button-dangerColor)}.Modal-module_promtErrorText__2Eyj9{color:var(--st-button-dangerColor);font-size:80%;font-style:italic}.Modal-module_modalButtonPlace__AYeOm{display:flex;justify-content:flex-end;position:relative;overflow:hidden;padding:calc(var(--st-dialog-padding)/2) var(--st-dialog-padding);background-color:var(--st-modal-secondColor)}.Modal-module_modalButtonPlace__AYeOm>button{margin-left:1rem}.Modal-module_modalCloseIcon__20QFz{border:none;background:none;display:block;width:15px;height:15px;padding:0;overflow:hidden;position:absolute;right:var(--st-dialog-padding);top:var(--st-dialog-padding);cursor:pointer}.Modal-module_modalCloseIcon__20QFz svg{width:15px;height:15px;fill:var(--st-modal-titleTextColor)}.Modal-module_dialog__2UBIn{width:var(--st-dialog-baseWidth);max-width:var(--st-dialog-maxWidth)}.Modal-module_staticDialog__1ApBK{width:0;height:0;z-index:-1}");const y=react__WEBPACK_IMPORTED_MODULE_0__.createContext({dialogState:{result:void 0,isOpen:!1,isForce:!1},setDialogState:()=>null}),h=t=>{const[o,n]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({result:void 0,isOpen:!1,isForce:!1});return react__WEBPACK_IMPORTED_MODULE_0__.createElement(y.Provider,{value:{dialogState:o,setDialogState:n}},t.children)};function C(t){var o;const l=t.onClose,a=t.onAfterClose,d=(~~(1e8*Math.random())).toString(16),i=null===(o=t.isCanClose)||void 0===o||o,{dialogState:s,setDialogState:c}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(y);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{c({isOpen:t.isOpen,isForce:!1})}),[t.isOpen,c]);const u=()=>{c({isOpen:!1,result:void 0,isForce:!0})};(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{!s.isOpen&&s.isForce&&(l&&l(s.result),a&&a(s.result)),s.isOpen&&t.onAfterOpen&&t.onAfterOpen()}),[s]);return react__WEBPACK_IMPORTED_MODULE_0__.createElement(g,{className:[v.dialog,t.className].join(" "),labelledby:"header_"+d,describedby:"content_"+d,isOpen:s.isOpen,isStatic:t.isStatic,isFocusLock:t.isFocusLock,defaultBodyOverflow:t.defaultBodyOverflow,isBodyScrollLocked:t.isBodyScrollLocked,replaceScrollBar:t.replaceScrollBar,scrollBarPlaceholderColor:t.scrollBarPlaceholderColor,onAttemptClose:()=>{i&&(a?a(s.result):u())},onCompletelyHidden:()=>{t.onCompletelyHidden&&t.onCompletelyHidden()}},t.showCloseIcon&&react__WEBPACK_IMPORTED_MODULE_0__.createElement("button",{className:["stf__dialogClose",v.modalCloseIcon].join(" "),"aria-label":"Close",onClick:()=>{a?a(s.result):u()}},react__WEBPACK_IMPORTED_MODULE_0__.createElement(x,null)),t.title&&react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3",{className:v.modalTitle,id:"header_"+d},t.title),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{id:"content_"+d,className:v.modalBody},t.children))}function x(){return react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg",{height:"512px",viewBox:"0 0 512 512",width:"512px"},react__WEBPACK_IMPORTED_MODULE_0__.createElement("path",{d:"M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"}))}function B(t){var o;const[a,r]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!0),[d,i]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(!1),s=(~~(1e8*Math.random())).toString(16),c=void 0!==t.defaultValue?String(t.defaultValue):void 0,[u,p]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(c),_=e=>{r(!1),t.onClose&&t.onClose(e)};return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{t.isRequired&&void 0!==u&&(""===u.trim()?i(!0):i(!1))}),[u,t]),react__WEBPACK_IMPORTED_MODULE_0__.createElement(g,{className:v.alert,isOpen:a,labelledby:"header_"+s,describedby:"content_"+s,onAttemptClose:()=>_(void 0),onCompletelyHidden:()=>{t.onCompletelyHidden&&t.onCompletelyHidden()}},t.title&&react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalTitle,id:"header_"+s},t.title),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalContent,id:"content_"+s},react__WEBPACK_IMPORTED_MODULE_0__.createElement("input",{type:"text",className:d?v.promtErrorInput:v.promtInput,onChange:e=>{p(e.target.value)},defaultValue:u,name:"promtDialog",autoFocus:!0}),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.promtErrorText},null!==(o=d&&t.errorText)&&void 0!==o?o:"Value input required")),react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:v.modalButtonPlace},react__WEBPACK_IMPORTED_MODULE_0__.createElement(m,{onClick:()=>{!t.isRequired||u&&""!==u.trim()?_(u):i(!0)}},t.okButtonText||"Ok"),react__WEBPACK_IMPORTED_MODULE_0__.createElement(m,{onClick:()=>{_(void 0)},type:"light"},t.cancelButtonText||"Cancel")))}function E(t,o){const n=_("stfDialogPlace"),l=document.createElement("div");return l.classList.add("stf__modalDialogsPlace"),n.appendChild(l),new Promise((a=>{const r=document.activeElement;react_dom__WEBPACK_IMPORTED_MODULE_1__.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement(h,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(t,Object.assign({},o,{onClose:e=>{a(e),r&&1===n.childNodes.length&&r.focus()},onCompletelyHidden:()=>{react_dom__WEBPACK_IMPORTED_MODULE_1__.render(void 0,l),l.remove()}}))),l)}))}function k(e,t,o){return E(b,{body:e,title:t,buttonText:o})}function w(e,t){return E(B,Object.assign({title:e},t))}function M(e,t,o,n){return i(this,void 0,void 0,(function*(){return"ok"===(yield E(f,{body:e,title:t,okButtonText:o,cancelButtonText:n}))}))}function O(e,t){return i(this,void 0,void 0,(function*(){return E(C,Object.assign(Object.assign({},t),{children:e,isOpen:!0}))}))}var T={content:"Content-module_content__1e-91"};function F(t){return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:[t.className,T.content].join(" ")},t.children)}s(".Content-module_content__1e-91{padding:calc(var(--st-dialog-padding)/2) var(--st-dialog-padding) var(--st-dialog-padding) var(--st-dialog-padding)}");var N={footer:"Footer-module_footer__1VyaK"};function S(t){return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div",{className:[t.className,N.footer].join(" ")},t.children)}function H(t){const l=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();return (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)((()=>{t.isOpen?l.current=document.activeElement:l.current&&(l.current.focus(),l.current=null)}),[t.isOpen]),react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal(react__WEBPACK_IMPORTED_MODULE_0__.createElement(h,null,react__WEBPACK_IMPORTED_MODULE_0__.createElement(C,Object.assign({},t,{isStatic:!0}))),_("stfMountedDialogPlace"))}function A(){const{dialogState:e,setDialogState:t}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(y),o=(0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((e=>{t({isOpen:!1,isForce:!0,result:e})}),[t]);return{isOpen:e.isOpen,close:o}}s(".Footer-module_footer__1VyaK{display:flex;justify-content:flex-end;position:relative;overflow:hidden;padding:calc(var(--st-dialog-padding)/2) var(--st-dialog-padding);background-color:var(--st-modal-secondColor)}.Footer-module_footer__1VyaK>button{margin-left:1rem}");
-//# sourceMappingURL=index.js.map
 
 
 /***/ }),
