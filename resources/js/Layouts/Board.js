@@ -25,7 +25,7 @@ export default function Authenticated({ title, auth, children, header }) {
         fetchApi()
     }, [title], []);
 
-    const rol = user.map((row) =>{ return (row.id_rol)})
+    const rol = 1
 
     return (
         <div className="min-h-screen bg-gray-100">

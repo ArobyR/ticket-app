@@ -50,6 +50,10 @@ Route::get('/user.guest', function () {
     return Inertia::render('Guest');
 })->name('user.guest');
 
+Route::get('/prueba', function () {
+    return view('index');
+})->name('user.guest');
+
 
 require __DIR__.'/auth.php';
 
