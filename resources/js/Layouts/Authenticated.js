@@ -4,6 +4,7 @@ import Logo from "../Components/UI/Logo";
 import NavLink from "../Components/UI/NavLink";
 import Dropdown from "../Components/UI/Dropdown";
 import ResponsiveNavLink from "../Components/UI/ResponsiveNavLink";
+import { getRol } from "@/Utils/User/api";
 
 export default function Authenticated({ title, auth, children, header }) {
 
@@ -13,20 +14,18 @@ export default function Authenticated({ title, auth, children, header }) {
 
     const [user, setUser] = useState([])
 
-    const url = "/api/users.rol/"+ auth.user.id_usuario_fk
-    const fetchApi = async () => {
-        const response = await fetch(url)
-        const responseJson = await response.json()
-        setUser(responseJson)
-        console.log(responseJson)
+    const AuthApi = async () => {
+        const response = await getRol(auth.user.id_usuario_fk)
+        console.log(response)
+        setUser(response)
     }
+
     useEffect(() => {
         document.title = title;
-        fetchApi()
+        AuthApi();
     }, [title], []);
 
     const rol = user.map((row) =>{ return (row.id_rol)})
-
     return (
         <div className="min-h-screen bg-gray-100">
             <nav className="bg-white border-b border-gray-100">

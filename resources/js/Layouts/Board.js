@@ -13,19 +13,18 @@ export default function Authenticated({ title, auth, children, header }) {
 
     const [user, setUser] = useState([])
 
-    const url = "/api/users.rol/"+ auth.user.id_usuario_fk
-    const fetchApi = async () => {
-        const response = await fetch(url)
-        const responseJson = await response.json()
-        setUser(responseJson)
-        console.log(responseJson)
+    const AuthApi = async () => {
+        const response = await getRol(auth.user.id_usuario_fk)
+        setUser(response)
+        console.log(response)
     }
+
     useEffect(() => {
         document.title = title;
-        fetchApi()
+        AuthApi();
     }, [title], []);
 
-    const rol = 1
+    const rol = 3
 
     return (
         <div className="min-h-screen bg-gray-100">

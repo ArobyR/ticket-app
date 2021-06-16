@@ -38,6 +38,7 @@ export default function Dashboard(props) {
 
     const [formStep, setFormStep] = useState(0)
     const [isOpen, setOpen] = useState(false);
+    
     const create = async () => {
         const responseData = await createTicket(data)
         console.log(responseData)
@@ -163,6 +164,7 @@ export default function Dashboard(props) {
                             <QRCode value="Hola Mundo" />
                         </span>
                     </Modal>
+
                     <CardEnd
                         label="Opcion 2"
                         name="Seleccionar"

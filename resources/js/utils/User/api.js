@@ -12,7 +12,7 @@ export const getAllUsers = async () => {
 
 export const getUserById = async (id) => {
     try {
-        const response = await axios.get('/api/users.show/'+id);
+        const response = await axios.get('/api/users.show/' + id);
         const responseData = await response.data;
         return responseData;
     } catch (error) {
@@ -22,7 +22,7 @@ export const getUserById = async (id) => {
 
 export const getUserUpdateById = async (id) => {
     try {
-        const response = await axios.get('/api/users.update/'+id);
+        const response = await axios.get('/api/users.update/' + id);
         const responseData = await response.data;
         return responseData;
     } catch (error) {
@@ -30,9 +30,21 @@ export const getUserUpdateById = async (id) => {
     }
 }
 
+export const getRol = async (id) => {
+    try {
+        const response = await axios.get('/api/users.rol/' + id);
+        const responseData = await response.data;
+        return responseData;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+
 export const deleteUser = async (id) => {
     try {
-        const response = await axios.get('/api/users.delete/'+id);
+        const response = await axios.get('/api/users.delete/' + id);
         const responseData = await response.data;
         return responseData;
     } catch (error) {

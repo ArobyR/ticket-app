@@ -50,6 +50,11 @@ Route::get('/user.guest', function () {
     return Inertia::render('Guest');
 })->name('user.guest');
 
+Route::get('/test', function () {
+    return Inertia::render('Test');
+})->name('test');
+
+
 Route::get('/prueba', function () {
     return view('index');
 })->name('user.guest');

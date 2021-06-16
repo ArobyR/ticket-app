@@ -5,19 +5,15 @@ export const getAllTickets = async () => {
         const response = await axios.get('api/ticket.list');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {   console.error(error);   }
 }
 
 export const getCodigoTicket = async (id) => {
     try {
-        const response = await axios.get('api/ticket.codigo/'+id);
+        const response = await axios.get('api/ticket.codigo/' + id);
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {   console.error(error);   }
 }
 
 export const getCancelados = async () => {
@@ -25,9 +21,7 @@ export const getCancelados = async () => {
         const response = await axios.get('api/ticket.cancelados');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);   }
 }
 
 export const getAtendidos = async () => {
@@ -35,9 +29,7 @@ export const getAtendidos = async () => {
         const response = await axios.get('api/ticket.atendidos');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);   }
 }
 
 export const getAtendidosCancelados = async () => {
@@ -46,8 +38,7 @@ export const getAtendidosCancelados = async () => {
         const responseData = await response.data;
         return responseData;
     } catch (error) {
-        console.error(error);
-    }
+    console.error(error);    }
 }
 
 export const getAtendidosMes = async () => {
@@ -55,9 +46,7 @@ export const getAtendidosMes = async () => {
         const response = await axios.get('api/ticket.atendidos-mes');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);   }
 }
 
 export const getCanceladosMes = async () => {
@@ -65,9 +54,7 @@ export const getCanceladosMes = async () => {
         const response = await axios.get('api/ticket.cancelados-mes');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);   }
 }
 
 export const getAtendidosCanceladosMes = async () => {
@@ -75,28 +62,22 @@ export const getAtendidosCanceladosMes = async () => {
         const response = await axios.get('api/ticket.atendidos-cancelados-mes');
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);    }
 }
 
 export const createTicket = async (data) => {
     try {
-        const reponse = await axios.post('api/ticket.insert', data);
-        const responseData = await reponse.data;
+        const response = await axios.post('api/ticket.insert', data);
+        const responseData = await response;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);}
 }
 
 export const deleteTicket = async (id) => {
     try {
-        const response = await axios.get('api/ticket.delete/'+ id);
+        const response = await axios.get('api/ticket.delete/' + id);
         const responseData = await response.data;
         return responseData;
-    } catch (error) {
-        console.error(error);
-    }
+    } catch (error) {    console.error(error);    }
 }
 

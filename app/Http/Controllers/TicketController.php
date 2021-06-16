@@ -124,6 +124,7 @@ class TicketController extends Controller
      */
     public function destroy($id)
     {
-        Ticket::where('id_ticket', '=', $id)->delete();;
+        $Ticket = Ticket::where('id_ticket', '=', $id)->delete();;
+        return response()->json($Ticket, 204);
     }
 }

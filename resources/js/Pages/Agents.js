@@ -9,7 +9,7 @@ export default function Register(props) {
             title="Dashboard"
             header={
                 <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-                    Dashboard
+                    Gestión de turnos
                 </h2>
             }
         >
