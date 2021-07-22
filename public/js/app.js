@@ -941,6 +941,17 @@ var n,e=(n=__webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogr
 
 /***/ }),
 
+/***/ "./node_modules/@windmill/react-ui/dist/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@windmill/react-ui/dist/index.js ***!
+  \*******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+/*! For license information please see index.js.LICENSE.txt */
+!function(e,t){ true?module.exports=t(__webpack_require__(/*! react */ "./node_modules/react/index.js"),__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js")):0}(this,(function(e,t){return(()=>{var r={122:(e,t,r)=>{"use strict";function n(){return(n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e}).apply(this,arguments)}r.d(t,{Z:()=>n})},788:(e,t,r)=>{"use strict";function n(e,t){e.prototype=Object.create(t.prototype),e.prototype.constructor=e,e.__proto__=t}r.d(t,{Z:()=>n})},756:(e,t,r)=>{"use strict";function n(e,t){if(null==e)return{};var r,n,a={},o=Object.keys(e);for(n=0;n<o.length;n++)r=o[n],t.indexOf(r)>=0||(a[r]=e[r]);return a}r.d(t,{Z:()=>n})},184:(e,t)=>{var r;!function(){"use strict";var n={}.hasOwnProperty;function a(){for(var e=[],t=0;t<arguments.length;t++){var r=arguments[t];if(r){var o=typeof r;if("string"===o||"number"===o)e.push(r);else if(Array.isArray(r)&&r.length){var i=a.apply(null,r);i&&e.push(i)}else if("object"===o)for(var u in r)n.call(r,u)&&r[u]&&e.push(u)}}return e.join(" ")}e.exports?(a.default=a,e.exports=a):void 0===(r=function(){return a}.apply(t,[]))||(e.exports=r)}()},703:(e,t,r)=>{"use strict";var n=r(414);function a(){}function o(){}o.resetWarningCache=a,e.exports=function(){function e(e,t,r,a,o,i){if(i!==n){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}function t(){return e}e.isRequired=e;var r={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:o,resetWarningCache:a};return r.PropTypes=r,r}},697:(e,t,r)=>{e.exports=r(703)()},414:e=>{"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},722:(e,t,r)=>{"use strict";r.r(t),r.d(t,{AutoFocusInside:()=>we,FocusLockUI:()=>E,FreeFocusInside:()=>Ne,InFocusGuard:()=>p,MoveFocusInside:()=>Me,default:()=>Se,useFocusInside:()=>Pe});var n=r(756),a=r(122),o=r(297),i=r.n(o),u=(r(697),"data-focus-lock"),l="data-focus-lock-disabled",c="data-no-focus-lock",s="data-autofocus-inside";var f={width:"1px",height:"0px",padding:0,overflow:"hidden",position:"fixed",top:"1px",left:"1px"},d=function(e){var t=e.children;return o.createElement(o.Fragment,null,o.createElement("div",{key:"guard-first","data-focus-guard":!0,"data-focus-auto-guard":!0,style:f}),t,t&&o.createElement("div",{key:"guard-last","data-focus-guard":!0,"data-focus-auto-guard":!0,style:f}))};d.propTypes={},d.defaultProps={children:null};const p=d;var h=function(){return(h=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)};function b(e){return e}function v(e,t){void 0===t&&(t=b);var r=[],n=!1;return{read:function(){if(n)throw new Error("Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.");return r.length?r[r.length-1]:e},useMedium:function(e){var a=t(e,n);return r.push(a),function(){r=r.filter((function(e){return e!==a}))}},assignSyncMedium:function(e){for(n=!0;r.length;){var t=r;r=[],t.forEach(e)}r={push:function(t){return e(t)},filter:function(){return r}}},assignMedium:function(e){n=!0;var t=[];if(r.length){var a=r;r=[],a.forEach(e),t=r}var o=function(){var r=t;t=[],r.forEach(e)},i=function(){return Promise.resolve().then(o)};i(),r={push:function(e){t.push(e),i()},filter:function(e){return t=t.filter(e),r}}}}}function m(e,t){return void 0===t&&(t=b),v(e,t)}var y=m({},(function(e){return{target:e.target,currentTarget:e.currentTarget}})),g=m(),O=m(),_=function(e){void 0===e&&(e={});var t=v(null);return t.options=h({async:!0,ssr:!1},e),t}({async:!0}),x=[],j=o.forwardRef((function(e,t){var r,n,i,c,s,d,p=o.useState(),h=p[0],b=p[1],v=o.useRef(),m=o.useRef(!1),O=o.useRef(null),j=e.children,E=e.disabled,w=e.noFocusGuards,P=e.persistentFocus,k=e.crossFrame,M=e.autoFocus,C=(e.allowTextSelection,e.group),N=e.className,S=e.whiteList,T=e.shards,I=void 0===T?x:T,D=e.as,B=void 0===D?"div":D,R=e.lockProps,L=void 0===R?{}:R,F=e.sideCar,A=e.returnFocus,z=e.onActivation,W=e.onDeactivation,Z=o.useState({})[0],U=o.useCallback((function(){O.current=O.current||document&&document.activeElement,v.current&&z&&z(v.current),m.current=!0}),[z]),V=o.useCallback((function(){m.current=!1,W&&W(v.current)}),[W]),G=o.useCallback((function(e){var t=O.current;if(Boolean(A)&&t&&t.focus){var r="object"==typeof A?A:void 0;O.current=null,e?Promise.resolve().then((function(){return t.focus(r)})):t.focus(r)}}),[A]),q=o.useCallback((function(e){m.current&&y.useMedium(e)}),[]),H=g.useMedium,$=o.useCallback((function(e){v.current!==e&&(v.current=e,b(e))}),[]),X=(0,a.Z)(((r={})[l]=E&&"disabled",r[u]=C,r),L),Y=!0!==w,K=Y&&"tail"!==w,J=(n=[t,$],c=i,s=function(e){return n.forEach((function(t){return function(e,t){return"function"==typeof e?e(t):e&&(e.current=t),e}(t,e)}))},(d=(0,o.useState)((function(){return{value:c,callback:s,facade:{get current(){return d.value},set current(e){var t=d.value;t!==e&&(d.value=e,d.callback(e,t))}}}}))[0]).callback=s,d.facade);return o.createElement(o.Fragment,null,Y&&[o.createElement("div",{key:"guard-first","data-focus-guard":!0,tabIndex:E?-1:0,style:f}),o.createElement("div",{key:"guard-nearest","data-focus-guard":!0,tabIndex:E?-1:1,style:f})],!E&&o.createElement(F,{id:Z,sideCar:_,observed:h,disabled:E,persistentFocus:P,crossFrame:k,autoFocus:M,whiteList:S,shards:I,onActivation:U,onDeactivation:V,returnFocus:G}),o.createElement(B,(0,a.Z)({ref:J},X,{className:N,onBlur:H,onFocus:q}),j),K&&o.createElement("div",{"data-focus-guard":!0,tabIndex:E?-1:0,style:f}))}));j.propTypes={},j.defaultProps={children:void 0,disabled:!1,returnFocus:!1,noFocusGuards:!1,autoFocus:!0,persistentFocus:!1,crossFrame:!0,allowTextSelection:void 0,group:void 0,className:void 0,whiteList:void 0,shards:void 0,as:"div",lockProps:{},onActivation:void 0,onDeactivation:void 0};const E=j;var w=r(788);var P=function(e){for(var t=Array(e.length),r=0;r<e.length;++r)t[r]=e[r];return t},k=function(e){return Array.isArray(e)?e:[e]},M=function(e,t){var r=e.tabIndex-t.tabIndex,n=e.index-t.index;if(r){if(!e.tabIndex)return 1;if(!t.tabIndex)return-1}return r||n},C=function(e,t,r){return P(e).map((function(e,t){return{node:e,index:t,tabIndex:r&&-1===e.tabIndex?(e.dataset||{}).focusGuard?0:-1:e.tabIndex}})).filter((function(e){return!t||e.tabIndex>=0})).sort(M)};const N=["button:enabled:not([readonly])","select:enabled:not([readonly])","textarea:enabled:not([readonly])","input:enabled:not([readonly])","a[href]","area[href]","iframe","object","embed","[tabindex]","[contenteditable]","[autofocus]"];var S=N.join(","),T=S+", [data-focus-guard]",I=function(e,t){return e.reduce((function(e,r){return e.concat(P(r.querySelectorAll(t?T:S)),r.parentNode?P(r.parentNode.querySelectorAll(N.join(","))).filter((function(e){return e===r})):[])}),[])},D=function e(t){return!t||t===document||t.nodeType===Node.DOCUMENT_NODE||!((r=window.getComputedStyle(t,null))&&r.getPropertyValue&&("none"===r.getPropertyValue("display")||"hidden"===r.getPropertyValue("visibility")))&&e(t.parentNode&&t.parentNode.nodeType===t.DOCUMENT_FRAGMENT_NODE?t.parentNode.host:t.parentNode);var r},B=function e(t){var r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];return r.push(t),t.parentNode&&e(t.parentNode,r),r},R=function(e,t){for(var r=B(e),n=B(t),a=0;a<r.length;a+=1){var o=r[a];if(n.indexOf(o)>=0)return o}return!1},L=function(e){return P(e).filter((function(e){return D(e)})).filter((function(e){return function(e){return!(("INPUT"===e.tagName||"BUTTON"===e.tagName)&&("hidden"===e.type||e.disabled))}(e)}))},F=function(e,t){return C(L(I(e,t)),!0,t)},A=function(e){return C(L(I(e)),!1)},z=function(e){return"INPUT"===e.tagName&&"radio"===e.type},W=function(e,t){return z(e)&&e.name?function(e,t){return t.filter(z).filter((function(t){return t.name===e.name})).filter((function(e){return e.checked}))[0]||e}(e,t):e},Z=function(e,t){return e.length>1?e.indexOf(W(e[t],e)):t};const U=function(e){return e[0]&&e.length>1?W(e[0],e):e[0]};var V="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},G=function e(t){for(var r=t.length,n=0;n<r;n+=1)for(var a=function(r){if(n!==r&&t[n].contains(t[r]))return{v:e(t.filter((function(e){return e!==t[r]})))}},o=0;o<r;o+=1){var i=a(o);if("object"===(void 0===i?"undefined":V(i)))return i.v}return t},q=function e(t){return t.parentNode?e(t.parentNode):t};const H=function(e){return k(e).filter(Boolean).reduce((function(e,t){var r=t.getAttribute(u);return e.push.apply(e,r?G(P(q(t).querySelectorAll('[data-focus-lock="'+r+'"]:not(['+l+'="disabled"])'))):[t]),e}),[])};var $=function(e){return e&&e.dataset&&e.dataset.focusGuard},X=function(e){return!$(e)},Y=function(e,t,r){var n=k(e),a=k(t),o=n[0],i=null;return a.filter(Boolean).forEach((function(e){i=R(i||e,e)||i,r.filter(Boolean).forEach((function(e){var t=R(o,e);t&&(i=!i||t.contains(i)?t:R(t,i))}))})),i};const K=function(e,t){var r=document&&document.activeElement,n=H(e).filter(X),a=Y(r||e,e,n),o=A(n),i=F(n).filter((function(e){var t=e.node;return X(t)}));if(i[0]||(i=o)[0]){var u,l,c,f,d=A([a]).map((function(e){return e.node})),p=(u=d,l=i,c=new Map,l.forEach((function(e){return c.set(e.node,e)})),u.map((function(e){return c.get(e)})).filter(Boolean)),h=p.map((function(e){return e.node})),b=function(e,t,r,n){var a=e.length,o=e[0],i=e[a-1],u=$(r);if(!(e.indexOf(r)>=0)){var l,c,s=t.indexOf(r),f=t.indexOf(n||s),d=e.indexOf(n),p=s-f,h=t.indexOf(o),b=t.indexOf(i),v=(l=t,c=new Set,l.forEach((function(e){return c.add(W(e,l))})),l.filter((function(e){return c.has(e)}))),m=v.indexOf(r)-v.indexOf(n||s),y=Z(e,0),g=Z(e,a-1);return-1===s||-1===d?"NEW_FOCUS":!p&&d>=0?d:s<=h&&u&&Math.abs(p)>1?g:s>=b&&u&&Math.abs(p)>1?y:p&&Math.abs(m)>1?d:s<=h?g:s>b?y:p?Math.abs(p)>1?d:(a+d+p)%a:void 0}}(h,d,r,t);if("NEW_FOCUS"===b){var v=o.map((function(e){return e.node})).filter((f=function(e){return e.reduce((function(e,t){return e.concat(function(e){return L((t=e.querySelectorAll("["+s+"]"),P(t).map((function(e){return I([e])})).reduce((function(e,t){return e.concat(t)}),[])));var t}(t))}),[])}(n),function(e){return!!e.autofocus||e.dataset&&!!e.dataset.autofocus||f.indexOf(e)>=0}));return{node:v&&v.length?U(v):U(h)}}return void 0===b?b:p[b]}};var J=0,Q=!1;const ee=function(e,t){var r,n=K(e,t);if(!Q&&n){if(J>2)return console.error("FocusLock: focus-fighting detected. Only one focus management system could be active. See https://github.com/theKashey/focus-lock/#focus-fighting"),Q=!0,void setTimeout((function(){Q=!1}),1);J++,(r=n.node).focus(),r.contentWindow&&r.contentWindow.focus(),J--}};var te=function(e){return e===document.activeElement};const re=function(e){var t=document&&document.activeElement;return!(!t||t.dataset&&t.dataset.focusGuard)&&H(e).reduce((function(e,r){return e||r.contains(t)||function(e){return t=P(e.querySelectorAll("iframe")),r=te,!!t.filter((function(e){return e===r}))[0];var t,r}(r)}),!1)};function ne(e){var t=window.setImmediate;void 0!==t?t(e):setTimeout(e,1)}var ae=function(e,t){var r={};return r[e]=t,r},oe=function(){return document&&document.activeElement===document.body||document&&P(document.querySelectorAll("["+c+"]")).some((function(e){return e.contains(document.activeElement)}))},ie=null,ue=null,le=null,ce=!1,se=function(){return!0};function fe(e,t,r,n){var a=null,o=e;do{var i=n[o];if(i.guard)i.node.dataset.focusAutoGuard&&(a=i);else{if(!i.lockItem)break;if(o!==e)return;a=null}}while((o+=r)!==t);a&&(a.node.tabIndex=0)}var de=function(e){return e&&"current"in e?e.current:e},pe=function(){var e,t,r,n,a,o,i=!1;if(ie){var u=ie,l=u.observed,c=u.persistentFocus,s=u.autoFocus,f=u.shards,d=u.crossFrame,p=l||le&&le.portaledElement,h=document&&document.activeElement;if(p){var b=[p].concat(f.map(de).filter(Boolean));if(h&&!function(e){return(ie.whiteList||se)(e)}(h)||(c||(d?Boolean(ce):"meanwhile"===ce)||!oe()||!ue&&s)&&(!p||re(b)||(o=h,le&&le.portaledElement===o)||(document&&!ue&&h&&!s?(h.blur&&h.blur(),document.body.focus()):(i=ee(b,ue),le={})),ce=!1,ue=document&&document.activeElement),document){var v=document&&document.activeElement,m=(t=H(e=b).filter(X),r=Y(e,e,t),n=F([r],!0),a=F(t).filter((function(e){var t=e.node;return X(t)})).map((function(e){return e.node})),n.map((function(e){var t=e.node;return{node:t,index:e.index,lockItem:a.indexOf(t)>=0,guard:$(t)}}))),y=m.map((function(e){return e.node})).indexOf(v);y>-1&&(m.filter((function(e){var t=e.guard,r=e.node;return t&&r.dataset.focusAutoGuard})).forEach((function(e){return e.node.removeAttribute("tabIndex")})),fe(y,m.length,1,m),fe(y,-1,-1,m))}}}return i},he=function(e){pe()&&e&&(e.stopPropagation(),e.preventDefault())},be=function(){return ne(pe)},ve=function(){ce="just",setTimeout((function(){ce="meanwhile"}),0)};y.assignSyncMedium((function(e){var t=e.target,r=e.currentTarget;r.contains(t)||(le={observerNode:r,portaledElement:t})})),g.assignMedium(be),O.assignMedium((function(e){return e({moveFocusInside:ee,focusInside:re})}));const me=(ye=function(e){return e.filter((function(e){return!e.disabled}))},ge=function(e){var t=e.slice(-1)[0];t&&!ie&&(document.addEventListener("focusin",he,!0),document.addEventListener("focusout",be),window.addEventListener("blur",ve));var r=ie,n=r&&t&&t.id===r.id;ie=t,r&&!n&&(r.onDeactivation(),e.filter((function(e){return e.id===r.id})).length||r.returnFocus(!t)),t?(ue=null,n&&r.observed===t.observed||t.onActivation(),pe(),ne(pe)):(document.removeEventListener("focusin",he,!0),document.removeEventListener("focusout",be),window.removeEventListener("blur",ve),ue=null)},function(e){var t,r=[];function n(){t=ye(r.map((function(e){return e.props}))),ge(t)}var a,u,l,c=function(a){function o(){return a.apply(this,arguments)||this}(0,w.Z)(o,a),o.peek=function(){return t};var u=o.prototype;return u.componentDidMount=function(){r.push(this),n()},u.componentDidUpdate=function(){n()},u.componentWillUnmount=function(){var e=r.indexOf(this);r.splice(e,1),n()},u.render=function(){return i().createElement(e,this.props)},o}(o.PureComponent);return a=c,u="displayName",l="SideEffect("+function(e){return e.displayName||e.name||"Component"}(e)+")",u in a?Object.defineProperty(a,u,{value:l,enumerable:!0,configurable:!0,writable:!0}):a[u]=l,c})((function(){return null}));var ye,ge,Oe=o.forwardRef((function(e,t){return o.createElement(E,(0,a.Z)({sideCar:me,ref:t},e))})),_e=E.propTypes||{},xe=(_e.sideCar,(0,n.Z)(_e,["sideCar"]));Oe.propTypes=xe;const je=Oe;var Ee=function(e){var t=e.disabled,r=e.children,n=e.className;return o.createElement("div",(0,a.Z)({},ae(s,!t),{className:n}),r)};Ee.propTypes={},Ee.defaultProps={disabled:!1,className:void 0};const we=Ee;var Pe=function(e){o.useEffect((function(){var t=!0;return O.useMedium((function(r){var n=e&&e.current;t&&n&&(r.focusInside(n)||r.moveFocusInside(n,null))})),function(){t=!1}}),[e])};function ke(e){var t=e.disabled,r=e.className,n=e.children,i=o.useRef(null);return Pe(t?void 0:i),o.createElement("div",(0,a.Z)({},ae(s,!t),{ref:i,className:r}),n)}ke.propTypes={},ke.defaultProps={disabled:!1,className:void 0};const Me=ke;var Ce=function(e){var t=e.children,r=e.className;return o.createElement("div",(0,a.Z)({},ae(c,!0),{className:r}),t)};Ce.propTypes={},Ce.defaultProps={className:void 0};const Ne=Ce,Se=je},391:(e,t,r)=>{"use strict";r.r(t),r.d(t,{CSSTransition:()=>j,ReplaceTransition:()=>S,SwitchTransition:()=>z,Transition:()=>O,TransitionGroup:()=>C,config:()=>f});var n=r(122),a=r(756),o=r(788);function i(e,t){return e.replace(new RegExp("(^|\\s)"+t+"(?:\\s|$)","g"),"$1").replace(/\s+/g," ").replace(/^\s*|\s*$/g,"")}r(697);var u=r(297),l=r.n(u),c=r(268),s=r.n(c);const f={disabled:!1},d=l().createContext(null);var p="unmounted",h="exited",b="entering",v="entered",m="exiting",y=function(e){function t(t,r){var n;n=e.call(this,t,r)||this;var a,o=r&&!r.isMounting?t.enter:t.appear;return n.appearStatus=null,t.in?o?(a=h,n.appearStatus=b):a=v:a=t.unmountOnExit||t.mountOnEnter?p:h,n.state={status:a},n.nextCallback=null,n}(0,o.Z)(t,e),t.getDerivedStateFromProps=function(e,t){return e.in&&t.status===p?{status:h}:null};var r=t.prototype;return r.componentDidMount=function(){this.updateStatus(!0,this.appearStatus)},r.componentDidUpdate=function(e){var t=null;if(e!==this.props){var r=this.state.status;this.props.in?r!==b&&r!==v&&(t=b):r!==b&&r!==v||(t=m)}this.updateStatus(!1,t)},r.componentWillUnmount=function(){this.cancelNextCallback()},r.getTimeouts=function(){var e,t,r,n=this.props.timeout;return e=t=r=n,null!=n&&"number"!=typeof n&&(e=n.exit,t=n.enter,r=void 0!==n.appear?n.appear:t),{exit:e,enter:t,appear:r}},r.updateStatus=function(e,t){void 0===e&&(e=!1),null!==t?(this.cancelNextCallback(),t===b?this.performEnter(e):this.performExit()):this.props.unmountOnExit&&this.state.status===h&&this.setState({status:p})},r.performEnter=function(e){var t=this,r=this.props.enter,n=this.context?this.context.isMounting:e,a=this.props.nodeRef?[n]:[s().findDOMNode(this),n],o=a[0],i=a[1],u=this.getTimeouts(),l=n?u.appear:u.enter;!e&&!r||f.disabled?this.safeSetState({status:v},(function(){t.props.onEntered(o)})):(this.props.onEnter(o,i),this.safeSetState({status:b},(function(){t.props.onEntering(o,i),t.onTransitionEnd(l,(function(){t.safeSetState({status:v},(function(){t.props.onEntered(o,i)}))}))})))},r.performExit=function(){var e=this,t=this.props.exit,r=this.getTimeouts(),n=this.props.nodeRef?void 0:s().findDOMNode(this);t&&!f.disabled?(this.props.onExit(n),this.safeSetState({status:m},(function(){e.props.onExiting(n),e.onTransitionEnd(r.exit,(function(){e.safeSetState({status:h},(function(){e.props.onExited(n)}))}))}))):this.safeSetState({status:h},(function(){e.props.onExited(n)}))},r.cancelNextCallback=function(){null!==this.nextCallback&&(this.nextCallback.cancel(),this.nextCallback=null)},r.safeSetState=function(e,t){t=this.setNextCallback(t),this.setState(e,t)},r.setNextCallback=function(e){var t=this,r=!0;return this.nextCallback=function(n){r&&(r=!1,t.nextCallback=null,e(n))},this.nextCallback.cancel=function(){r=!1},this.nextCallback},r.onTransitionEnd=function(e,t){this.setNextCallback(t);var r=this.props.nodeRef?this.props.nodeRef.current:s().findDOMNode(this),n=null==e&&!this.props.addEndListener;if(r&&!n){if(this.props.addEndListener){var a=this.props.nodeRef?[this.nextCallback]:[r,this.nextCallback],o=a[0],i=a[1];this.props.addEndListener(o,i)}null!=e&&setTimeout(this.nextCallback,e)}else setTimeout(this.nextCallback,0)},r.render=function(){var e=this.state.status;if(e===p)return null;var t=this.props,r=t.children,n=(t.in,t.mountOnEnter,t.unmountOnExit,t.appear,t.enter,t.exit,t.timeout,t.addEndListener,t.onEnter,t.onEntering,t.onEntered,t.onExit,t.onExiting,t.onExited,t.nodeRef,(0,a.Z)(t,["children","in","mountOnEnter","unmountOnExit","appear","enter","exit","timeout","addEndListener","onEnter","onEntering","onEntered","onExit","onExiting","onExited","nodeRef"]));return l().createElement(d.Provider,{value:null},"function"==typeof r?r(e,n):l().cloneElement(l().Children.only(r),n))},t}(l().Component);function g(){}y.contextType=d,y.propTypes={},y.defaultProps={in:!1,mountOnEnter:!1,unmountOnExit:!1,appear:!1,enter:!0,exit:!0,onEnter:g,onEntering:g,onEntered:g,onExit:g,onExiting:g,onExited:g},y.UNMOUNTED=p,y.EXITED=h,y.ENTERING=b,y.ENTERED=v,y.EXITING=m;const O=y;var _=function(e,t){return e&&t&&t.split(" ").forEach((function(t){return n=t,void((r=e).classList?r.classList.remove(n):"string"==typeof r.className?r.className=i(r.className,n):r.setAttribute("class",i(r.className&&r.className.baseVal||"",n)));var r,n}))},x=function(e){function t(){for(var t,r=arguments.length,n=new Array(r),a=0;a<r;a++)n[a]=arguments[a];return(t=e.call.apply(e,[this].concat(n))||this).appliedClasses={appear:{},enter:{},exit:{}},t.onEnter=function(e,r){var n=t.resolveArguments(e,r),a=n[0],o=n[1];t.removeClasses(a,"exit"),t.addClass(a,o?"appear":"enter","base"),t.props.onEnter&&t.props.onEnter(e,r)},t.onEntering=function(e,r){var n=t.resolveArguments(e,r),a=n[0],o=n[1]?"appear":"enter";t.addClass(a,o,"active"),t.props.onEntering&&t.props.onEntering(e,r)},t.onEntered=function(e,r){var n=t.resolveArguments(e,r),a=n[0],o=n[1]?"appear":"enter";t.removeClasses(a,o),t.addClass(a,o,"done"),t.props.onEntered&&t.props.onEntered(e,r)},t.onExit=function(e){var r=t.resolveArguments(e)[0];t.removeClasses(r,"appear"),t.removeClasses(r,"enter"),t.addClass(r,"exit","base"),t.props.onExit&&t.props.onExit(e)},t.onExiting=function(e){var r=t.resolveArguments(e)[0];t.addClass(r,"exit","active"),t.props.onExiting&&t.props.onExiting(e)},t.onExited=function(e){var r=t.resolveArguments(e)[0];t.removeClasses(r,"exit"),t.addClass(r,"exit","done"),t.props.onExited&&t.props.onExited(e)},t.resolveArguments=function(e,r){return t.props.nodeRef?[t.props.nodeRef.current,e]:[e,r]},t.getClassNames=function(e){var r=t.props.classNames,n="string"==typeof r,a=n?(n&&r?r+"-":"")+e:r[e];return{baseClassName:a,activeClassName:n?a+"-active":r[e+"Active"],doneClassName:n?a+"-done":r[e+"Done"]}},t}(0,o.Z)(t,e);var r=t.prototype;return r.addClass=function(e,t,r){var n=this.getClassNames(t)[r+"ClassName"],a=this.getClassNames("enter").doneClassName;"appear"===t&&"done"===r&&a&&(n+=" "+a),"active"===r&&e&&e.scrollTop,n&&(this.appliedClasses[t][r]=n,function(e,t){e&&t&&t.split(" ").forEach((function(t){return n=t,void((r=e).classList?r.classList.add(n):function(e,t){return e.classList?!!t&&e.classList.contains(t):-1!==(" "+(e.className.baseVal||e.className)+" ").indexOf(" "+t+" ")}(r,n)||("string"==typeof r.className?r.className=r.className+" "+n:r.setAttribute("class",(r.className&&r.className.baseVal||"")+" "+n)));var r,n}))}(e,n))},r.removeClasses=function(e,t){var r=this.appliedClasses[t],n=r.base,a=r.active,o=r.done;this.appliedClasses[t]={},n&&_(e,n),a&&_(e,a),o&&_(e,o)},r.render=function(){var e=this.props,t=(e.classNames,(0,a.Z)(e,["classNames"]));return l().createElement(O,(0,n.Z)({},t,{onEnter:this.onEnter,onEntered:this.onEntered,onEntering:this.onEntering,onExit:this.onExit,onExiting:this.onExiting,onExited:this.onExited}))},t}(l().Component);x.defaultProps={classNames:""},x.propTypes={};const j=x;function E(e,t){var r=Object.create(null);return e&&u.Children.map(e,(function(e){return e})).forEach((function(e){r[e.key]=function(e){return t&&(0,u.isValidElement)(e)?t(e):e}(e)})),r}function w(e,t,r){return null!=r[t]?r[t]:e.props[t]}function P(e,t,r){var n=E(e.children),a=function(e,t){function r(r){return r in t?t[r]:e[r]}e=e||{},t=t||{};var n,a=Object.create(null),o=[];for(var i in e)i in t?o.length&&(a[i]=o,o=[]):o.push(i);var u={};for(var l in t){if(a[l])for(n=0;n<a[l].length;n++){var c=a[l][n];u[a[l][n]]=r(c)}u[l]=r(l)}for(n=0;n<o.length;n++)u[o[n]]=r(o[n]);return u}(t,n);return Object.keys(a).forEach((function(o){var i=a[o];if((0,u.isValidElement)(i)){var l=o in t,c=o in n,s=t[o],f=(0,u.isValidElement)(s)&&!s.props.in;!c||l&&!f?c||!l||f?c&&l&&(0,u.isValidElement)(s)&&(a[o]=(0,u.cloneElement)(i,{onExited:r.bind(null,i),in:s.props.in,exit:w(i,"exit",e),enter:w(i,"enter",e)})):a[o]=(0,u.cloneElement)(i,{in:!1}):a[o]=(0,u.cloneElement)(i,{onExited:r.bind(null,i),in:!0,exit:w(i,"exit",e),enter:w(i,"enter",e)})}})),a}var k=Object.values||function(e){return Object.keys(e).map((function(t){return e[t]}))},M=function(e){function t(t,r){var n,a=(n=e.call(this,t,r)||this).handleExited.bind(function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(n));return n.state={contextValue:{isMounting:!0},handleExited:a,firstRender:!0},n}(0,o.Z)(t,e);var r=t.prototype;return r.componentDidMount=function(){this.mounted=!0,this.setState({contextValue:{isMounting:!1}})},r.componentWillUnmount=function(){this.mounted=!1},t.getDerivedStateFromProps=function(e,t){var r,n,a=t.children,o=t.handleExited;return{children:t.firstRender?(r=e,n=o,E(r.children,(function(e){return(0,u.cloneElement)(e,{onExited:n.bind(null,e),in:!0,appear:w(e,"appear",r),enter:w(e,"enter",r),exit:w(e,"exit",r)})}))):P(e,a,o),firstRender:!1}},r.handleExited=function(e,t){var r=E(this.props.children);e.key in r||(e.props.onExited&&e.props.onExited(t),this.mounted&&this.setState((function(t){var r=(0,n.Z)({},t.children);return delete r[e.key],{children:r}})))},r.render=function(){var e=this.props,t=e.component,r=e.childFactory,n=(0,a.Z)(e,["component","childFactory"]),o=this.state.contextValue,i=k(this.state.children).map(r);return delete n.appear,delete n.enter,delete n.exit,null===t?l().createElement(d.Provider,{value:o},i):l().createElement(d.Provider,{value:o},l().createElement(t,n,i))},t}(l().Component);M.propTypes={},M.defaultProps={component:"div",childFactory:function(e){return e}};const C=M;var N=function(e){function t(){for(var t,r=arguments.length,n=new Array(r),a=0;a<r;a++)n[a]=arguments[a];return(t=e.call.apply(e,[this].concat(n))||this).handleEnter=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onEnter",0,r)},t.handleEntering=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onEntering",0,r)},t.handleEntered=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onEntered",0,r)},t.handleExit=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onExit",1,r)},t.handleExiting=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onExiting",1,r)},t.handleExited=function(){for(var e=arguments.length,r=new Array(e),n=0;n<e;n++)r[n]=arguments[n];return t.handleLifecycle("onExited",1,r)},t}(0,o.Z)(t,e);var r=t.prototype;return r.handleLifecycle=function(e,t,r){var n,a=this.props.children,o=l().Children.toArray(a)[t];if(o.props[e]&&(n=o.props)[e].apply(n,r),this.props[e]){var i=o.props.nodeRef?void 0:s().findDOMNode(this);this.props[e](i)}},r.render=function(){var e=this.props,t=e.children,r=e.in,n=(0,a.Z)(e,["children","in"]),o=l().Children.toArray(t),i=o[0],u=o[1];return delete n.onEnter,delete n.onEntering,delete n.onEntered,delete n.onExit,delete n.onExiting,delete n.onExited,l().createElement(C,n,r?l().cloneElement(i,{key:"first",onEnter:this.handleEnter,onEntering:this.handleEntering,onEntered:this.handleEntered}):l().cloneElement(u,{key:"second",onEnter:this.handleExit,onEntering:this.handleExiting,onEntered:this.handleExited}))},t}(l().Component);N.propTypes={};const S=N;var T,I,D="out-in",B="in-out",R=function(e,t,r){return function(){var n;e.props[t]&&(n=e.props)[t].apply(n,arguments),r()}},L=((T={})["out-in"]=function(e){var t=e.current,r=e.changeState;return l().cloneElement(t,{in:!1,onExited:R(t,"onExited",(function(){r(b,null)}))})},T[B]=function(e){var t=e.current,r=e.changeState,n=e.children;return[t,l().cloneElement(n,{in:!0,onEntered:R(n,"onEntered",(function(){r(b)}))})]},T),F=((I={})["out-in"]=function(e){var t=e.children,r=e.changeState;return l().cloneElement(t,{in:!0,onEntered:R(t,"onEntered",(function(){r(v,l().cloneElement(t,{in:!0}))}))})},I[B]=function(e){var t=e.current,r=e.children,n=e.changeState;return[l().cloneElement(t,{in:!1,onExited:R(t,"onExited",(function(){n(v,l().cloneElement(r,{in:!0}))}))}),l().cloneElement(r,{in:!0})]},I),A=function(e){function t(){for(var t,r=arguments.length,n=new Array(r),a=0;a<r;a++)n[a]=arguments[a];return(t=e.call.apply(e,[this].concat(n))||this).state={status:v,current:null},t.appeared=!1,t.changeState=function(e,r){void 0===r&&(r=t.state.current),t.setState({status:e,current:r})},t}(0,o.Z)(t,e);var r=t.prototype;return r.componentDidMount=function(){this.appeared=!0},t.getDerivedStateFromProps=function(e,t){return null==e.children?{current:null}:t.status===b&&e.mode===B?{status:b}:!t.current||((r=t.current)===(n=e.children)||l().isValidElement(r)&&l().isValidElement(n)&&null!=r.key&&r.key===n.key)?{current:l().cloneElement(e.children,{in:!0})}:{status:m};var r,n},r.render=function(){var e,t=this.props,r=t.children,n=t.mode,a=this.state,o=a.status,i=a.current,u={children:r,current:i,changeState:this.changeState,status:o};switch(o){case b:e=F[n](u);break;case m:e=L[n](u);break;case v:e=i}return l().createElement(d.Provider,{value:{isMounting:!this.appeared}},e)},t}(l().Component);A.propTypes={},A.defaultProps={mode:D};const z=A},745:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.NeutralIcon=t.SuccessIcon=t.DangerIcon=t.WarningIcon=t.InfoIcon=void 0;var c,s=i(r(297)),f=l(r(184)),d=r(983);!function(e){e[e.success=0]="success",e[e.danger=1]="danger",e[e.warning=2]="warning",e[e.info=3]="info",e[e.neutral=4]="neutral"}(c||(c={})),t.InfoIcon=function(e){return s.default.createElement("svg",n({},e,{fill:"none",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",viewBox:"0 0 24 24",stroke:"currentColor"}),s.default.createElement("path",{d:"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"}))},t.WarningIcon=function(e){return s.default.createElement("svg",n({},e,{fill:"none",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",viewBox:"0 0 24 24",stroke:"currentColor"}),s.default.createElement("path",{d:"M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"}))},t.DangerIcon=function(e){return s.default.createElement("svg",n({},e,{fill:"none",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",viewBox:"0 0 24 24",stroke:"currentColor"}),s.default.createElement("path",{d:"M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"}))},t.SuccessIcon=function(e){return s.default.createElement("svg",n({},e,{fill:"none",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",viewBox:"0 0 24 24",stroke:"currentColor"}),s.default.createElement("path",{d:"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"}))},t.NeutralIcon=function(e){return s.default.createElement("svg",n({},e,{fill:"none",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",viewBox:"0 0 24 24",stroke:"currentColor"}),s.default.createElement("path",{d:"M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"}))};var p=s.default.forwardRef((function(e,r){var a,o=e.className,i=e.children,l=e.type,c=void 0===l?"neutral":l,p=e.onClose,h=u(e,["className","children","type","onClose"]),b=s.useContext(d.ThemeContext).theme.alert,v=b.base,m=b.withClose,y=b[c],g=b.icon.base,O=b.icon[c];switch(c){case"success":a=t.SuccessIcon;break;case"warning":a=t.WarningIcon;break;case"danger":a=t.DangerIcon;break;case"info":a=t.InfoIcon;break;case"neutral":a=t.NeutralIcon;break;default:a=t.NeutralIcon}var _=f.default(v,y,p&&m,o),x=f.default(g,O,"absolute left-0 top-0 ml-4 mt-4"),j=f.default(g,O);return s.default.createElement("div",n({className:_,role:"alert",ref:r},h),p&&s.default.createElement("button",{onClick:p,className:"absolute top-0 right-0 mt-4 mr-4","aria-label":"close"},s.default.createElement("svg",{className:j,fill:"currentColor",viewBox:"0 0 20 20",role:"img","aria-hidden":"true"},s.default.createElement("path",{d:"M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z",clipRule:"evenodd",fillRule:"evenodd"}))),s.default.createElement(a,{className:x}),i)}));t.default=p},25:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.size,a=void 0===r?"regular":r,o=e.src,i=e.alt,l=e.className,d=u(e,["size","src","alt","className"]),p=c.useContext(f.ThemeContext).theme.avatar,h=p.base,b={large:p.size.large,regular:p.size.regular,small:p.size.small},v=s.default(h,b[a],l);return c.default.createElement("div",n({className:v,ref:t},d),c.default.createElement("img",{className:"object-cover w-full h-full rounded-full",src:o,alt:i,loading:"lazy"}),c.default.createElement("div",{className:"absolute inset-0 rounded-full shadow-inner","aria-hidden":"true"}))}));t.default=d},119:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=u(e,["className"]),o=c.useContext(f.ThemeContext).theme.backdrop.base,i=s.default(o,r);return c.default.createElement("div",n({className:i,ref:t},a))}));t.default=d},558:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=e.type,i=void 0===o?"primary":o,l=u(e,["className","children","type"]),d=c.useContext(f.ThemeContext).theme.badge,p=d.base,h={success:d.success,danger:d.danger,warning:d.warning,neutral:d.neutral,primary:d.primary},b=s.default(p,h[i],r);return c.default.createElement("span",n({className:b,ref:t},l),a)}));t.default=d},753:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=l(r(184)),s=i(r(297)),f=r(983),d=l(r(920)),p=s.default.forwardRef((function(e,t){var r=e.tag,a=void 0===r?"button":r,o=e.type,i=void 0===o?"button"===a?"button":void 0:o,l=e.disabled,p=void 0!==l&&l,h=e.size,b=void 0===h?"regular":h,v=e.layout,m=void 0===v?"primary":v,y=e.block,g=void 0!==y&&y,O=e.icon,_=e.iconLeft,x=e.iconRight,j=e.className,E=e.children,w=u(e,["tag","type","disabled","size","layout","block","icon","iconLeft","iconRight","className","children"]),P=s.useContext(f.ThemeContext).theme.button;function k(){return!!O||!!_||!!x}d.default(k()&&!w["aria-label"]&&!E,"Button",'You are using an icon button, but no "aria-label" attribute was found. Add an "aria-label" attribute to work as a label for screen readers.');var M=_||O,C=x,N=P.base,S=P.block,T={larger:P.size.larger,large:P.size.large,regular:P.size.regular,small:P.size.small,pagination:P.size.pagination},I={larger:P.size.icon.larger,large:P.size.icon.large,regular:P.size.icon.regular,small:P.size.icon.small,pagination:P.size.icon.regular},D=P.icon[b],B={primary:P.primary.base,outline:P.outline.base,link:P.link.base},R={primary:P.primary.active,outline:P.outline.active,link:P.link.active},L={primary:P.primary.disabled,outline:P.outline.disabled,link:P.link.disabled},F=P.dropdownItem.base,A="__dropdownItem"===m?c.default(F,j):c.default(N,k()&&!E&&I[b],k()&&E&&T[b],!k()&&T[b],B[m],p?L[m]:R[m],g?S:null,j),z=c.default(D,E?P.icon.left:""),W=c.default(D,E?P.icon.right:"");return s.default.createElement(a,n({className:A,ref:t,disabled:p,type:i},w),M?s.default.createElement(M,{className:z,"aria-hidden":!0}):null,E,C?s.default.createElement(C,{className:W,"aria-hidden":!0}):null)}));t.default=p},918:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=e.colored,i=void 0!==o&&o,l=u(e,["className","children","colored"]),d=c.useContext(f.ThemeContext).theme.card,p=d.base,h=d.default,b=s.default(p,!i&&h,r);return c.default.createElement("div",n({className:b,ref:t},l),a)}));t.default=d},715:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.cardBody.base,l=s.default(i,r);return c.default.createElement("div",n({className:l,ref:t},o),a)}));t.default=d},971:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=l(r(236)),p=l(r(722)),h=c.default.forwardRef((function(e,t){var r=e.children,a=e.onClose,o=e.isOpen,i=e.className,l=e.align,h=void 0===l?"left":l,b=u(e,["children","onClose","isOpen","className","align"]),v=c.useContext(f.ThemeContext).theme.dropdown,m=v.base,y=v.align[h];function g(e){"Esc"!==e.key&&"Escape"!==e.key||a()}var O=c.useRef(null);function _(e){O.current&&!O.current.contains(e.target)&&a()}c.useEffect((function(){return document.addEventListener("click",_,{capture:!0}),document.addEventListener("keydown",g,{capture:!0}),function(){document.removeEventListener("click",_),document.removeEventListener("keydown",g)}}),[o]);var x=s.default(m,y,i);return c.default.createElement(d.default,{show:o,leave:"transition ease-out duration-150",leaveFrom:"opacity-100",leaveTo:"opacity-0"},c.default.createElement("div",{ref:t},c.default.createElement(p.default,{returnFocus:!0},c.default.createElement("ul",n({className:x,ref:O,"aria-label":"submenu"},b),r))))}));t.default=h},689:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(753)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=u(e,["children"]),o=c.useContext(f.ThemeContext).theme.dropdownItem.base;return c.default.createElement("li",{className:o},c.default.createElement(s.default,n({layout:"__dropdownItem",ref:t},a),r))}));t.default=d},747:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=e.valid,o=e.className,i=u(e,["children","valid","className"]),l=c.useContext(f.ThemeContext).theme.helperText,d=l.base,p=l.valid,h=l.invalid,b=s.default(d,function(e){switch(e){case!0:return p;case!1:return h;default:return""}}(a),o);return c.default.createElement("span",n({className:b,ref:t},i),r)}));t.default=d},947:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.valid,a=e.disabled,o=e.className,i=e.type,l=void 0===i?"text":i,d=u(e,["valid","disabled","className","type"]),p=c.useContext(f.ThemeContext).theme.input,h=p.base,b=p.active,v=p.disabled,m=p.valid,y=p.invalid,g=p.radio,O=p.checkbox;function _(e){return void 0!==e}var x=s.default(function(e){switch(e){case"radio":return g;case"checkbox":return O;default:return h}}(l),!_(r)&&!a&&b,!_(r)&&a&&v,function(e){return _(e)?e?m:y:""}(r),o);return c.default.createElement("input",n({className:x,type:l,ref:t,disabled:a},d))}));t.default=d},461:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=e.check,o=e.radio,i=e.disabled,l=e.className,d=u(e,["children","check","radio","disabled","className"]),p=c.useContext(f.ThemeContext).theme.label,h=p.base,b=p.check,v=p.disabled,m=s.default(h,(a||o)&&b,i&&v,l);return c.default.createElement("label",n({className:m,ref:t},d),r)}));t.default=d},284:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=r(268),f=l(r(119)),d=l(r(236)),p=l(r(722)),h=r(983),b=c.default.forwardRef((function(e,t){var r=e.children,a=e.onClose,o=e.isOpen,i=u(e,["children","onClose","isOpen"]),l=c.useContext(h.ThemeContext).theme.modal.base;function b(e){"Esc"!==e.key&&"Escape"!==e.key||a()}c.useEffect((function(){return document.addEventListener("keydown",b,{capture:!0}),function(){document.removeEventListener("keydown",b)}}));var v=c.useState(!1),m=v[0],y=v[1];c.useEffect((function(){y(!0)}),[]);var g=c.default.createElement(d.default,{show:o},c.default.createElement(c.default.Fragment,null,c.default.createElement(d.default,{enter:"transition ease-out duration-150",enterFrom:"opacity-0",enterTo:"opacity-100",leave:"transition ease-in duration-150",leaveFrom:"opacity-100",leaveTo:"opacity-0"},c.default.createElement(f.default,{onClick:a},c.default.createElement(d.default,{enter:"transition ease-out duration-150",enterFrom:"opacity-0 transform translate-y-1/2",enterTo:"opacity-100",leave:"transition ease-in duration-150",leaveFrom:"opacity-100",leaveTo:"opacity-0  transform translate-y-1/2"},c.default.createElement("div",n({className:l,role:"dialog",onClick:function(e){return e.stopPropagation()},ref:t},i),c.default.createElement(p.default,{returnFocus:!0},c.default.createElement("header",{className:"flex justify-end"},c.default.createElement("button",{className:"inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded dark:hover:text-gray-200 hover: hover:text-gray-700","aria-label":"close",onClick:a},c.default.createElement("svg",{className:"w-4 h-4",fill:"currentColor",viewBox:"0 0 20 20",role:"img","aria-hidden":"true"},c.default.createElement("path",{d:"M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z",clipRule:"evenodd",fillRule:"evenodd"})))),r)))))));return m?s.createPortal(g,document.body):null}));t.default=b},441:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=e.className,o=u(e,["children","className"]),i=c.useContext(f.ThemeContext).theme.modalBody.base,l=s.default(i,a);return c.default.createElement("div",n({className:l,ref:t},o),r)}));t.default=d},640:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=e.className,o=u(e,["children","className"]),i=c.useContext(f.ThemeContext).theme.modalFooter.base,l=s.default(i,a);return c.default.createElement("footer",n({className:l,ref:t},o),r)}));t.default=d},459:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.children,a=e.className,o=u(e,["children","className"]),i=c.useContext(f.ThemeContext).theme.modalHeader.base,l=s.default(i,a);return c.default.createElement("p",n({className:l,ref:t},o),r)}));t.default=d},428:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.EmptyPageButton=t.PageButton=t.NavigationButton=void 0;var c=i(r(297)),s=l(r(753)),f=r(983),d=function(e){return c.default.createElement("svg",n({},e,{"aria-hidden":"true",fill:"currentColor",viewBox:"0 0 20 20"}),c.default.createElement("path",{d:"M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z",clipRule:"evenodd",fillRule:"evenodd"}))},p=function(e){return c.default.createElement("svg",n({},e,{"aria-hidden":"true",fill:"currentColor",viewBox:"0 0 20 20"}),c.default.createElement("path",{d:"M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z",clipRule:"evenodd",fillRule:"evenodd"}))};t.NavigationButton=function(e){var t=e.onClick,r=e.disabled,n=e.directionIcon,a="prev"===n?"Previous":"Next",o="prev"===n?d:p;return c.default.createElement(s.default,{size:"small",layout:"link",icon:o,onClick:t,disabled:r,"aria-label":a})},t.PageButton=function(e){var t=e.page,r=e.isActive,n=e.onClick;return c.default.createElement(s.default,{size:"pagination",layout:r?"primary":"link",onClick:n},t)},t.EmptyPageButton=function(){return c.default.createElement("span",{className:"px-2 py-1"},"...")};var h=c.default.forwardRef((function(e,r){var a=e.totalResults,o=e.resultsPerPage,i=void 0===o?10:o,l=e.label,s=e.onChange,d=u(e,["totalResults","resultsPerPage","label","onChange"]),p=c.useState([]),h=p[0],b=p[1],v=c.useState(1),m=v[0],y=v[1],g=Math.ceil(a/i),O=g;c.useEffect((function(){b(g<=7?Array.from({length:g}).map((function(e,t){return t+1})):m<5?[1,2,3,4,5,"...",g]:m>=5&&m<g-3?[1,"...",m-1,m,m+1,"...",g]:[1,"...",g-4,g-3,g-2,g-1,g])}),[m,g]),c.useEffect((function(){s(m)}),[m]);var _=c.useContext(f.ThemeContext).theme.pagination.base;return c.default.createElement("div",n({className:_,ref:r},d),c.default.createElement("span",{className:"flex items-center font-semibold tracking-wide uppercase"},"Showing ",m*i-i+1,"-",Math.min(m*i,a)," of ",a),c.default.createElement("div",{className:"flex mt-2 sm:mt-auto sm:justify-end"},c.default.createElement("nav",{"aria-label":l},c.default.createElement("ul",{className:"inline-flex items-center"},c.default.createElement("li",null,c.default.createElement(t.NavigationButton,{directionIcon:"prev",disabled:1===m,onClick:function(){y(m-1)}})),h.map((function(e,r){return c.default.createElement("li",{key:e.toString()+r},"..."===e?c.default.createElement(t.EmptyPageButton,null):c.default.createElement(t.PageButton,{page:e,isActive:e===m,onClick:function(){return y(+e)}}))})),c.default.createElement("li",null,c.default.createElement(t.NavigationButton,{directionIcon:"next",disabled:m===O,onClick:function(){y(m+1)}}))))))}));t.default=h},340:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.valid,a=e.children,o=e.className,i=e.multiple,l=e.disabled,d=u(e,["valid","children","className","multiple","disabled"]),p=c.useContext(f.ThemeContext).theme.select,h=p.base,b=p.active,v=p.valid,m=p.invalid,y=p.disabled,g=p.select;function O(e){return void 0!==e}var _=s.default(h,!O(r)&&!l&&b,!O(r)&&l&&y,function(e){return O(e)?e?v:m:""}(r),!i&&g,o);return c.default.createElement("select",n({className:_,ref:t,disabled:l,multiple:!!i},d),a)}));t.default=d},579:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},o=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var i=o(r(297)),u=i.default.forwardRef((function(e,t){var r=e.children,o=a(e,["children"]);return i.default.createElement("div",{className:"w-full overflow-x-auto"},i.default.createElement("table",n({className:"w-full whitespace-nowrap",ref:t},o),r))}));t.default=u},688:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableBody.base,l=s.default(i,r);return c.default.createElement("tbody",n({className:l,ref:t},o),a)}));t.default=d},355:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableCell.base,l=s.default(i,r);return c.default.createElement("td",n({className:l,ref:t},o),a)}));t.default=d},159:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableContainer.base,l=s.default(i,r);return c.default.createElement("div",n({className:l,ref:t},o),a)}));t.default=d},516:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableFooter.base,l=s.default(i,r);return c.default.createElement("div",n({className:l,ref:t},o),a)}));t.default=d},45:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableHeader.base,l=s.default(i,r);return c.default.createElement("thead",n({className:l,ref:t},o),a)}));t.default=d},147:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.className,a=e.children,o=u(e,["className","children"]),i=c.useContext(f.ThemeContext).theme.tableRow.base,l=s.default(i,r);return c.default.createElement("tr",n({className:l,ref:t},o),a)}));t.default=d},353:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=l(r(184)),f=r(983),d=c.default.forwardRef((function(e,t){var r=e.valid,a=e.disabled,o=e.className,i=e.children,l=u(e,["valid","disabled","className","children"]),d=c.useContext(f.ThemeContext).theme.textarea,p=d.base,h=d.active,b=d.disabled,v=d.valid,m=d.invalid;function y(e){return void 0!==e}var g=s.default(p,!y(r)&&!a&&h,!y(r)&&a&&b,function(e){return y(e)?e?v:m:""}(r),o);return c.default.createElement("textarea",n({className:g,ref:t,disabled:a},l),i)}));t.default=d},236:function(e,t,r){"use strict";var n=this&&this.__assign||function(){return(n=Object.assign||function(e){for(var t,r=1,n=arguments.length;r<n;r++)for(var a in t=arguments[r])Object.prototype.hasOwnProperty.call(t,a)&&(e[a]=t[a]);return e}).apply(this,arguments)},a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),i=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&a(t,e,r);return o(t,e),t},u=this&&this.__rest||function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.indexOf(n)<0&&(r[n]=e[n]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var a=0;for(n=Object.getOwnPropertySymbols(e);a<n.length;a++)t.indexOf(n[a])<0&&Object.prototype.propertyIsEnumerable.call(e,n[a])&&(r[n[a]]=e[n[a]])}return r},l=this&&this.__spreadArrays||function(){for(var e=0,t=0,r=arguments.length;t<r;t++)e+=arguments[t].length;var n=Array(e),a=0;for(t=0;t<r;t++)for(var o=arguments[t],i=0,u=o.length;i<u;i++,a++)n[a]=o[i];return n};Object.defineProperty(t,"__esModule",{value:!0});var c=i(r(297)),s=r(391),f=c.default.createContext({parent:{}}),d=function(e){var t=e.show,r=e.enter,n=void 0===r?"":r,a=e.enterFrom,o=void 0===a?"":a,i=e.enterTo,u=void 0===i?"":i,f=e.leave,d=void 0===f?"":f,p=e.leaveFrom,h=void 0===p?"":p,b=e.leaveTo,v=void 0===b?"":b,m=e.appear,y=e.children,g=n.split(" ").filter((function(e){return e.length})),O=o.split(" ").filter((function(e){return e.length})),_=u.split(" ").filter((function(e){return e.length})),x=d.split(" ").filter((function(e){return e.length})),j=h.split(" ").filter((function(e){return e.length})),E=v.split(" ").filter((function(e){return e.length}));function w(e,t){var r;t.length&&(r=e.classList).add.apply(r,t)}function P(e,t){var r;t.length&&(r=e.classList).remove.apply(r,t)}return c.default.createElement(s.CSSTransition,{appear:m,unmountOnExit:!0,in:t,addEndListener:function(e,t){e.addEventListener("transitionend",t,!1)},onEnter:function(e){w(e,l(g,O))},onEntering:function(e){P(e,O),w(e,_)},onEntered:function(e){P(e,l(_,g))},onExit:function(e){w(e,l(x,j))},onExiting:function(e){P(e,j),w(e,E)},onExited:function(e){P(e,l(E,x))}},y)};t.default=function(e){var t=e.show,r=e.appear,a=u(e,["show","appear"]),o=c.useContext(f).parent,i=function(){var e=c.useRef(!0);return c.useEffect((function(){e.current=!1}),[]),e.current}();return void 0===t?c.default.createElement(d,n({appear:o.appear,show:o.show},a)):c.default.createElement(f.Provider,{value:{parent:{show:t,isInitialRender:i,appear:r}}},c.default.createElement(d,n({appear:r,show:t},a)))}},929:function(e,t,r){"use strict";var n=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),a=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),o=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.prototype.hasOwnProperty.call(e,r)&&n(t,e,r);return a(t,e),t},i=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var u=o(r(297)),l=r(983),c=i(r(15)),s=r(514),f=i(r(775));t.default=function(e){var t=e.children,r=e.theme,n=e.dark,a=e.usePreferences,o=void 0!==a&&a,i=s.mergeDeep(c.default,r),d=f.default(o),p=d[0],h=d[1],b=d[2];u.useLayoutEffect((function(){n&&(null!=h&&h("dark"),document.documentElement.classList.add("dark"))}),[n]);var v=u.useMemo((function(){return{theme:i,mode:p,toggleMode:b}}),[p]);return u.default.createElement(l.ThemeContext.Provider,{value:v},t)}},983:function(e,t,r){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.ThemeProvider=t.ThemeContext=void 0;var a=n(r(297)),o=n(r(15));t.ThemeContext=a.default.createContext({theme:o.default}),t.ThemeProvider=function(e){var r=e.children,n=e.value;return a.default.createElement(t.ThemeContext.Provider,{value:n},r)}},607:function(e,t,r){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0}),t.Windmill=t.Transition=t.Textarea=t.TableRow=t.TableHeader=t.TableFooter=t.TableContainer=t.TableCell=t.TableBody=t.Table=t.Select=t.Pagination=t.ModalHeader=t.ModalFooter=t.ModalBody=t.Modal=t.Label=t.Input=t.HelperText=t.DropdownItem=t.Dropdown=t.CardBody=t.Card=t.Button=t.Badge=t.Backdrop=t.Avatar=t.Alert=t.WindmillContext=void 0;var a=r(983);Object.defineProperty(t,"WindmillContext",{enumerable:!0,get:function(){return a.ThemeContext}});var o=r(745);Object.defineProperty(t,"Alert",{enumerable:!0,get:function(){return n(o).default}});var i=r(25);Object.defineProperty(t,"Avatar",{enumerable:!0,get:function(){return n(i).default}});var u=r(119);Object.defineProperty(t,"Backdrop",{enumerable:!0,get:function(){return n(u).default}});var l=r(558);Object.defineProperty(t,"Badge",{enumerable:!0,get:function(){return n(l).default}});var c=r(753);Object.defineProperty(t,"Button",{enumerable:!0,get:function(){return n(c).default}});var s=r(918);Object.defineProperty(t,"Card",{enumerable:!0,get:function(){return n(s).default}});var f=r(715);Object.defineProperty(t,"CardBody",{enumerable:!0,get:function(){return n(f).default}});var d=r(971);Object.defineProperty(t,"Dropdown",{enumerable:!0,get:function(){return n(d).default}});var p=r(689);Object.defineProperty(t,"DropdownItem",{enumerable:!0,get:function(){return n(p).default}});var h=r(747);Object.defineProperty(t,"HelperText",{enumerable:!0,get:function(){return n(h).default}});var b=r(947);Object.defineProperty(t,"Input",{enumerable:!0,get:function(){return n(b).default}});var v=r(461);Object.defineProperty(t,"Label",{enumerable:!0,get:function(){return n(v).default}});var m=r(284);Object.defineProperty(t,"Modal",{enumerable:!0,get:function(){return n(m).default}});var y=r(441);Object.defineProperty(t,"ModalBody",{enumerable:!0,get:function(){return n(y).default}});var g=r(640);Object.defineProperty(t,"ModalFooter",{enumerable:!0,get:function(){return n(g).default}});var O=r(459);Object.defineProperty(t,"ModalHeader",{enumerable:!0,get:function(){return n(O).default}});var _=r(428);Object.defineProperty(t,"Pagination",{enumerable:!0,get:function(){return n(_).default}});var x=r(340);Object.defineProperty(t,"Select",{enumerable:!0,get:function(){return n(x).default}});var j=r(579);Object.defineProperty(t,"Table",{enumerable:!0,get:function(){return n(j).default}});var E=r(688);Object.defineProperty(t,"TableBody",{enumerable:!0,get:function(){return n(E).default}});var w=r(355);Object.defineProperty(t,"TableCell",{enumerable:!0,get:function(){return n(w).default}});var P=r(159);Object.defineProperty(t,"TableContainer",{enumerable:!0,get:function(){return n(P).default}});var k=r(516);Object.defineProperty(t,"TableFooter",{enumerable:!0,get:function(){return n(k).default}});var M=r(45);Object.defineProperty(t,"TableHeader",{enumerable:!0,get:function(){return n(M).default}});var C=r(147);Object.defineProperty(t,"TableRow",{enumerable:!0,get:function(){return n(C).default}});var N=r(353);Object.defineProperty(t,"Textarea",{enumerable:!0,get:function(){return n(N).default}});var S=r(236);Object.defineProperty(t,"Transition",{enumerable:!0,get:function(){return n(S).default}});var T=r(929);Object.defineProperty(t,"Windmill",{enumerable:!0,get:function(){return n(T).default}})},15:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={alert:{base:"p-4 pl-12 relative rounded-lg leading-5",withClose:"pr-12",success:"bg-green-50 text-green-900 dark:bg-green-600 dark:text-white",danger:"bg-red-50 text-red-900 dark:bg-red-600 dark:text-white",warning:"bg-yellow-50 text-yellow-900 dark:bg-yellow-600 dark:text-white",neutral:"bg-gray-50 text-gray-800 dark:bg-gray-700 dark:text-gray-300",info:"bg-blue-50 text-blue-900 dark:bg-blue-600 dark:text-white",icon:{base:"h-5 w-5",success:"text-green-400 dark:text-green-300",danger:"text-red-400 dark:text-red-300",warning:"text-yellow-400 dark:text-yellow-100",neutral:"text-gray-400 dark:text-gray-500",info:"text-blue-400 dark:text-blue-300"}},pagination:{base:"flex flex-col justify-between text-xs sm:flex-row text-gray-600 dark:text-gray-400"},tableFooter:{base:"px-4 py-3 border-t dark:border-gray-700 bg-gray-50 text-gray-500 dark:text-gray-400 dark:bg-gray-800"},tableRow:{base:""},tableHeader:{base:"text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"},tableContainer:{base:"w-full overflow-hidden rounded-lg ring-1 ring-black ring-opacity-5"},tableCell:{base:"px-4 py-3"},tableBody:{base:"bg-white divide-y dark:divide-gray-700 dark:bg-gray-800 text-gray-700 dark:text-gray-400"},dropdownItem:{base:"mb-2 last:mb-0"},dropdown:{base:"absolute w-56 p-2 mt-2 text-gray-600 bg-white border border-gray-100 rounded-lg shadow-md min-w-max-content dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700",align:{left:"left-0",right:"right-0"}},avatar:{base:"relative rounded-full inline-block",size:{large:"w-10 h-10",regular:"w-8 h-8",small:"w-6 h-6"}},modal:{base:"w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-xl"},modalBody:{base:"mb-6 text-sm text-gray-700 dark:text-gray-400"},modalFooter:{base:"flex flex-col items-center justify-end px-6 py-3 -mx-6 -mb-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-50 dark:bg-gray-800"},modalHeader:{base:"mt-4 mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300"},badge:{base:"inline-flex px-2 text-xs font-medium leading-5 rounded-full",success:"text-green-700 bg-green-100 dark:bg-green-700 dark:text-green-100",danger:"text-red-700 bg-red-100 dark:text-red-100 dark:bg-red-700",warning:"text-orange-700 bg-orange-100 dark:text-white dark:bg-orange-600",neutral:"text-gray-700 bg-gray-100 dark:text-gray-100 dark:bg-gray-700",primary:"text-purple-700 bg-purple-100 dark:text-white dark:bg-purple-600"},backdrop:{base:"fixed inset-0 z-40 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"},textarea:{base:"block w-full text-sm dark:text-gray-300 rounded-md focus:outline-none",active:"focus:border-purple-400 border-gray-300 dark:border-gray-600 dark:focus:border-gray-600 dark:bg-gray-700 dark:focus:ring-gray-300 focus:ring focus:ring-purple-300",disabled:"cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800",valid:"border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-green-200 dark:focus:ring-green-200",invalid:"border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-red-200 dark:focus:ring-red-200"},select:{base:"block w-full text-sm dark:text-gray-300 focus:outline-none rounded-md",active:"focus:border-purple-400 border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:ring focus:ring-purple-300 dark:focus:ring-gray-300 dark:focus:border-gray-600",select:"leading-5",disabled:"cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800",valid:"border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-green-200 dark:focus:ring-green-200",invalid:"border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-red-200 dark:focus:ring-red-200"},label:{base:"block text-sm text-gray-700 dark:text-gray-400",check:"inline-flex items-center",disabled:"opacity-50 cursor-not-allowed"},input:{base:"block w-full text-sm focus:outline-none dark:text-gray-300 leading-5 rounded-md",active:"focus:border-purple-400 border-gray-300 dark:border-gray-600 focus:ring focus:ring-purple-300 dark:focus:border-gray-600 dark:focus:ring-gray-300 dark:bg-gray-700",disabled:"cursor-not-allowed opacity-50 bg-gray-300 dark:bg-gray-800",valid:"border-green-600 dark:bg-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring focus:ring-green-200 dark:focus:ring-green-200",invalid:"border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:ring focus:ring-red-200 dark:focus:ring-red-200",radio:"text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:ring focus:ring-purple-300 focus:ring-offset-0 dark:focus:ring-gray-300",checkbox:"text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:ring focus:ring-purple-300 focus:ring-offset-0 rounded dark:focus:ring-gray-300"},helperText:{base:"text-xs",valid:"text-green-600 dark:text-green-400",invalid:"text-red-600 dark:text-red-400"},card:{base:"min-w-0 rounded-lg ring-1 ring-black ring-opacity-5 overflow-hidden",default:"bg-white dark:bg-gray-800"},cardBody:{base:"p-4"},button:{base:"align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none",block:"w-full",size:{larger:"px-10 py-4 rounded-lg",large:"px-5 py-3 rounded-lg",regular:"px-4 py-2 rounded-lg text-sm",small:"px-3 py-1 rounded-md text-sm",icon:{larger:"p-4 rounded-lg",large:"p-3 rounded-lg",regular:"p-2 rounded-lg",small:"p-2 rounded-md"},pagination:"px-3 py-1 rounded-md text-xs"},icon:{larger:"h-5 w-5",large:"h-5 w-5",regular:"h-5 w-5",small:"h-3 w-3",left:"mr-2 -ml-1",right:"ml-2 -mr-1"},primary:{base:"text-white bg-purple-600 border border-transparent",active:"active:bg-purple-600 hover:bg-purple-700 focus:ring focus:ring-purple-300",disabled:"opacity-50 cursor-not-allowed"},outline:{base:"text-gray-600 border-gray-300 border dark:text-gray-400 focus:outline-none",active:"active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500 focus:ring focus:ring-gray-300",disabled:"opacity-50 cursor-not-allowed bg-gray-300"},link:{base:"text-gray-600 dark:text-gray-400 focus:outline-none border border-transparent",active:"active:bg-transparent hover:bg-gray-100 focus:ring focus:ring-gray-300 dark:hover:bg-gray-500 dark:hover:text-gray-300 dark:hover:bg-opacity-10",disabled:"opacity-50 cursor-not-allowed"},dropdownItem:{base:"inline-flex items-center cursor-pointer w-full px-2 py-1 text-sm font-medium transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"}}}},514:function(e,t){"use strict";var r=this&&this.__spreadArrays||function(){for(var e=0,t=0,r=arguments.length;t<r;t++)e+=arguments[t].length;var n=Array(e),a=0;for(t=0;t<r;t++)for(var o=arguments[t],i=0,u=o.length;i<u;i++,a++)n[a]=o[i];return n};function n(e){return e&&"object"==typeof e&&!Array.isArray(e)}Object.defineProperty(t,"__esModule",{value:!0}),t.mergeDeep=t.isObject=void 0,t.isObject=n,t.mergeDeep=function e(t){for(var a,o,i=[],u=1;u<arguments.length;u++)i[u-1]=arguments[u];if(0===i.length)return t;var l=i.shift();if(n(t)&&n(l))for(var c in l)n(l[c])?(t[c]||Object.assign(t,((a={})[c]={},a)),e(t[c],l[c])):Object.assign(t,((o={})[c]=l[c],o));return e.apply(void 0,r([t],i))}},775:(e,t,r)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.useDarkMode=void 0;var n=r(297);t.useDarkMode=function(e){if(!e)return[null,null,null];var t=n.useState(null),r=t[0],a=t[1];return n.useEffect((function(){var e=!!window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;a(window.localStorage.getItem("theme")||(e?"dark":"light"))}),[]),n.useEffect((function(){r&&(window.localStorage.setItem("theme",r),document.documentElement.classList.add(r))}),[r]),[r,a,function(){"light"===r?(document.documentElement.className="",document.documentElement.classList.add("dark"),a("dark")):(document.documentElement.className="",document.documentElement.classList.add("light"),a("light"))}]},t.default=t.useDarkMode},920:(e,t)=>{"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e,t,r){}},297:t=>{"use strict";t.exports=e},268:e=>{"use strict";e.exports=t}},n={};function a(e){if(n[e])return n[e].exports;var t=n[e]={exports:{}};return r[e].call(t.exports,t,t.exports,a),t.exports}return a.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return a.d(t,{a:t}),t},a.d=(e,t)=>{for(var r in t)a.o(t,r)&&!a.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},a.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),a.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a(607)})()}));
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -3252,6 +3263,116 @@ function ValidationErros(props) {
 
 /***/ }),
 
+/***/ "./resources/js/Components/Nav/Icon.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Components/Nav/Icon.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ IconDashboard)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function IconDashboard() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    fill: "none",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.16667 3H3.83333C3.3731 3 3 3.3731 3 3.83333V7.16667C3 7.6269 3.3731 8 3.83333 8H7.16667C7.6269 8 8 7.6269 8 7.16667V3.83333C8 3.3731 7.6269 3 7.16667 3Z",
+      stroke: "#667EEA",
+      strokeWidth: 1,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.16667 11.6667H3.83333C3.3731 11.6667 3 12.0398 3 12.5V15.8333C3 16.2936 3.3731 16.6667 3.83333 16.6667H7.16667C7.6269 16.6667 8 16.2936 8 15.8333V12.5C8 12.0398 7.6269 11.6667 7.16667 11.6667Z",
+      stroke: "#667EEA",
+      strokeWidth: 1,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.1667 11.6667H12.8333C12.3731 11.6667 12 12.0398 12 12.5V15.8334C12 16.2936 12.3731 16.6667 12.8333 16.6667H16.1667C16.6269 16.6667 17 16.2936 17 15.8334V12.5C17 12.0398 16.6269 11.6667 16.1667 11.6667Z",
+      stroke: "#667EEA",
+      strokeWidth: 1,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.1667 3H12.8333C12.3731 3 12 3.3731 12 3.83333V7.16667C12 7.6269 12.3731 8 12.8333 8H16.1667C16.6269 8 17 7.6269 17 7.16667V3.83333C17 3.3731 16.6269 3 16.1667 3Z",
+      stroke: "#667EEA",
+      strokeWidth: 1,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/Components/Nav/ResponsiveNavLink.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/Components/Nav/ResponsiveNavLink.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ResponsiveNavLink)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @windmill/react-ui */ "./node_modules/@windmill/react-ui/dist/index.js");
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_windmill_react_ui__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function ResponsiveNavLink(_ref) {
+  var href = _ref.href,
+      active = _ref.active,
+      label = _ref.label,
+      children = _ref.children;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+      href: href,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        className: "text-white pt-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "flex items-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "md:w-6 md:h-6 w-5 h-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("main", {
+              children: children
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            className: active ? "cursor-pointer text-indigo-500 ml-3 text-lg tracking-normal transition duration-150 ease-in-out" : "cursor-pointer hover:text-indigo-500 text-gray-700 ml-3 text-lg tracking-normal transition duration-150 ease-in-out",
+            children: label
+          })]
+        })
+      })
+    })
+  })
+  /*<li
+      className={
+          active
+              ? "cursor-pointer h-full flex items-center text-sm text-indigo-500 tracking-normal transition duration-150 ease-in-out"
+              : "cursor-pointer h-full flex items-center text-sm hover:text-indigo-500 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out"
+      }
+  >
+      <a href={href}>{label}</a>
+  </li>*/
+  ;
+}
+
+/***/ }),
+
 /***/ "./resources/js/Components/Tables/Link.js":
 /*!************************************************!*\
   !*** ./resources/js/Components/Tables/Link.js ***!
@@ -4158,7 +4279,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _Components_UI_Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/UI/Logo */ "./resources/js/Components/UI/Logo.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @windmill/react-ui */ "./node_modules/@windmill/react-ui/dist/index.js");
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_windmill_react_ui__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Components_Nav_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Nav/ResponsiveNavLink */ "./resources/js/Components/Nav/ResponsiveNavLink.js");
+/* harmony import */ var _Components_Nav_Icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/Nav/Icon */ "./resources/js/Components/Nav/Icon.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -4177,35 +4302,479 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
+
+
+
 function Guest(_ref) {
   var title = _ref.title,
+      auth = _ref.auth,
       children = _ref.children;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     document.title = title;
   }, [title]);
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       show = _useState2[0],
       setShow = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      profile = _useState4[0],
-      setProfile = _useState4[1];
+      product = _useState4[0],
+      setProduct = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "bg-gray-200 h-full w-full",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("nav", {
-        className: "w-full bg-white hidden xl:block shadow",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "flex items-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      deliverables = _useState6[0],
+      setDeliverables = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      profile = _useState8[0],
+      setProfile = _useState8[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "absolute bg-gray-200 w-full h-full",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        className: show ? "w-full h-full absolute z-40  transform  translate-x-0 " : "   w-full h-full absolute z-40  transform -translate-x-full",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "bg-gray-800 opacity-50 inset-0 fixed w-full h-full",
+          onClick: function onClick() {
+            return setShow(!show);
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "w-64 z-20 absolute left-0 z-40 top-0 bg-white shadow flex-col justify-between transition duration-150 ease-in-out h-full",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "flex flex-col justify-between h-full",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+              className: "px-6 pt-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                className: "flex items-center justify-between",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                  className: "flex items-center",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                    "aria-label": "Home",
+                    id: "logo",
+                    enableBackground: "new 0 0 300 300",
+                    height: 43,
+                    viewBox: "0 0 300 300",
+                    width: 43,
+                    xmlns: "http://www.w3.org/2000/svg",
+                    xmlnsXlink: "http://www.w3.org/1999/xlink",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("g", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                        fill: "#4c51bf",
+                        d: "m234.735 35.532c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16zm0 24c-4.412 0-8-3.588-8-8s3.588-8 8-8 8 3.588 8 8-3.588 8-8 8zm-62.529-14c0-2.502 2.028-4.53 4.53-4.53s4.53 2.028 4.53 4.53c0 2.501-2.028 4.529-4.53 4.529s-4.53-2.027-4.53-4.529zm89.059 60c0 2.501-2.028 4.529-4.53 4.529s-4.53-2.028-4.53-4.529c0-2.502 2.028-4.53 4.53-4.53s4.53 2.029 4.53 4.53zm-40.522-5.459-88-51.064c-1.242-.723-2.773-.723-4.016 0l-88 51.064c-1.232.715-1.992 2.033-1.992 3.459v104c0 1.404.736 2.705 1.938 3.428l88 52.936c.635.381 1.35.572 2.062.572s1.428-.191 2.062-.572l88-52.936c1.201-.723 1.938-2.023 1.938-3.428v-104c0-1.426-.76-2.744-1.992-3.459zm-90.008-42.98 80.085 46.47-52.95 31.289-23.135-13.607v-21.713c0-2.209-1.791-4-4-4s-4 1.791-4 4v21.713l-26.027 15.309c-1.223.719-1.973 2.029-1.973 3.447v29.795l-52 30.727v-94.688zm0 198.707-80.189-48.237 51.467-30.412 24.723 14.539v19.842c0 2.209 1.791 4 4 4s4-1.791 4-4v-19.842l26.027-15.307c1.223-.719 1.973-2.029 1.973-3.447v-31.667l52-30.728v94.729z"
+                      })
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                    className: "text-bold md:text2xl text-base pl-3 text-gray-800",
+                    children: "Ticket App"
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                  id: "cross",
+                  className: " text-gray-800",
+                  onClick: function onClick() {
+                    return setShow(!show);
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    className: "icon icon-tabler icon-tabler-x",
+                    width: 24,
+                    height: 24,
+                    viewBox: "0 0 24 24",
+                    strokeWidth: 1,
+                    stroke: "currentColor",
+                    fill: "none",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      stroke: "none",
+                      d: "M0 0h24v24H0z"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                      x1: 18,
+                      y1: 6,
+                      x2: 6,
+                      y2: 18
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                      x1: 6,
+                      y1: 6,
+                      x2: 18,
+                      y2: 18
+                    })]
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+                className: "f-m-m",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                    className: "text-white pt-8",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                      className: "flex items-center",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                        className: "md:w-6 md:h-6 w-5 h-5",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "none",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M7.16667 3H3.83333C3.3731 3 3 3.3731 3 3.83333V7.16667C3 7.6269 3.3731 8 3.83333 8H7.16667C7.6269 8 8 7.6269 8 7.16667V3.83333C8 3.3731 7.6269 3 7.16667 3Z",
+                            stroke: "#667EEA",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M7.16667 11.6667H3.83333C3.3731 11.6667 3 12.0398 3 12.5V15.8333C3 16.2936 3.3731 16.6667 3.83333 16.6667H7.16667C7.6269 16.6667 8 16.2936 8 15.8333V12.5C8 12.0398 7.6269 11.6667 7.16667 11.6667Z",
+                            stroke: "#667EEA",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M16.1667 11.6667H12.8333C12.3731 11.6667 12 12.0398 12 12.5V15.8334C12 16.2936 12.3731 16.6667 12.8333 16.6667H16.1667C16.6269 16.6667 17 16.2936 17 15.8334V12.5C17 12.0398 16.6269 11.6667 16.1667 11.6667Z",
+                            stroke: "#667EEA",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M16.1667 3H12.8333C12.3731 3 12 3.3731 12 3.83333V7.16667C12 7.6269 12.3731 8 12.8333 8H16.1667C16.6269 8 17 7.6269 17 7.16667V3.83333C17 3.3731 16.6269 3 16.1667 3Z",
+                            stroke: "#667EEA",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          })]
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                        className: "text-indigo-500 ml-3 text-lg",
+                        children: "Dashboard"
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Nav_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  label: "Dashboard",
+                  href: route("test"),
+                  active: route().current("test"),
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 20 20",
+                    fill: "none",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      d: "M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z",
+                      stroke: "currentColor",
+                      strokeWidth: 1,
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      d: "M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z",
+                      stroke: "currentColor",
+                      strokeWidth: 1,
+                      strokeLinecap: "round",
+                      strokeLinejoin: "round"
+                    })]
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                    className: "text-gray-700 pt-8",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                      className: "flex items-center",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                        className: "flex items-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: "md:w-6 md:h-6 w-5 h-5",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 18 18",
+                            fill: "none",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              d: "M2.33333 4.83333H4.83333C5.05435 4.83333 5.26631 4.74554 5.42259 4.58926C5.57887 4.43298 5.66667 4.22101 5.66667 4V3.16667C5.66667 2.72464 5.84226 2.30072 6.15482 1.98816C6.46738 1.67559 6.89131 1.5 7.33333 1.5C7.77536 1.5 8.19928 1.67559 8.51184 1.98816C8.8244 2.30072 9 2.72464 9 3.16667V4C9 4.22101 9.0878 4.43298 9.24408 4.58926C9.40036 4.74554 9.61232 4.83333 9.83333 4.83333H12.3333C12.5543 4.83333 12.7663 4.92113 12.9226 5.07741C13.0789 5.23369 13.1667 5.44565 13.1667 5.66667V8.16667C13.1667 8.38768 13.2545 8.59964 13.4107 8.75592C13.567 8.9122 13.779 9 14 9H14.8333C15.2754 9 15.6993 9.17559 16.0118 9.48816C16.3244 9.80072 16.5 10.2246 16.5 10.6667C16.5 11.1087 16.3244 11.5326 16.0118 11.8452C15.6993 12.1577 15.2754 12.3333 14.8333 12.3333H14C13.779 12.3333 13.567 12.4211 13.4107 12.5774C13.2545 12.7337 13.1667 12.9457 13.1667 13.1667V15.6667C13.1667 15.8877 13.0789 16.0996 12.9226 16.2559C12.7663 16.4122 12.5543 16.5 12.3333 16.5H9.83333C9.61232 16.5 9.40036 16.4122 9.24408 16.2559C9.0878 16.0996 9 15.8877 9 15.6667V14.8333C9 14.3913 8.8244 13.9674 8.51184 13.6548C8.19928 13.3423 7.77536 13.1667 7.33333 13.1667C6.89131 13.1667 6.46738 13.3423 6.15482 13.6548C5.84226 13.9674 5.66667 14.3913 5.66667 14.8333V15.6667C5.66667 15.8877 5.57887 16.0996 5.42259 16.2559C5.26631 16.4122 5.05435 16.5 4.83333 16.5H2.33333C2.11232 16.5 1.90036 16.4122 1.74408 16.2559C1.5878 16.0996 1.5 15.8877 1.5 15.6667V13.1667C1.5 12.9457 1.5878 12.7337 1.74408 12.5774C1.90036 12.4211 2.11232 12.3333 2.33333 12.3333H3.16667C3.60869 12.3333 4.03262 12.1577 4.34518 11.8452C4.65774 11.5326 4.83333 11.1087 4.83333 10.6667C4.83333 10.2246 4.65774 9.80072 4.34518 9.48816C4.03262 9.17559 3.60869 9 3.16667 9H2.33333C2.11232 9 1.90036 8.9122 1.74408 8.75592C1.5878 8.59964 1.5 8.38768 1.5 8.16667V5.66667C1.5 5.44565 1.5878 5.23369 1.74408 5.07741C1.90036 4.92113 2.11232 4.83333 2.33333 4.83333",
+                              stroke: "currentColor",
+                              strokeWidth: 1,
+                              strokeLinecap: "round",
+                              strokeLinejoin: "round"
+                            })
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                          className: "text-gray-700 ml-3 text-lg",
+                          children: "Products"
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                        onClick: function onClick() {
+                          return setProduct(!product);
+                        },
+                        children: product ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: " ml-4",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            className: "icon icon-tabler icon-tabler-chevron-up",
+                            width: 14,
+                            height: 14,
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1,
+                            stroke: "currentColor",
+                            fill: "none",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              stroke: "none",
+                              d: "M0 0h24v24H0z",
+                              fill: "none"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                              points: "6 15 12 9 18 15"
+                            })]
+                          })
+                        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: "ml-4",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            className: "icon icon-tabler icon-tabler-chevron-down",
+                            width: 14,
+                            height: 14,
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1,
+                            stroke: "currentColor",
+                            fill: "none",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              stroke: "none",
+                              d: "M0 0h24v24H0z",
+                              fill: "none"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                              points: "6 9 12 15 18 9"
+                            })]
+                          })
+                        })
+                      })]
+                    }), product ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+                        className: "my-3",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-indigo-500 py-2 px-6",
+                          children: "Best Sellers"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-gray-800 hover:text-indigo-500 py-2 px-6",
+                          children: "Out of Stock"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-gray-800 hover:text-indigo-500 py-2 px-6",
+                          children: "New Products"
+                        })]
+                      })
+                    }) : ""]
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                    className: "text-gray-800 pt-8",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                      className: "flex items-center",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                        className: "md:w-6 md:h-6 w-5 h-5",
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "none",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z",
+                            stroke: "currentColor",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z",
+                            stroke: "currentColor",
+                            strokeWidth: 1,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round"
+                          })]
+                        })
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                        className: "text-gray-800 ml-3 text-lg",
+                        children: "Performance"
+                      })]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                    className: "text-gray-800 pt-8",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                      className: "flex items-center",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                        className: "flex items-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: "md:w-6 md:h-6 w-5 h-5",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 20 20",
+                            fill: "none",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              d: "M5.83333 6.66667L2.5 10L5.83333 13.3333",
+                              stroke: "currentColor",
+                              strokeWidth: 1,
+                              strokeLinecap: "round",
+                              strokeLinejoin: "round"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              d: "M14.1667 6.66667L17.5 10L14.1667 13.3333",
+                              stroke: "currentColor",
+                              strokeWidth: 1,
+                              strokeLinecap: "round",
+                              strokeLinejoin: "round"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              d: "M11.6667 3.33333L8.33333 16.6667",
+                              stroke: "currentColor",
+                              strokeWidth: 1,
+                              strokeLinecap: "round",
+                              strokeLinejoin: "round"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                          className: "text-gray-800 ml-3 text-lg",
+                          children: "Deliverables"
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                        onClick: function onClick() {
+                          return setDeliverables(!deliverables);
+                        },
+                        children: deliverables ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: " ml-4",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            className: "icon icon-tabler icon-tabler-chevron-up",
+                            width: 14,
+                            height: 14,
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1,
+                            stroke: "currentColor",
+                            fill: "none",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              stroke: "none",
+                              d: "M0 0h24v24H0z",
+                              fill: "none"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                              points: "6 15 12 9 18 15"
+                            })]
+                          })
+                        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                          className: "ml-4",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            className: "icon icon-tabler icon-tabler-chevron-down",
+                            width: 14,
+                            height: 14,
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1,
+                            stroke: "currentColor",
+                            fill: "none",
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                              stroke: "none",
+                              d: "M0 0h24v24H0z",
+                              fill: "none"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                              points: "6 9 12 15 18 9"
+                            })]
+                          })
+                        })
+                      })]
+                    }), deliverables ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+                        className: "my-3",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-indigo-500 py-2 px-6",
+                          children: "Best Sellers"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-gray-800 hover:text-indigo-500 py-2 px-6",
+                          children: "Out of Stock"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                          className: "text-sm text-gray-800 hover:text-indigo-500 py-2 px-6",
+                          children: "New Products"
+                        })]
+                      })
+                    }) : ""]
+                  })
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "w-full",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "border-t border-gray-300",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                  className: "w-full flex items-center justify-between px-6 pt-1",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                    className: "flex items-center",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+                      alt: "profile-pic",
+                      src: "https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png",
+                      className: "w-8 h-8 rounded-md"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                      className: " text-gray-800 text-base leading-4 ml-2",
+                      children: "Jane Doe"
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+                    className: "flex",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                      className: "cursor-pointer text-white pt-5 pb-3",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        className: "icon icon-tabler icon-tabler-messages",
+                        width: 24,
+                        height: 24,
+                        viewBox: "0 0 24 24",
+                        strokeWidth: 1,
+                        stroke: "#718096",
+                        fill: "none",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          stroke: "none",
+                          d: "M0 0h24v24H0z"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                      className: "cursor-pointer text-white pt-5 pb-3 pl-3",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        className: "icon icon-tabler icon-tabler-bell",
+                        width: 24,
+                        height: 24,
+                        viewBox: "0 0 24 24",
+                        strokeWidth: 1,
+                        stroke: "#718096",
+                        fill: "none",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          stroke: "none",
+                          d: "M0 0h24v24H0z"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M9 17v1a3 3 0 0 0 6 0v-1"
+                        })]
+                      })
+                    })]
+                  })]
+                })
+              })
+            })]
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("nav", {
+        className: "w-full mx-auto bg-white shadow",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          className: "container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "h-full flex items-center",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
               className: "mr-10 flex items-center",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
                 "aria-label": "Home",
                 id: "logo",
                 enableBackground: "new 0 0 300 300",
@@ -4214,163 +4783,81 @@ function Guest(_ref) {
                 width: 43,
                 xmlns: "http://www.w3.org/2000/svg",
                 xmlnsXlink: "http://www.w3.org/1999/xlink",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("g", {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("g", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
                     fill: "#4c51bf",
                     d: "m234.735 35.532c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16zm0 24c-4.412 0-8-3.588-8-8s3.588-8 8-8 8 3.588 8 8-3.588 8-8 8zm-62.529-14c0-2.502 2.028-4.53 4.53-4.53s4.53 2.028 4.53 4.53c0 2.501-2.028 4.529-4.53 4.529s-4.53-2.027-4.53-4.529zm89.059 60c0 2.501-2.028 4.529-4.53 4.529s-4.53-2.028-4.53-4.529c0-2.502 2.028-4.53 4.53-4.53s4.53 2.029 4.53 4.53zm-40.522-5.459-88-51.064c-1.242-.723-2.773-.723-4.016 0l-88 51.064c-1.232.715-1.992 2.033-1.992 3.459v104c0 1.404.736 2.705 1.938 3.428l88 52.936c.635.381 1.35.572 2.062.572s1.428-.191 2.062-.572l88-52.936c1.201-.723 1.938-2.023 1.938-3.428v-104c0-1.426-.76-2.744-1.992-3.459zm-90.008-42.98 80.085 46.47-52.95 31.289-23.135-13.607v-21.713c0-2.209-1.791-4-4-4s-4 1.791-4 4v21.713l-26.027 15.309c-1.223.719-1.973 2.029-1.973 3.447v29.795l-52 30.727v-94.688zm0 198.707-80.189-48.237 51.467-30.412 24.723 14.539v19.842c0 2.209 1.791 4 4 4s4-1.791 4-4v-19.842l26.027-15.307c1.223-.719 1.973-2.029 1.973-3.447v-31.667l52-30.728v94.729z"
                   })
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
                 className: "text-base text-gray-800 font-bold tracking-normal leading-tight ml-3 hidden lg:block",
-                children: "The North"
+                children: "Ticket App"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-              className: "hidden xl:flex items-center h-full",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                className: "cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal transition duration-150 ease-in-out",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                  className: "mr-2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-grid",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 4,
-                      y: 4,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 14,
-                      y: 4,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 4,
-                      y: 14,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 14,
-                      y: 14,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    })]
-                  })
-                }), "Dashboard"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                className: "cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                  className: "mr-2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-puzzle",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      d: "M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                    })]
-                  })
-                }), "Products"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                className: "cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                  className: "mr-2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-compass",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                      points: "8 16 10 10 16 8 14 14 8 16"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
-                      cx: 12,
-                      cy: 12,
-                      r: 9
-                    })]
-                  })
-                }), "Performance"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                className: "cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 tracking-normal transition duration-150 ease-in-out",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                  className: "mr-2",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-code",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                      points: "7 8 3 12 7 16"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                      points: "17 8 21 12 17 16"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                      x1: 14,
-                      y1: 4,
-                      x2: 10,
-                      y2: 20
-                    })]
-                  })
-                }), "Deliverables"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+              className: "pr-12 xl:flex items-center h-full hidden",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal border-b-2 border-indigo-700",
+                children: "Dashboard"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "cursor-pointer h-full flex items-center text-sm text-gry-800 mx-10 tracking-normal",
+                children: "Products"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal",
+                children: "Performance"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "cursor-pointer h-full flex items-center text-sm text-gray-800 tracking-normal",
+                children: "Deliverables"
               })]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "h-full hidden xl:flex items-center justify-end",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              className: "h-full flex",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "flex items-center pl-8 relative cursor-pointer",
-                onClick: function onClick() {
-                  return setProfile(!profile);
-                },
-                children: [profile && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-                  className: "p-2 w-40 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 ",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                    className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                      className: "flex items-center",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            className: "h-full xl:flex items-center justify-end hidden",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "w-full h-full flex items-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "w-full h-full flex",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                  "aria-haspopup": "true",
+                  className: "cursor-pointer w-full flex items-center justify-end relative",
+                  onClick: function onClick() {
+                    return setProfile(!profile);
+                  },
+                  children: [profile ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+                    className: "p-2 w-40 border-r bg-white absolute rounded z-40 left-0 shadow mt-48 ",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                      className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                        className: "flex items-center",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          className: "icon icon-tabler icon-tabler-user",
+                          width: 20,
+                          height: 20,
+                          viewBox: "0 0 24 24",
+                          strokeWidth: "1.5",
+                          stroke: "currentColor",
+                          fill: "none",
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            stroke: "none",
+                            d: "M0 0h24v24H0z"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
+                            cx: 12,
+                            cy: 7,
+                            r: 4
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            d: "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                          className: "ml-2",
+                          children: "My Profile"
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                      className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
                         xmlns: "http://www.w3.org/2000/svg",
-                        className: "icon icon-tabler icon-tabler-user",
+                        className: "icon icon-tabler icon-tabler-help",
                         width: 20,
                         height: 20,
                         viewBox: "0 0 24 24",
@@ -4379,272 +4866,79 @@ function Guest(_ref) {
                         fill: "none",
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
                           stroke: "none",
                           d: "M0 0h24v24H0z"
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
                           cx: 12,
-                          cy: 7,
-                          r: 4
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                          d: "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+                          cy: 12,
+                          r: 9
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                          x1: 12,
+                          y1: 17,
+                          x2: 12,
+                          y2: "17.01"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"
                         })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
                         className: "ml-2",
-                        children: "My Profile"
+                        children: "Help Center"
                       })]
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                      className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        className: "icon icon-tabler icon-tabler-settings",
+                        width: 20,
+                        height: 20,
+                        viewBox: "0 0 24 24",
+                        strokeWidth: "1.5",
+                        stroke: "currentColor",
+                        fill: "none",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          stroke: "none",
+                          d: "M0 0h24v24H0z"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                          d: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
+                          cx: 12,
+                          cy: 12,
+                          r: 3
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                        className: "ml-2",
+                        children: "Account Settings"
+                      })]
+                    })]
+                  }) : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+                    className: "text-gray-800 text-sm ml-2",
+                    children: auth.user.name
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                    className: "ml-2 -mr-0.5 h-4 w-4",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 20 20",
+                    fill: "currentColor",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      fillRule: "evenodd",
+                      d: "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
+                      clipRule: "evenodd"
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                    className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      className: "icon icon-tabler icon-tabler-help",
-                      width: 20,
-                      height: 20,
-                      viewBox: "0 0 24 24",
-                      strokeWidth: "1.5",
-                      stroke: "currentColor",
-                      fill: "none",
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                        stroke: "none",
-                        d: "M0 0h24v24H0z"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
-                        cx: 12,
-                        cy: 12,
-                        r: 9
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                        x1: 12,
-                        y1: 17,
-                        x2: 12,
-                        y2: "17.01"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                        d: "M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                      className: "ml-2",
-                      children: "Help Center"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                    className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      className: "icon icon-tabler icon-tabler-settings",
-                      width: 20,
-                      height: 20,
-                      viewBox: "0 0 24 24",
-                      strokeWidth: "1.5",
-                      stroke: "currentColor",
-                      fill: "none",
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                        stroke: "none",
-                        d: "M0 0h24v24H0z"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                        d: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
-                        cx: 12,
-                        cy: 12,
-                        r: 3
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                      className: "ml-2",
-                      children: "Account Settings"
-                    })]
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-                  className: "rounded h-10 w-10 object-cover",
-                  src: "https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png",
-                  alt: "logo"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                  className: "text-gray-800 text-sm ml-2",
-                  children: "Jane Doe"
-                })]
+                })
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "flex items-center xl:hidden",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-              className: "p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 md:mt-16 hidden",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  className: "flex items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-grid",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 4,
-                      y: 4,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 14,
-                      y: 4,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 4,
-                      y: 14,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                      x: 14,
-                      y: 14,
-                      width: 6,
-                      height: 6,
-                      rx: 1
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                    className: "ml-2 font-bold",
-                    children: "Dashboard"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center",
-                onclick: "dropdownHandler(this)",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  className: "flex items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-puzzle",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      d: "M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                    className: "ml-2 font-bold",
-                    children: "Products"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                className: "flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "icon icon-tabler icon-tabler-compass",
-                  width: 20,
-                  height: 20,
-                  viewBox: "0 0 24 24",
-                  strokeWidth: "1.5",
-                  stroke: "currentColor",
-                  fill: "none",
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                    stroke: "none",
-                    d: "M0 0h24v24H0z"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                    points: "8 16 10 10 16 8 14 14 8 16"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
-                    cx: 12,
-                    cy: 12,
-                    r: 9
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                  className: "ml-2 font-bold",
-                  children: "Performance"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "border-b border-gray-300 flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center",
-                onclick: "dropdownHandler(this)",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  className: "flex items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "icon icon-tabler icon-tabler-code",
-                    width: 20,
-                    height: 20,
-                    viewBox: "0 0 24 24",
-                    strokeWidth: "1.5",
-                    stroke: "currentColor",
-                    fill: "none",
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                      stroke: "none",
-                      d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                      points: "7 8 3 12 7 16"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                      points: "17 8 21 12 17 16"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                      x1: 14,
-                      y1: 4,
-                      x2: 10,
-                      y2: 20
-                    })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                    className: "ml-2 font-bold",
-                    children: "Deliverables"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  className: "flex items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    className: "w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-                      className: "rounded h-10 w-10 object-cover",
-                      src: "https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png",
-                      alt: "logo"
-                    })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                    className: "text-sm ml-2 cursor-pointer",
-                    children: "Jane Doe"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    className: "sm:ml-2 text-gray-800 relative",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      className: "icon icon-tabler icon-tabler-chevron-down cursor-pointer",
-                      width: 20,
-                      height: 20,
-                      viewBox: "0 0 24 24",
-                      strokeWidth: "1.5",
-                      stroke: "currentColor",
-                      fill: "none",
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                        stroke: "none",
-                        d: "M0 0h24v24H0z"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                        points: "6 9 12 15 18 9"
-                      })]
-                    })
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "visible xl:hidden flex items-center relative",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+              className: "p-2 w-64 border-r bg-white absolute top-0 -ml-2 rounded right-0 shadow mt-12 lg:mt-16 hidden",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
                 className: "cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
                   className: "flex items-center",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
                     className: "icon icon-tabler icon-tabler-user",
                     width: 20,
@@ -4655,339 +4949,273 @@ function Guest(_ref) {
                     fill: "none",
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
                       stroke: "none",
                       d: "M0 0h24v24H0z"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
                       cx: 12,
                       cy: 7,
                       r: 4
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
                       d: "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
                     className: "ml-2",
                     children: "Profile"
                   })]
                 })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+                  className: "flex items-center",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    className: "icon icon-tabler icon-tabler-grid",
+                    width: 20,
+                    height: 20,
+                    viewBox: "0 0 24 24",
+                    strokeWidth: "1.5",
+                    stroke: "currentColor",
+                    fill: "none",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      stroke: "none",
+                      d: "M0 0h24v24H0z"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("rect", {
+                      x: 4,
+                      y: 4,
+                      width: 6,
+                      height: 6,
+                      rx: 1
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("rect", {
+                      x: 14,
+                      y: 4,
+                      width: 6,
+                      height: 6,
+                      rx: 1
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("rect", {
+                      x: 4,
+                      y: 14,
+                      width: 6,
+                      height: 6,
+                      rx: 1
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("rect", {
+                      x: 14,
+                      y: 14,
+                      width: 6,
+                      height: 6,
+                      rx: 1
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    className: "ml-2",
+                    children: "Dashboard"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                className: "flex xl:hidden  cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center relative",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "icon icon-tabler icon-tabler-help",
+                  width: 20,
+                  height: 20,
+                  viewBox: "0 0 24 24",
+                  strokeWidth: "1.5",
+                  stroke: "currentColor",
+                  fill: "none",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    stroke: "none",
+                    d: "M0 0h24v24H0z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
+                    cx: 12,
+                    cy: 12,
+                    r: 9
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                    x1: 12,
+                    y1: 17,
+                    x2: 12,
+                    y2: "17.01"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    d: "M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                  className: "ml-2",
+                  children: "Products"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+                className: "flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "icon icon-tabler icon-tabler-settings",
+                  width: 20,
+                  height: 20,
+                  viewBox: "0 0 24 24",
+                  strokeWidth: "1.5",
+                  stroke: "currentColor",
+                  fill: "none",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    stroke: "none",
+                    d: "M0 0h24v24H0z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    d: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("circle", {
+                    cx: 12,
+                    cy: 12,
+                    r: 3
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                  className: "ml-2",
+                  children: "Performance"
+                })]
               })]
-            })
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("nav", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "w-24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-              xmlns: "http://www.w3.org/2000/svg",
-              width: 43,
-              height: 44,
-              viewBox: "0 0 43 44",
-              fill: "none",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M37.8735 0C36.1688 0 34.7818 1.37956 34.7818 3.0751C34.7818 4.77063 36.1688 6.15019 37.8735 6.15019C39.5782 6.15019 40.9653 4.77063 40.9653 3.0751C40.9653 1.37956 39.5782 0 37.8735 0ZM37.8735 4.61264C37.021 4.61264 36.3277 3.92305 36.3277 3.0751C36.3277 2.22714 37.021 1.53755 37.8735 1.53755C38.7261 1.53755 39.4194 2.22714 39.4194 3.0751C39.4194 3.92305 38.7261 4.61264 37.8735 4.61264ZM26.6663 1.0513C26.1828 1.0513 25.7909 1.44107 25.7909 1.92193C25.7909 2.4028 26.1828 2.79238 26.6663 2.79238C27.1497 2.79238 27.5416 2.40261 27.5416 1.92193C27.5416 1.44107 27.1497 1.0513 26.6663 1.0513ZM43 13.4535C43 13.9342 42.6081 14.324 42.1247 14.324C41.6412 14.324 41.2493 13.9342 41.2493 13.4535C41.2493 12.9727 41.6412 12.5829 42.1247 12.5829C42.6081 12.5829 43 12.9729 43 13.4535ZM18.1654 2.59019L35.1698 12.4044C35.4079 12.5418 35.5548 12.7951 35.5548 13.0692V33.0573C35.5548 33.3273 35.4123 33.5772 35.1803 33.7161L18.1758 43.8901C18.0533 43.9633 17.915 44 17.7774 44C17.6398 44 17.5016 43.9633 17.3789 43.8901L0.374484 33.7161C0.142219 33.5772 0 33.3271 0 33.0573V13.0692C0 12.7951 0.146857 12.5418 0.384919 12.4044L17.3894 2.59019C17.6296 2.45124 17.9254 2.45124 18.1654 2.59019ZM17.7774 4.14388L33.2524 13.0751L23.0207 19.0887L18.5503 16.4735V12.3004C18.5503 11.8758 18.2042 11.5316 17.7774 11.5316C17.3505 11.5316 17.0044 11.8758 17.0044 12.3004V16.4735L11.9752 19.4158C11.7389 19.554 11.5939 19.8057 11.5939 20.0783V25.8047L1.54586 31.7102V13.5118L17.7774 4.14388ZM2.28227 33.0632L17.7774 42.3341L34.0091 32.6225V14.4162L23.961 20.322V26.4081C23.961 26.6807 23.8161 26.9325 23.5798 27.0706L18.5505 30.0125V33.826C18.5505 34.2506 18.2044 34.5948 17.7776 34.5948C17.3507 34.5948 17.0046 34.2506 17.0046 33.826V30.0125L12.2274 27.2182L2.28227 33.0632Z",
-                fill: "#667EEA"
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              id: "menu",
-              className: "text-gray-800",
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
               onClick: function onClick() {
                 return setShow(!show);
               },
-              children: show ? " " : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "icon icon-tabler icon-tabler-menu-2",
-                width: 24,
-                height: 24,
-                viewBox: "0 0 24 24",
-                strokeWidth: "1.5",
-                stroke: "currentColor",
-                fill: "none",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                  stroke: "none",
-                  d: "M0 0h24v24H0z",
-                  fill: "none"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                  x1: 4,
-                  y1: 6,
-                  x2: 20,
-                  y2: 6
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                  x1: 4,
-                  y1: 12,
-                  x2: 20,
-                  y2: 12
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                  x1: 4,
-                  y1: 18,
-                  x2: 20,
-                  y2: 18
-                })]
-              })
-            })
+              "aria-label": "Main Menu",
+              "aria-haspopup": "true",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "icon icon-tabler icon-tabler-menu",
+              width: 32,
+              height: 32,
+              viewBox: "0 0 24 24",
+              strokeWidth: "1.5",
+              stroke: "#2c3e50",
+              fill: "none",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                stroke: "none",
+                d: "M0 0h24v24H0z"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                x1: 4,
+                y1: 8,
+                x2: 20,
+                y2: 8
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                x1: 4,
+                y1: 16,
+                x2: 20,
+                y2: 16
+              })]
+            })]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: show ? "absolute xl:hidden w-full h-full transform -translate-x-0 z-40" : "absolute xl:hidden w-full h-full transform -translate-x-full z-40",
-          id: "mobile-nav",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "bg-gray-800 opacity-50 w-full h-full",
-            onClick: function onClick() {
-              return setShow(!show);
-            }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              className: "px-6 h-full",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "flex flex-col justify-between h-full w-full",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    className: "mt-6 flex w-full items-center justify-between",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                      className: "flex items-center justify-between w-full",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                        className: "flex items-center",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: 43,
-                          height: 44,
-                          viewBox: "0 0 43 44",
-                          fill: "none",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M37.8735 0C36.1688 0 34.7818 1.37956 34.7818 3.0751C34.7818 4.77063 36.1688 6.15019 37.8735 6.15019C39.5782 6.15019 40.9653 4.77063 40.9653 3.0751C40.9653 1.37956 39.5782 0 37.8735 0ZM37.8735 4.61264C37.021 4.61264 36.3277 3.92305 36.3277 3.0751C36.3277 2.22714 37.021 1.53755 37.8735 1.53755C38.7261 1.53755 39.4194 2.22714 39.4194 3.0751C39.4194 3.92305 38.7261 4.61264 37.8735 4.61264ZM26.6663 1.0513C26.1828 1.0513 25.7909 1.44107 25.7909 1.92193C25.7909 2.4028 26.1828 2.79238 26.6663 2.79238C27.1497 2.79238 27.5416 2.40261 27.5416 1.92193C27.5416 1.44107 27.1497 1.0513 26.6663 1.0513ZM43 13.4535C43 13.9342 42.6081 14.324 42.1247 14.324C41.6412 14.324 41.2493 13.9342 41.2493 13.4535C41.2493 12.9727 41.6412 12.5829 42.1247 12.5829C42.6081 12.5829 43 12.9729 43 13.4535ZM18.1654 2.59019L35.1698 12.4044C35.4079 12.5418 35.5548 12.7951 35.5548 13.0692V33.0573C35.5548 33.3273 35.4123 33.5772 35.1803 33.7161L18.1758 43.8901C18.0533 43.9633 17.915 44 17.7774 44C17.6398 44 17.5016 43.9633 17.3789 43.8901L0.374484 33.7161C0.142219 33.5772 0 33.3271 0 33.0573V13.0692C0 12.7951 0.146857 12.5418 0.384919 12.4044L17.3894 2.59019C17.6296 2.45124 17.9254 2.45124 18.1654 2.59019ZM17.7774 4.14388L33.2524 13.0751L23.0207 19.0887L18.5503 16.4735V12.3004C18.5503 11.8758 18.2042 11.5316 17.7774 11.5316C17.3505 11.5316 17.0044 11.8758 17.0044 12.3004V16.4735L11.9752 19.4158C11.7389 19.554 11.5939 19.8057 11.5939 20.0783V25.8047L1.54586 31.7102V13.5118L17.7774 4.14388ZM2.28227 33.0632L17.7774 42.3341L34.0091 32.6225V14.4162L23.961 20.322V26.4081C23.961 26.6807 23.8161 26.9325 23.5798 27.0706L18.5505 30.0125V33.826C18.5505 34.2506 18.2044 34.5948 17.7776 34.5948C17.3507 34.5948 17.0046 34.2506 17.0046 33.826V30.0125L12.2274 27.2182L2.28227 33.0632Z",
-                            fill: "#667EEA"
-                          })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                          className: "text-base text-gray-800 ml-3",
-                          children: "The North"
-                        })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                        id: "cross",
-                        className: "text-gray-800",
-                        onClick: function onClick() {
-                          return setShow(!show);
-                        },
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          className: "icon icon-tabler icon-tabler-x",
-                          width: 24,
-                          height: 24,
-                          viewBox: "0 0 24 24",
-                          strokeWidth: "1.5",
-                          stroke: "currentColor",
-                          fill: "none",
-                          strokeLinecap: "round",
-                          strokeLinejoin: "round",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                            stroke: "none",
-                            d: "M0 0h24v24H0z"
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                            x1: 18,
-                            y1: 6,
-                            x2: 6,
-                            y2: 18
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                            x1: 6,
-                            y1: 6,
-                            x2: 18,
-                            y2: 18
-                          })]
-                        })
-                      })]
-                    })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-                    className: "f-m-m",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                      className: "cursor-pointer",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                        className: "text-gray-800 pt-8",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                          className: "flex items-center",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                            className: "w-6 h-6 md:w-8 md:h-8 text-indigo-700",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              className: "icon icon-tabler icon-tabler-grid",
-                              viewBox: "0 0 24 24",
-                              strokeWidth: "1.5",
-                              stroke: "currentColor",
-                              fill: "none",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                                stroke: "none",
-                                d: "M0 0h24v24H0z"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                                x: 4,
-                                y: 4,
-                                width: 6,
-                                height: 6,
-                                rx: 1
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                                x: 14,
-                                y: 4,
-                                width: 6,
-                                height: 6,
-                                rx: 1
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                                x: 4,
-                                y: 14,
-                                width: 6,
-                                height: 6,
-                                rx: 1
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("rect", {
-                                x: 14,
-                                y: 14,
-                                width: 6,
-                                height: 6,
-                                rx: 1
-                              })]
-                            })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                            className: "text-indigo-700 xl:text-base text-base ml-3",
-                            children: "Dashboard"
-                          })]
-                        })
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                      className: "cursor-pointer",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                        className: "text-gray-800 pt-8",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                          className: "flex items-center justify-between",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                            className: "flex items-center",
-                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                              className: "w-6 h-6 md:w-8 md:h-8 text-gray-800",
-                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                className: "icon icon-tabler icon-tabler-puzzle",
-                                viewBox: "0 0 24 24",
-                                strokeWidth: "1.5",
-                                stroke: "currentColor",
-                                fill: "none",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                                  stroke: "none",
-                                  d: "M0 0h24v24H0z"
-                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                                  d: "M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"
-                                })]
-                              })
-                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                              className: "text-gray-800 xl:text-base md:text-2xl text-base ml-3",
-                              children: "Products"
-                            })]
-                          })
-                        })
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                      className: "cursor-pointer",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                        className: "text-gray-800 pt-8",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                          className: "flex items-center",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                            className: "w-6 h-6 md:w-8 md:h-8 text-gray-800",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              className: "icon icon-tabler icon-tabler-compass",
-                              viewBox: "0 0 24 24",
-                              strokeWidth: "1.5",
-                              stroke: "currentColor",
-                              fill: "none",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                                stroke: "none",
-                                d: "M0 0h24v24H0z"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                                points: "8 16 10 10 16 8 14 14 8 16"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
-                                cx: 12,
-                                cy: 12,
-                                r: 9
-                              })]
-                            })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                            className: "text-gray-800 xl:text-base md:text-2xl text-base ml-3",
-                            children: "Performance"
-                          })]
-                        })
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                      className: "text-gray-800 pt-8 cursor-pointer",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                        className: "flex items-center justify-between",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                          className: "flex items-center",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                            className: "w-6 h-6 md:w-8 md:h-8 text-gray-800",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              className: "icon icon-tabler icon-tabler-code",
-                              viewBox: "0 0 24 24",
-                              strokeWidth: "1.5",
-                              stroke: "currentColor",
-                              fill: "none",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                                stroke: "none",
-                                d: "M0 0h24v24H0z"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                                points: "7 8 3 12 7 16"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("polyline", {
-                                points: "17 8 21 12 17 16"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("line", {
-                                x1: 14,
-                                y1: 4,
-                                x2: 10,
-                                y2: 20
-                              })]
-                            })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                            className: "text-gray-800 xl:text-base md:text-2xl text-base ml-3",
-                            children: "Deliverables"
-                          })]
-                        })
-                      })
-                    })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        className: "my-6 lg:my-12 container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between pb-4 border-b border-gray-300",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h4", {
+            className: "text-2xl font-bold leading-tight text-gray-800",
+            children: "User Profile"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
+            className: "flex flex-col md:flex-row items-start md:items-center text-gray-600 text-sm mt-3",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+              className: "flex items-center mr-3 mt-3 md:mt-0",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                className: "mr-2",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "icon icon-tabler icon-tabler-paperclip",
+                  width: 16,
+                  height: 16,
+                  viewBox: "0 0 24 24",
+                  strokeWidth: "1.5",
+                  stroke: "currentColor",
+                  fill: "none",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    stroke: "none",
+                    d: "M0 0h24v24H0z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    d: "M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9 l6.5 -6.5"
                   })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  className: "w-full pt-4",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    className: "border-t border-gray-300",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                      className: "w-full flex items-center justify-between pt-1",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                        className: "flex items-center",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-                          alt: "profile-pic",
-                          src: "https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png",
-                          className: "w-8 h-8 rounded-md"
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-                          className: " text-gray-800 text-base leading-4 ml-2",
-                          children: "Jane Doe"
-                        })]
-                      })
-                    })
-                  })
-                })]
-              })
-            })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                children: "Active"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+              className: "flex items-center mr-3 mt-3 md:mt-0",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                className: "mr-2",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "icon icon-tabler icon-tabler-trending-up",
+                  width: 16,
+                  height: 16,
+                  viewBox: "0 0 24 24",
+                  strokeWidth: "1.5",
+                  stroke: "currentColor",
+                  fill: "none",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    stroke: "none",
+                    d: "M0 0h24v24H0z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                    points: "3 17 9 11 13 15 21 7"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("polyline", {
+                    points: "14 7 21 7 21 14"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                children: " Trending"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+              className: "flex items-center mt-3 md:mt-0",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                className: "mr-2",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  className: "icon icon-tabler icon-tabler-plane-departure",
+                  width: 16,
+                  height: 16,
+                  viewBox: "0 0 24 24",
+                  strokeWidth: "1.5",
+                  stroke: "currentColor",
+                  fill: "none",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    stroke: "none",
+                    d: "M0 0h24v24H0z"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    d: "M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z",
+                    transform: "rotate(-15 12 12) translate(0 -1)"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("line", {
+                    x1: 3,
+                    y1: 21,
+                    x2: 21,
+                    y2: 21
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                children: "Started on 29 Jan 2020"
+              })]
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          className: "mt-6 lg:mt-0",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+            className: "mx-2 my-2 bg-white transition duration-150 ease-in-out focus:outline-none hover:bg-gray-100 rounded text-indigo-700 px-6 py-2 text-sm",
+            children: "Back"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+            className: "transition duration-150 ease-in-out hover:bg-indigo-600 focus:outline-none border bg-indigo-700 rounded text-white px-8 py-2 text-sm",
+            children: "Edit Profile"
           })]
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "container mx-auto px-6",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "w-full h-64 rounded  border-2 bg-white",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("main", {
+            children: children
+          })
+        })
       })]
     })
   });
@@ -6597,9 +6825,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function Dashboard(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Layouts_Test__WEBPACK_IMPORTED_MODULE_1__.default, {
+    title: "Dashboard",
     auth: props.auth,
     errors: props.errors,
-    title: "Dashboard"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "p-6 bg-white border-b border-gray-200",
+      children: "You're logged in!"
+    })
   });
 }
 
@@ -8020,8 +8252,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/progress */ "./node_modules/@inertiajs/progress/dist/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import modules...
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @windmill/react-ui */ "./node_modules/@windmill/react-ui/dist/index.js");
+/* harmony import */ var _windmill_react_ui__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_windmill_react_ui__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
@@ -8029,15 +8263,17 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import
 
 
 
-var el = document.getElementById('app');
-(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.App, {
-  initialPage: JSON.parse(el.dataset.page),
-  resolveComponent: function resolveComponent(name) {
-    return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
-  }
+var el = document.getElementById("app");
+(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_windmill_react_ui__WEBPACK_IMPORTED_MODULE_4__.Windmill, {
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.App, {
+    initialPage: JSON.parse(el.dataset.page),
+    resolveComponent: function resolveComponent(name) {
+      return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name))["default"];
+    }
+  })
 }), el);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
-  color: '#4B5563'
+  color: "#4B5563"
 });
 
 /***/ }),

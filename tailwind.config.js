@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const windmill = require('@windmill/react-ui/config')
 
-module.exports = {
+module.exports = windmill({
     purge: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -23,4 +24,4 @@ module.exports = {
     },
 
     plugins: [require('@tailwindcss/forms')],
-};
+});

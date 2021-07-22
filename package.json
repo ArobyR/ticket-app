@@ -32,6 +32,7 @@
         "tailwindcss": "^2.1.2"
     },
     "dependencies": {
+        "@windmill/react-ui": "^0.6.0",
         "qrcode.react": "^1.0.1",
         "react-bootstrap": "^1.5.2",
         "react-icons": "^4.2.0",

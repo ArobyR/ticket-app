@@ -52,7 +52,7 @@ Route::get('/user.guest', function () {
 
 Route::get('/test', function () {
     return Inertia::render('Test');
-})->name('test');
+})->middleware(['auth', 'verified'])->name('test');
 
 
 Route::get('/prueba', function () {
