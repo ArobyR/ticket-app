@@ -47,6 +47,7 @@ export default function Register() {
                                 <th class="px-6 py-3 border-b-2 border-gray-300"></th>
                             </tr>
                         </thead>
+                        
                         <tbody class="bg-white">
                             <tr>
                                 <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">

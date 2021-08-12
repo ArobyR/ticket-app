@@ -8,7 +8,6 @@ import Embarazada from "@/Assets/Png/Embarazada.png";
 import Discapacitado from "@/Assets/Png/Discapacitado.png";
 import Corriente from "@/Assets/Png/Corriente.png";
 import { createTicket } from "@/Utils/Ticket/api";
-/*import { StaticDialog, useDialog } from "react-st-modal";*/
 import Modal from "@/Components/Forms/Modal";
 import QRCode from "qrcode.react";
 
@@ -18,6 +17,10 @@ export default function Dashboard(props) {
         id_categoria: '',
         estado_ticket: '',
     });
+
+    const handleInit = () => {
+        setFormStep(1)
+    }
 
     const handlePregnant = () => {
         setData({ id_categoria: '1', estado_ticket: 'en proceso' })
@@ -49,20 +52,9 @@ export default function Dashboard(props) {
         setFormStep(3)
     }
 
-    const handleInit = () => {
-        setFormStep(1)
-    }
-
-    const handleOption1 = () => {
-
-    }
-
     const handleFinish = () => {
-        const confirm = window.confirm('Estas Seguro que deseas finalizar ?')
+        const confirm = window.confirm('Estas Seguro que desea finalizar?')
         { confirm && (setFormStep(0)) }
-    }
-
-    const handleOption2 = () => {
     }
 
     return (
@@ -98,7 +90,7 @@ export default function Dashboard(props) {
                     </CardStart>
 
                     <CardCenter
-                        label="Persona sin discapacidad"
+                        label="Persona con discapacidad"
                         name="Seleccionar"
                         onClick={handleDisabled}
                         processing={processing}
